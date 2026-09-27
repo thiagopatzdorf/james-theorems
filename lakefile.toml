@@ -1,0 +1,6 @@
+name = "james-theorems"
+version = "0.1.0"
+defaultTargets = ["JamesTheorems"]
+
+[[lean_lib]]
+name = "JamesTheorems"
