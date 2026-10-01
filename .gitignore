@@ -1,1 +1,9 @@
 .lake/
+
+__pycache__/
+*.pyc
+research/covering-codes/build/
+research/covering-codes/formal/.lake/
+research/covering-codes/preprint/*.aux
+research/covering-codes/preprint/*.log
+research/covering-codes/preprint/*.out
