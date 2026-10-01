@@ -1,0 +1,5 @@
+{
+  "source_modules": 3037,
+  "mathlib_modules": 3014,
+  "note": "header-import approximation, excludes toolchain/other packages; optional caches failed here"
+}

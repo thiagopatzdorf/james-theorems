@@ -40,3 +40,8 @@ certificate; 1350 is not approved by a claimed Lean success.
 The concurrent research-branch commit `f5129539417d55e4a91303a5f7fb0f7d7d06b7de` adds the classical sphere lower bound `QaryKLower 7 9 4 221`; its source is preserved and included in the actual final build. This is separate from principal upper-bound coverage and from the stronger computationally rechecked LB 241.
 
 The verified compact partition has 117649 representatives and 27 exceptional orbits (9261 words), for 253820 payload bytes. The reported linear prefix structure is independently checked against the actual original file. It is now the preferred principal Lean replay route, with the flat certificate preserved.
+
+The final real build passed 3335 jobs, including ten kernel-checked orbit algebra
+theorems (normalization, injectivity, decomposition, Hamming isometry and coset
+transport). Finite compact-payload checks and linkage to the actual original
+Finset remain the principal coverage gap; this is not a formal upper-bound proof.

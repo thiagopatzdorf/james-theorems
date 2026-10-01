@@ -12,3 +12,5 @@ No AI-discovery, optimality or world-record claim. Published documentary lower
 bounds are distinct from independently rechecked ones; alpha is an interval.
 
 The concurrent research-branch commit `f5129539417d55e4a91303a5f7fb0f7d7d06b7de` adds the classical sphere lower bound `QaryKLower 7 9 4 221`; its source is preserved and included in the actual final build. This is separate from principal upper-bound coverage and from the stronger computationally rechecked LB 241.
+
+The paper target fixes SOURCE_DATE_EPOCH for reproducible PDF metadata; two consecutive builds produced identical bytes with the same TeX distribution. Scoped Git attributes enforce LF for canonical text and preserve binary/original-source archives exactly.

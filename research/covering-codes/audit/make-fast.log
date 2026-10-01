@@ -5,6 +5,8 @@ test_all_frozen_artifacts_and_large_lean_word_linkage (test_certificate.Certific
 test_witness_roundtrip_and_adversarial_mutations (test_certificate.CertificateTests.test_witness_roundtrip_and_adversarial_mutations) ... ok
 test_preserves_bytes_order_and_unknown_fields (test_ingestion.Ingestion.test_preserves_bytes_order_and_unknown_fields) ... ok
 test_rejects_malformed_and_wrong_size_but_preserves_original (test_ingestion.Ingestion.test_rejects_malformed_and_wrong_size_but_preserves_original) ... ok
+test_compact_partition_and_forged_payloads (test_partition.PartitionTests.test_compact_partition_and_forged_payloads) ... ok
+test_named_case_parameters_and_hash_reject_before_expensive_work (test_pipeline.PipelineTests.test_named_case_parameters_and_hash_reject_before_expensive_work) ... ok
 test_adversarial_parser (test_verifiers.IndependentChecks.test_adversarial_parser) ... ok
 test_all_binary_length3_subsets_all_radii (test_verifiers.IndependentChecks.test_all_binary_length3_subsets_all_radii) ... ok
 test_duplicates_and_boundaries (test_verifiers.IndependentChecks.test_duplicates_and_boundaries) ... ok
@@ -13,7 +15,7 @@ test_parameter_and_overflow_rejection (test_verifiers.IndependentChecks.test_par
 test_repetition_231 (test_verifiers.IndependentChecks.test_repetition_231) ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 4.978s
+Ran 12 tests in 5.851s
 
 OK
 python3 tools/generate_table.py --check

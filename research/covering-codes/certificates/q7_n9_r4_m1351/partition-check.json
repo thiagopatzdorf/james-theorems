@@ -8,6 +8,6 @@
   "covered_by_symmetry": 40344346,
   "ambient_words": 40353607,
   "payload_bytes": 253820,
-  "runtime_seconds": 10.583145420999244,
+  "runtime_seconds": 0.056007314000453334,
   "formal_status": "NOT_REPLAYED_IN_LEAN"
 }

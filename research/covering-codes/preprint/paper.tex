@@ -65,8 +65,9 @@ The files were recovered from \path{thiagopatzdorf/fabrica-de-sites}, branch
 \path{research/preco-da-impossibilidade}, commit
 \texttt{e7f3ed9c52e6992eaa244fc75a04ed4abed89fd1}.
 The archived report describes the principal as three translates of a
-$[9,3]_7$ linear kernel (1029 words) with 322 patch words. This is reported
-provenance, not an independently replayed derivation: the original generator
+$[9,3]_7$ linear kernel (1029 words) with 322 patch words. The three-coset decomposition and generator matrix have now been independently
+checked against the actual prefix of the recovered file. The patch search was
+not replayed: the original generator
 revision and seed are unknown. The construction proved computationally is the
 actual recovered file, not this narrative. The secondary files are reported as
 linear codes or unions of cosets, with patches in the seven-ary length-eight case.
@@ -115,6 +116,23 @@ reconstructs every ambient word and checks its selected word's literal Hamming
 distance. Truncated, extended, out-of-range and mathematically incorrect witnesses
 are rejected even when their hashes are updated.
 
+
+A compact partition certificate is also generated and checked. Let $L$ be the
+343-word linear span described in the archived matrix, and $C_0$ the three-coset
+1029-word prefix of the actual file. The checker confirms those complete cosets
+and the bijective projection of $L$ to its first three coordinates. Coordinate
+translation modulo seven is a Hamming isometry and $C_0+L=C_0$. Each word has
+exactly one normalized representative with prefix $000$. A checked witness in
+$C_0$ for that representative transports to every word of its orbit. Marked
+representatives instead have direct witnesses for every word in the orbit.
+The partition therefore exhausts the entire space without a new construction.
+There are $7^6=117649$ representatives, with 27 exceptional orbits containing
+9261 points. The quotient and exception uint16 payloads total 253820 bytes;
+the checker verifies 40\,344\,346 points by symmetry and 9261 explicitly.
+This compact route is preferred for future kernel replay; both it and the
+original flat full-space certificate are retained. Their external PASS reports
+are not substituted for a Lean theorem.
+
 \section{Verified and candidate upper bounds}
 \begin{theorem}[Computationally verified construction]
 The frozen 1351-word file has 1351 distinct elements of $A_7^9$ and satisfies
@@ -142,7 +160,10 @@ Lean 4.30.0-rc2. \texttt{QaryWord} is \texttt{Fin n}\,$\to$\,\texttt{Fin q};
 \texttt{CoversFinset} proof, and \texttt{toUpper} yields \texttt{QaryKUpper}.
 No covering-code foundations are reimplemented.
 
-The actual build proves $K_2(3,1)\le2$ using $\{000,111\}$ and
+A concurrent research-branch commit also supplies the classical sphere lower bound
+$K_7(9,4)\ge221$ via the upstream sphere-covering theorem; this source is
+preserved and included in the final build. The actual build proves
+$K_2(3,1)\le2$ using $\{000,111\}$ and
 \path{covering_decide +kernel}, plus generic selector lemmas and a cardinality
 bound for the 1351-word principal Finset loaded in original order. There are zero
 \texttt{sorry}, \texttt{admit} or new axiom declarations. Printed dependencies are
@@ -150,7 +171,7 @@ only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
 Native mode is not enabled; upstream native mode overrides the kernel flag if
 explicitly enabled. The principal coverage theorem is absent. A generic theorem
 requiring an \texttt{ExplicitQaryUpper} hypothesis is not a proof that such an
-object exists. The packed witness decoder and complete Lean replay remain work.
+object exists. The modular-translation isometry, explicit matrix normalization, injectivity, 343-word coset cardinality and coset transport are now proved in Lean. Decoding the actual compact payloads, linking the cosets to the original Finset and reflecting the finite witness checks remain work.
 
 \section{Reproducibility}
 Install Python 3.12, NumPy 2.3.5, g++ and OpenSSL headers; install elan for the
@@ -195,7 +216,7 @@ Canonical files, metadata, original byte archives, hash files and reports reside
 under \path{research/covering-codes/certificates/}. The principal directory is
 \path{q7_n9_r4_m1351}; it also contains \texttt{witness.u16le.gz},
 \path{witness-metadata.json} and \path{certificate-check.json}.
-The payload hash is
+The flat payload hash is
 \begin{center}\small
 \texttt{6f4425a72b66efa284e7ffc1bfd20117fc058e44bb46b37650f2c9dca5a72d2a}.
 \end{center}

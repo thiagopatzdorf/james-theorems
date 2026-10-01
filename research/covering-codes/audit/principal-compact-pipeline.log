@@ -1,0 +1,34 @@
+make -C research/covering-codes verify-computational
+make[1]: Entering directory '/workspace/james-theorems/research/covering-codes'
+python3 tools/verify_case.py q7_n9_r4_m1351 --computational-only
+code.txt: OK
+originals/6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52.bin: OK
+witness.u16le.gz: OK
+witness-metadata.json: OK
+quotient.u16le: OK
+exceptions.u16le: OK
+partition-metadata.json: OK
+{
+  "status": "PASS",
+  "ambient_words": 40353607,
+  "code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "certificate_sha256": "6f4425a72b66efa284e7ffc1bfd20117fc058e44bb46b37650f2c9dca5a72d2a",
+  "max_witness_distance": 4,
+  "runtime_seconds": 9.00015294199875,
+  "formal_status": "NOT_REPLAYED_IN_LEAN"
+}
+{
+  "status": "PASS",
+  "code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "certificate_sha256": "014e806eaec285341392cbc2df13043e3d44612070c77215486d6432d2fe76e1",
+  "quotient_words": 117649,
+  "sentinel_orbits": 27,
+  "checked_exception_words": 9261,
+  "covered_by_symmetry": 40344346,
+  "ambient_words": 40353607,
+  "payload_bytes": 253820,
+  "runtime_seconds": 0.2445769690002635,
+  "formal_status": "NOT_REPLAYED_IN_LEAN"
+}
+{"status": "COMPUTATIONALLY_VERIFIED", "formal": "NOT_CLAIMED", "sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52"}
+make[1]: Leaving directory '/workspace/james-theorems/research/covering-codes'

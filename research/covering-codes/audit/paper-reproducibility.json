@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "pdf_sha256": "85f1cf4f26ab619d9c98751546a2577fd4ecaf3eaef52d77d30e398d77e15118",
+  "two_independent_make_paper_invocations_same_bytes": true,
+  "SOURCE_DATE_EPOCH": 1790812800,
+  "FORCE_SOURCE_DATE": 1,
+  "scope": "same TeX distribution; canonical PDF metadata time, not construction creation time"
+}
