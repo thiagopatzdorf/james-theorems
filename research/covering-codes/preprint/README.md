@@ -47,7 +47,9 @@ The nested project in `../formal/` pins Andreas Florath's proof-carrying coverin
 
 The upstream library already defines `QaryKUpper`, `ExplicitQaryUpper`, Hamming coverage, and the bridge from an explicit covering certificate to an upper-bound proposition. We therefore add instance certificates instead of re-formalizing the foundations.
 
-Current local runtime limitation: the environment used to prepare this branch has no `lake` executable, so the adapter has not been built here. It is intentionally marked **NOT EXECUTED**, not PASS.
+The sphere-covering lower bound on the principal parameters is now replayed in Lean: `K_7(9,4) ≥ 221` (`CoveringRecords.hammingSphere_q7_n9_r4`, kernel `decide`). The candidate `≤ 1351` is still not a theorem.
+
+`lake build CoveringRecords.Candidate CoveringRecords.HammingSphere` passed on 2026-10-01.
 
 ## Literature anchors
 

@@ -14,6 +14,19 @@ theorem principalClaim_of_explicit
     (E : ExplicitQaryUpper 7 9 4 1351) : QaryKUpper 7 9 4 1351
 ```
 
+## What is proved
+
+`CoveringRecords/HammingSphere.lean` proves the sphere-covering bound on the
+principal parameters, by replaying Florath's `sphereLower_valid`:
+
+```lean
+theorem hammingSphere_q7_n9_r4 : QaryKLower 7 9 4 221
+```
+
+`sphereLower 7 9 4 = 221` is kernel `decide`, not `native_decide`.
+
+## What is not proved
+
 It does **not** claim `K_7(9,4) <= 1351` yet. That statement becomes formally certified only after the canonical 1351-word construction and a checked coverage certificate are ingested.
 
 ## Build
@@ -33,4 +46,4 @@ Do not add a theorem named `q7_n9_r4_m1351` until:
 4. the Lean certificate is generated for exactly those bytes;
 5. the project builds with no `sorry` or `admit`.
 
-Current runtime note: the ChatGPT working container used to prepare this branch did not have `lake` installed, so the adapter build has not been executed here.
+`lake build CoveringRecords.Candidate CoveringRecords.HammingSphere` passed on 2026-10-01 (Lean v4.30.0-rc2). That build does not include a 1351-word witness.

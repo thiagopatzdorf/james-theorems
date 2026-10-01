@@ -16,3 +16,8 @@ Required files before promotion:
 - a Lean instance certificate tied to the same hash
 
 A valid certificate must establish that every one of the `7^9 = 40,353,607` ambient words is within Hamming distance at most 4 of one of the 1351 codewords.
+
+The matching **lower** bound is no longer open: `K_7(9,4) ≥ 221` is
+`CoveringRecords.hammingSphere_q7_n9_r4` (sphere-covering / Hamming ball,
+kernel `decide`). The gap 221…1351 is only closed from above by the files
+above.

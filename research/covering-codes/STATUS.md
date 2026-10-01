@@ -28,4 +28,29 @@ Validity and novelty remain separate:
 
 ## Local-build status
 
-The adapter source contains no `sorry` or `admit`, but the current ChatGPT runtime does not have `lake` installed. Therefore the Lean build is **NOT EXECUTED**, not PASS.
+Executed on 2026-10-01 with Lean `v4.30.0-rc2`, Florath
+`460df105545c2d6b04ba71f29de6b56dbda92825`, and the Mathlib cache for
+`d9694e37437f9a5cb6f81f8b25c4c754b398e213`.
+
+`lake build CoveringRecords.Candidate CoveringRecords.HammingSphere` — **PASS**.
+No `sorry`, no `admit`, no `native_decide`.
+
+`#print axioms` for `hammingSphere_q7_n9_r4` and `sphereLower_q7_n9_r4`:
+`propext`, `Classical.choice`, `Quot.sound`. `Classical.choice` comes from
+Mathlib's Hamming distance, which this layer imports on purpose.
+
+## Hamming sphere bound — proved
+
+`CoveringRecords.hammingSphere_q7_n9_r4`:
+
+`QaryKLower 7 9 4 221`
+
+That is `K_7(9,4) ≥ 221`, the classical sphere-covering (Hamming-ball) bound.
+`sphereLower 7 9 4` reduces by kernel `decide` to `221`
+(`V_7(9,4) = 182791`, `7^9 = 40353607`, `220 * 182791 = 40214020 < 7^9`).
+
+## Still not a theorem
+
+`K_7(9,4) ≤ 1351` is **not** asserted. `principalClaim_of_explicit` only
+bridges an `ExplicitQaryUpper 7 9 4 1351` witness, and that witness is not in
+the repository. It was not reconstructed.

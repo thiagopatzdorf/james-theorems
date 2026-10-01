@@ -1,1 +1,2 @@
 import CoveringRecords.Candidate
+import CoveringRecords.HammingSphere
