@@ -25,5 +25,6 @@
   "canonicalization": "CRLF to LF; final LF added if absent; order unchanged",
   "M_unique": 1351,
   "duplicates": 0,
-  "source_repository": "thiagopatzdorf/fabrica-de-sites"
+  "source_repository": "thiagopatzdorf/fabrica-de-sites",
+  "source_git_blob_sha": "fa56312e303af783b1ca7d7a96fd1a241d34e586"
 }

@@ -1,5 +1,3 @@
 # K_5(7,2) <= 500
 
-ARTIFACT_MISSING. No canonical construction was recovered.
-No hash or coverage result is asserted; metadata fields are null.
-See ../../artifact-search.md and ../../literature.md.
+COMPUTATIONALLY_VERIFIED: A/B independently cover the entire universe, with 500 unique words. Lean coverage replay is incomplete. See provenance.md, SHA256SUMS and verification JSON. Novelty is separate; see ../../literature.md.

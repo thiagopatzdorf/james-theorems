@@ -15,7 +15,7 @@
   "max_min_distance": 4,
   "first_uncovered": null,
   "exhaustive": true,
-  "runtime_seconds": 1.6671602639999037,
+  "runtime_seconds": 0.5193771340000239,
   "method": "transform",
   "status": "PASS"
 }

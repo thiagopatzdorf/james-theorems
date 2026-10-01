@@ -1,0 +1,13 @@
+{
+  "format": "flat uint16 little-endian; no header",
+  "ambient_order": "big-endian base-q, original line indices",
+  "q": 7,
+  "n": 9,
+  "R": 4,
+  "M": 1351,
+  "code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "payload_bytes": 80707214,
+  "payload_sha256": "6f4425a72b66efa284e7ffc1bfd20117fc058e44bb46b37650f2c9dca5a72d2a",
+  "gzip_sha256": "6f91c10f75e6d3e27a0539b1d74a799e42f79638e024551efbde6ef2d069db7a",
+  "formal_status": "NOT_REPLAYED_IN_LEAN"
+}
