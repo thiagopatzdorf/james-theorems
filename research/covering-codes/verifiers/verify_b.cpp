@@ -20,7 +20,8 @@ int main(int argc, char** argv) {
   if(argc!=5) throw std::runtime_error("usage: verify_b q n R code.txt");
   auto start=std::chrono::steady_clock::now();
   auto number=[](const char* s) {std::string v(s);size_t k=0;int a=std::stoi(v,&k);
-   if(k!=v.size()) throw std::runtime_error("bad integer");return a;};
+   if(k!=v.size()) throw std::runtime_error("bad integer");
+   return a;};
   int q=number(argv[1]),n=number(argv[2]),R=number(argv[3]);
   if(q<2||q>10||n<1||n>32||R<0||R>n) throw std::runtime_error("parameter range");
   uint64_t N=1;std::vector<uint64_t> power(n);

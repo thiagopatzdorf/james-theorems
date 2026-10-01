@@ -29,6 +29,7 @@ class IndependentChecks(unittest.TestCase):
         p = Path(self.temp.name)/'code.txt'
         p.write_bytes(raw)
         a = verify(q, n, R, p)
+        transformed = verify(q, n, R, p, method='transform')
         proc = subprocess.run([str(self.binary), str(q), str(n), str(R), str(p)], capture_output=True, text=True)
         self.assertIn(proc.returncode, (0, 1), proc.stderr)
         b = json.loads(proc.stdout)
@@ -36,6 +37,7 @@ class IndependentChecks(unittest.TestCase):
                     'ambient_words','sha256','canonical','exhaustive','covered',
                     'uncovered','max_min_distance','first_uncovered'):
             self.assertEqual(a[key], b[key], (key, q,n,R,raw))
+            self.assertEqual(a[key], transformed[key], ('transform',key,q,n,R,raw))
         self.assertEqual(a['sha256'], hashlib.sha256(raw).hexdigest())
         return a
 

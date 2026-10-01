@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Exhaustive reference: every ambient word, every codeword, literal Hamming.
-No early radius exit: max_min_distance is exact. Large instances are costly.
+No early radius exit: max_min_distance is exact. The default literal scan is
+cross-checked against the separable min-plus transform used for large spaces.
 """
 import argparse
 import hashlib
@@ -10,7 +11,7 @@ from pathlib import Path
 import time
 
 
-def verify(q, n, radius, path, parse_only=False):
+def verify(q, n, radius, path, parse_only=False, method='scan'):
     if not (2 <= q <= 10 and 1 <= n <= 32 and 0 <= radius <= n):
         raise ValueError('require 2<=q<=10, 1<=n<=32, 0<=R<=n')
     start = time.monotonic()
@@ -32,7 +33,32 @@ def verify(q, n, radius, path, parse_only=False):
                   canonical=bool(raw) and raw.endswith(b'\n') and not invalid,
                   covered=None, uncovered=None, max_min_distance=None,
                   first_uncovered=None, exhaustive=False)
-    if not parse_only and not invalid and unique:
+    if not parse_only and not invalid and unique and method == 'transform':
+        # Separable min-plus transform. After processing axes 0..k, each cell
+        # holds min_c [processed mismatch count + unprocessed equality constraint].
+        # Updating a coordinate costs 0 to stay, 1 to select any other symbol.
+        # min(old[j], 1+min(old[:])) is exactly that coordinate's transform.
+        import numpy as np
+        if q**n > 250_000_000:
+            raise ValueError('transform memory guard')
+        distance = np.full((q,)*n, n+1, dtype=np.uint8)
+        for c in unique:
+            distance[c] = 0
+        for axis in range(n):
+            cheapest = distance.min(axis=axis, keepdims=True)
+            np.minimum(distance, cheapest + np.uint8(1), out=distance)
+        flat = distance.reshape(-1)
+        covered = int(np.count_nonzero(flat <= radius))
+        # Argmax gives the first True without allocating all uncovered indices.
+        bad = flat > radius
+        first = None
+        if covered != q**n:
+            index = int(bad.argmax())
+            first = ''.join(str(int(d)) for d in np.unravel_index(index, (q,)*n))
+        result.update(covered=covered, uncovered=q**n-covered,
+                      max_min_distance=int(flat.max()), first_uncovered=first,
+                      exhaustive=True)
+    elif not parse_only and not invalid and unique:
         covered, maximum, first = 0, 0, None
         for word in itertools.product(range(q), repeat=n):
             nearest = min(sum(a != b for a, b in zip(word, c)) for c in unique)
@@ -46,6 +72,7 @@ def verify(q, n, radius, path, parse_only=False):
     elif not parse_only and not invalid:
         result.update(covered=0, uncovered=q**n, first_uncovered='0'*n, exhaustive=True)
     result['runtime_seconds'] = time.monotonic()-start
+    result['method'] = method
     return result
 
 
@@ -56,9 +83,10 @@ def main():
     p.add_argument('code')
     p.add_argument('--parse-only', action='store_true')
     p.add_argument('--expected-m', type=int)
+    p.add_argument('--method', choices=('scan','transform'), default='scan')
     a = p.parse_args()
     try:
-        r = verify(a.q, a.n, a.R, a.code, a.parse_only)
+        r = verify(a.q, a.n, a.R, a.code, a.parse_only, a.method)
     except (OSError, ValueError) as e:
         print(json.dumps({'status': 'ERROR', 'error': str(e)}))
         return 2
