@@ -1,0 +1,42 @@
+{
+  "schema": "impossibility/certificate/1",
+  "cell": "K5_9_3",
+  "q": 5,
+  "n": 9,
+  "R": 3,
+  "size": 1250,
+  "code_file": "data/codes/q5_n9_R3_M1250.txt",
+  "canonical_sha256": "ee6235466bb1579465ef07867ab9e02e42ab36eef5d9500e6a25ade66652cd85",
+  "canonical_form": "sha256 of sorted codewords joined by LF with trailing LF",
+  "generator": {
+    "method": "union of c=2 cosets of a GF(5)-linear [9,4] code (lincov), no patch",
+    "agent": "V1 (agents4)",
+    "run_tag": "pp1 T=25s seed=1 k=4 c=2",
+    "source_commit": "coldcase 56a8cce68ec3f6f406c845f5cc3e51711e5b8294",
+    "raw_file": "pp1_5_9_3_1250_pp.txt",
+    "raw_sha256": "334d055a45bcc7fffd7cc7ed5cefd719e8787587ced1b66b44cc85785a6bdea6",
+    "note": "provenance transcribed; generator not re-run here"
+  },
+  "verifiers": [
+    {
+      "impl": "nearest-c",
+      "source": "verifier/verify_nearest.c",
+      "result": "VERIFIED",
+      "rc": 0,
+      "output": "VERIFIED impl=nearest-c q=5 n=9 R=3 words=1250 space=1953125 uncovered=0",
+      "seconds": 25.1
+    },
+    {
+      "impl": "ballmark-py",
+      "source": "verifier/verify_cover.py",
+      "result": "VERIFIED",
+      "rc": 0,
+      "output": "VERIFIED impl=ballmark-py q=5 n=9 R=3 words=1250 space=1953125 uncovered=0",
+      "seconds": 23.3
+    }
+  ],
+  "repo_base_commit": "c4e1f0161fb20fe97ed6a131000ea98c28e50840",
+  "created_utc": "2026-10-01T04:33:51Z",
+  "host": "Windows-11-10.0.26200-SP0",
+  "claim": "K_5(9,3) <= 1250"
+}

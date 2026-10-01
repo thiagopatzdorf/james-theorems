@@ -1,0 +1,42 @@
+{
+  "schema": "impossibility/certificate/1",
+  "cell": "K5_9_4",
+  "q": 5,
+  "n": 9,
+  "R": 4,
+  "size": 250,
+  "code_file": "data/codes/q5_n9_R4_M250.txt",
+  "canonical_sha256": "b818a971c86488280ed74c524398dae5561dd1e231de6d734b7206cbfd9a478c",
+  "canonical_form": "sha256 of sorted codewords joined by LF with trailing LF",
+  "generator": {
+    "method": "union of c=2 cosets of a GF(5)-linear [9,3] code (lincov), no patch",
+    "agent": "V1 (agents4)",
+    "run_tag": "pp1 T=25s seed=1 k=3 c=2",
+    "source_commit": "coldcase 56a8cce68ec3f6f406c845f5cc3e51711e5b8294",
+    "raw_file": "pp1_5_9_4_250_pp.txt",
+    "raw_sha256": "c605e57c41117da0141fdd88dc3972598fb4dd6e02bedc3edd477330f3bf5922",
+    "note": "raw_sha256 recomputed from the source file and matched to agents4/V1/PROVENANCE.md"
+  },
+  "verifiers": [
+    {
+      "impl": "nearest-c",
+      "source": "verifier/verify_nearest.c",
+      "result": "VERIFIED",
+      "rc": 0,
+      "output": "VERIFIED impl=nearest-c q=5 n=9 R=4 words=250 space=1953125 uncovered=0",
+      "seconds": 2.2
+    },
+    {
+      "impl": "ballmark-py",
+      "source": "verifier/verify_cover.py",
+      "result": "VERIFIED",
+      "rc": 0,
+      "output": "VERIFIED impl=ballmark-py q=5 n=9 R=4 words=250 space=1953125 uncovered=0",
+      "seconds": 31.9
+    }
+  ],
+  "repo_base_commit": "c4e1f0161fb20fe97ed6a131000ea98c28e50840",
+  "created_utc": "2026-10-01T04:33:37Z",
+  "host": "Windows-11-10.0.26200-SP0",
+  "claim": "K_5(9,4) <= 250"
+}

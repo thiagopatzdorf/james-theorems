@@ -1,0 +1,42 @@
+{
+  "schema": "impossibility/certificate/1",
+  "cell": "K7_9_4",
+  "q": 7,
+  "n": 9,
+  "R": 4,
+  "size": 1351,
+  "code_file": "data/codes/q7_n9_R4_M1351.txt",
+  "canonical_sha256": "54dbdade1337432303847d2fd0d1c13b506de08ba518e1694c5fb37ed0e81162",
+  "canonical_form": "sha256 of sorted codewords joined by LF with trailing LF",
+  "generator": {
+    "method": "3 translates of a GF(7)-linear [9,3] kernel (columns 100 125 133 120 136 164 104 113 115; syndromes 0 16925 6913) = 1029 words, plus 322 greedy patch words",
+    "agent": "G3 (agents5)",
+    "run_tag": "patch.exe 9 3 4 p_hb.txt 20 ...",
+    "source_commit": "not recorded in PROVENANCE.md",
+    "raw_file": "p_hb.txt",
+    "raw_sha256": "c644bdfe354d74941eb6276d16f6a361544e4db2d97005977df2ffd8ea1a5fae",
+    "note": "raw file had CRLF line endings; canonical hash below is EOL-independent"
+  },
+  "verifiers": [
+    {
+      "impl": "nearest-c",
+      "source": "verifier/verify_nearest.c",
+      "result": "VERIFIED",
+      "rc": 0,
+      "output": "VERIFIED impl=nearest-c q=7 n=9 R=4 words=1351 space=40353607 uncovered=0",
+      "seconds": 148.1
+    },
+    {
+      "impl": "ballmark-py",
+      "source": "verifier/verify_cover.py",
+      "result": "VERIFIED",
+      "rc": 0,
+      "output": "VERIFIED impl=ballmark-py q=7 n=9 R=4 words=1351 space=40353607 uncovered=0",
+      "seconds": 590.2
+    }
+  ],
+  "repo_base_commit": "c4e1f0161fb20fe97ed6a131000ea98c28e50840",
+  "created_utc": "2026-10-01T04:45:21Z",
+  "host": "Windows-11-10.0.26200-SP0",
+  "claim": "K_7(9,4) <= 1351"
+}

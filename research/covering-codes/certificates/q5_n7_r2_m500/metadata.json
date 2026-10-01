@@ -1,0 +1,27 @@
+{
+  "q": 5,
+  "n": 7,
+  "R": 2,
+  "M": 500,
+  "metric": "Hamming",
+  "alphabet": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "code_sha256": "52a85f1b069e06df3c8503a3001e90d8d8170139e05b4ced05c5b8dabe5c27c3",
+  "original_sha256": "52a85f1b069e06df3c8503a3001e90d8d8170139e05b4ced05c5b8dabe5c27c3",
+  "source_path": "research/preco-da-impossibilidade/data/codes/q5_n7_R2_M500.txt",
+  "source_commit": "e7f3ed9c52e6992eaa244fc75a04ed4abed89fd1",
+  "generator": null,
+  "seed": null,
+  "created_at": null,
+  "canonicalized_at": "2026-10-01T13:26:21.573687+00:00",
+  "provenance_status": "RECOVERED_GIT_OBJECT_GENERATION_PARTIALLY_REPORTED",
+  "canonicalization": "CRLF to LF; final LF added if absent; order unchanged",
+  "M_unique": 500,
+  "duplicates": 0,
+  "source_repository": "thiagopatzdorf/fabrica-de-sites"
+}

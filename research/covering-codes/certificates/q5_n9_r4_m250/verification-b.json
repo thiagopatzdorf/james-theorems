@@ -1,0 +1,1 @@
+{"q":5,"n":9,"R":4,"M_parsed":250,"M_unique":250,"duplicates":0,"invalid_lines":0,"ambient_words":1953125,"sha256":"c605e57c41117da0141fdd88dc3972598fb4dd6e02bedc3edd477330f3bf5922","canonical":true,"exhaustive":true,"covered":1953125,"uncovered":0,"max_min_distance":4,"first_uncovered":null,"runtime_seconds":0.325731,"status":"PASS"}

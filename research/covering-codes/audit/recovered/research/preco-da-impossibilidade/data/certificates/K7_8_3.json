@@ -1,0 +1,42 @@
+{
+  "schema": "impossibility/certificate/1",
+  "cell": "K7_8_3",
+  "q": 7,
+  "n": 8,
+  "R": 3,
+  "size": 1893,
+  "code_file": "data/codes/q7_n8_R3_M1893.txt",
+  "canonical_sha256": "7c276cf1fffe7e43da8d21fa24ebf2ec91d413fb5c8c5d08bc3ee9b8aeeb93b1",
+  "canonical_form": "sha256 of sorted codewords joined by LF with trailing LF",
+  "generator": {
+    "method": "5 translates of a GF(7)-linear [8,3] kernel (parity-check columns 110 134 125 136 112 010 014 121; syndromes 0 13973 2824 5599 11177) = 1715 words, plus 178 patch words (greedy + local search)",
+    "agent": "G6 (agents6)",
+    "run_tag": "patch3 LS=4000000 seed 1 (best of 7 seeds, 178-180 patch words)",
+    "source_commit": "not recorded in RESULT.md",
+    "raw_file": "k8_1893_lf.txt",
+    "raw_sha256": "07e2f3c1c65608b037fb13a2e85fd9ea25c2ace2bcc9e30a128e1833c2d06e28",
+    "note": "history of this cell in earlier notes: 2290 (V1) -> 2058/2001 (G3) -> 1893 (G6)"
+  },
+  "verifiers": [
+    {
+      "impl": "nearest-c",
+      "source": "verifier/verify_nearest.c",
+      "result": "VERIFIED",
+      "rc": 0,
+      "output": "VERIFIED impl=nearest-c q=7 n=8 R=3 words=1893 space=5764801 uncovered=0",
+      "seconds": 61.4
+    },
+    {
+      "impl": "ballmark-py",
+      "source": "verifier/verify_cover.py",
+      "result": "VERIFIED",
+      "rc": 0,
+      "output": "VERIFIED impl=ballmark-py q=7 n=8 R=3 words=1893 space=5764801 uncovered=0",
+      "seconds": 68.5
+    }
+  ],
+  "repo_base_commit": "c4e1f0161fb20fe97ed6a131000ea98c28e50840",
+  "created_utc": "2026-10-01T04:35:13Z",
+  "host": "Windows-11-10.0.26200-SP0",
+  "claim": "K_7(8,3) <= 1893"
+}

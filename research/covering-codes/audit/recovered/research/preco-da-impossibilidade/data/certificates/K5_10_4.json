@@ -1,0 +1,42 @@
+{
+  "schema": "impossibility/certificate/1",
+  "cell": "K5_10_4",
+  "q": 5,
+  "n": 10,
+  "R": 4,
+  "size": 625,
+  "code_file": "data/codes/q5_n10_R4_M625.txt",
+  "canonical_sha256": "9e6866710516586faa66b91b5130c4d3c2c4c6857c5d38abfa554ecd37ef42e7",
+  "canonical_form": "sha256 of sorted codewords joined by LF with trailing LF",
+  "generator": {
+    "method": "a single linear [10,4] code over GF(5) (c=1, no patch)",
+    "agent": "V1 (agents4)",
+    "run_tag": "pp1 T=25s seed=1 k=4 c=1",
+    "source_commit": "coldcase 56a8cce68ec3f6f406c845f5cc3e51711e5b8294",
+    "raw_file": "pp1_5_10_4_625_pp.txt",
+    "raw_sha256": "ba1ec554be784e105c9c729c0cb5ea08c5cf10d120ee617ede96d864a83e53b9",
+    "note": "linear code: covering radius 4 can also be checked by the syndrome argument; here only the two direct verifiers are used"
+  },
+  "verifiers": [
+    {
+      "impl": "nearest-c",
+      "source": "verifier/verify_nearest.c",
+      "result": "VERIFIED",
+      "rc": 0,
+      "output": "VERIFIED impl=nearest-c q=5 n=10 R=4 words=625 space=9765625 uncovered=0",
+      "seconds": 48.9
+    },
+    {
+      "impl": "ballmark-py",
+      "source": "verifier/verify_cover.py",
+      "result": "VERIFIED",
+      "rc": 0,
+      "output": "VERIFIED impl=ballmark-py q=5 n=10 R=4 words=625 space=9765625 uncovered=0",
+      "seconds": 109.3
+    }
+  ],
+  "repo_base_commit": "c4e1f0161fb20fe97ed6a131000ea98c28e50840",
+  "created_utc": "2026-10-01T04:35:41Z",
+  "host": "Windows-11-10.0.26200-SP0",
+  "claim": "K_5(10,4) <= 625"
+}
