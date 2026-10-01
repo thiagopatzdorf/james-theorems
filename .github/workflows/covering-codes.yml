@@ -1,0 +1,59 @@
+name: Covering codes audit
+on:
+  pull_request:
+    paths: ['research/covering-codes/**', '.github/workflows/covering-codes.yml', 'Makefile']
+  workflow_dispatch:
+    inputs:
+      exhaustive:
+        description: 'Run both exhaustive verifiers on all eight frozen constructions'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  fast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r research/covering-codes/requirements.txt
+      - run: make covering-fast
+  lean:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.elan
+            research/covering-codes/formal/.lake
+          key: covering-lean-${{ runner.os }}-${{ hashFiles('research/covering-codes/formal/lean-toolchain', 'research/covering-codes/formal/lake-manifest.json') }}
+      - run: |
+          if ! test -x "$HOME/.elan/bin/elan"; then
+            curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          fi
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - run: make covering-formal
+      # The library/tiny/cardinality build is deliberately distinct from coverage.
+      - run: python3 -c "import json; d=json.load(open('research/covering-codes/formal-verification.json')); assert d['principal_coverage']=='NOT_PROVED'"
+  exhaustive:
+    if: github.event_name == 'workflow_dispatch' && inputs.exhaustive
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r research/covering-codes/requirements.txt
+      - run: make verify-all-computational
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: exhaustive-covering-reports
+          path: |
+            research/covering-codes/certificates/**/verification-*.json
+            research/covering-codes/certificates/**/certificate-check.json

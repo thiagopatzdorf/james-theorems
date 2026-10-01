@@ -1,0 +1,192 @@
+{
+  "date": "2026-10-01",
+  "primary": {
+    "repo": "thiagopatzdorf/james-theorems",
+    "branch": "research/covering-codes-preprint",
+    "initial_commit": "c2806d9af1864ffea519c0a6f4bb9bccc21a5c94",
+    "tree_truncated": false
+  },
+  "code_searches": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "results": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "results": []
+        },
+        "isError": false
+      }
+    }
+  ],
+  "commit_searches": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "commits": [
+            {
+              "sha": "79a0626e1d235a1727a7fc2c61d2a60608716f6e",
+              "message": "docs: explain the Ideris retry/backoff and why it exists\n\nNew \"Retry/backoff (por que existe)\" section in\ndocs/integrations/ideris-api-v3.md covering the policy (timeout, attempts,\nwhat's retried vs not) and the real business reason (a single transient\nIderis blip shouldn't fail the whole catalog:sync-ideris run). README\npoints at it. WORK_LOG entry for the session.",
+              "url": "https://api.github.com/repos/thiagopatzdorf/fabrica-de-sites/commits/79a0626e1d235a1727a7fc2c61d2a60608716f6e",
+              "html_url": "https://github.com/thiagopatzdorf/fabrica-de-sites/commit/79a0626e1d235a1727a7fc2c61d2a60608716f6e",
+              "diff": null,
+              "files": null,
+              "repository_full_name": "thiagopatzdorf/fabrica-de-sites",
+              "comments": null,
+              "author": null,
+              "committer": null,
+              "created_at": "2026-08-20T11:33:16.000Z",
+              "git_author_email": null,
+              "display_url": "https://github.com/thiagopatzdorf/fabrica-de-sites/commit/79a0626e1d235a1727a7fc2c61d2a60608716f6e",
+              "display_title": "docs: explain the Ideris retry/backoff and why it exists"
+            },
+            {
+              "sha": "5e9b2463dc77a1c002869b25c26e8139d36119ac",
+              "message": "feat(catalog): implement Ideris API v3 client skeleton\n\nAdds a real HTTP client for the documented Ideris API v3 endpoints (POST /login\nwith 8h JWT caching, GET /sku/search, /sku/code/{sku}, /sku/{id}, PUT\n/sku/stock), a DTO-to-Product mapper, an HTTP-mocked test suite covering auth,\nerror taxonomy (401/404/429/5xx), timeout and retry/backoff, and wiring into\nIderisCatalogProvider behind the existing IDERIS_API_ENABLED flag. Still no\nreal network calls were made; IDERIS_API_ENABLED stays false and\nIDERIS_PRIVATE_KEY stays empty until the real key is available.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>",
+              "url": "https://api.github.com/repos/thiagopatzdorf/fabrica-de-sites/commits/5e9b2463dc77a1c002869b25c26e8139d36119ac",
+              "html_url": "https://github.com/thiagopatzdorf/fabrica-de-sites/commit/5e9b2463dc77a1c002869b25c26e8139d36119ac",
+              "diff": null,
+              "files": null,
+              "repository_full_name": "thiagopatzdorf/fabrica-de-sites",
+              "comments": null,
+              "author": null,
+              "committer": null,
+              "created_at": "2026-07-29T03:34:55.000-03:00",
+              "git_author_email": null,
+              "display_url": "https://github.com/thiagopatzdorf/fabrica-de-sites/commit/5e9b2463dc77a1c002869b25c26e8139d36119ac",
+              "display_title": "feat(catalog): implement Ideris API v3 client skeleton"
+            },
+            {
+              "sha": "6fee54ad650b39359243b64947137bb953d9e6a2",
+              "message": "feat: automatic job lifecycle with heartbeat, reconcile and notifications\n\nImplement the Python-side lifecycle so a Factory issue runs end-to-end\nwithout manual Termius operations:\n\n- factory lifecycle: heartbeats live workers and reconciles dead ones to a\n  terminal state (exit 0 -> completed, non-zero -> failed, unknown exit ->\n  failed with an explicit reconcile error; a dead PID never stays running).\n- factory heartbeat/complete/fail: idempotent lifecycle commands that fill\n  finished_at, duration_seconds and exit_code.\n- notify: integration with the factory-notify CLI contract\n  (FACTORY_NOTIFY_ENABLED/CMD/CWD/TIMEOUT); provider failures never crash or\n  change the job outcome.\n- Reconciliation and notifications are idempotent: a second pass never\n  duplicates a transition or a notification.\n\nTests: 44 new tests covering live heartbeat, exit-0 completion, non-zero\nfailure, dead-PID reconciliation, idempotency and notification events.",
+              "url": "https://api.github.com/repos/thiagopatzdorf/fabrica-de-sites/commits/6fee54ad650b39359243b64947137bb953d9e6a2",
+              "html_url": "https://github.com/thiagopatzdorf/fabrica-de-sites/commit/6fee54ad650b39359243b64947137bb953d9e6a2",
+              "diff": null,
+              "files": null,
+              "repository_full_name": "thiagopatzdorf/fabrica-de-sites",
+              "comments": null,
+              "author": null,
+              "committer": null,
+              "created_at": "2026-08-16T23:32:14.000Z",
+              "git_author_email": null,
+              "display_url": "https://github.com/thiagopatzdorf/fabrica-de-sites/commit/6fee54ad650b39359243b64947137bb953d9e6a2",
+              "display_title": "feat: automatic job lifecycle with heartbeat, reconcile and notifications"
+            },
+            {
+              "sha": "3c3bd179c132d3c5badbe4e22fbaebcdaec291c2",
+              "message": "Factory Web V2 Phase 1: admin login + credential entry form (#3)\n\n* feat: read Pomerode's multi-account capacity schema, add reusable notify script\n\nops_metrics.capacity_providers_summary() now reads capacity_providers.json's\naccounts[] list (Pomerode grew multi-account support so several people's keys\nfor the same provider can coexist) instead of assuming one flat status per\nprovider -- rolls up capacity_added across every READY account, tagged by\nowner.\n\nAlso adds scripts/notify_email.py: generalizes the ad-hoc Resend-via-vault\nemail script this session kept hand-writing (blocker notifications, signup\nchecklists) into one reusable CLI, per the standing \"notify blockers by\nemail\" preference. Documents the Cloudflare-403 gotcha (needs a real\nUser-Agent header) inline so it doesn't get rediscovered next time.\n\n* feat: Factory Web V2 Phase 1 -- admin login + credential entry form\n\nAdds /admin/* routes so Thiago can type a new vault secret into a real\nform instead of pasting it in chat/terminal, per docs/web-v2-credentials-\nand-chat.md. Phase 1 only (credential entry) -- chat (Phase 2) is\nexplicitly out of scope.\n\n- admin_auth.py: single-operator login ported from mybagcenter-site's\n  apps/storefront/lib/admin-auth.ts (hmac.compare_digest password check,\n  HMAC-signed admin_session cookie so the cookie never carries the\n  password itself). Password + signing secret both live in the vault\n  (FACTORY_WEB_ADMIN_PASSWORD, FACTORY_WEB_AUTH_SECRET), never hardcoded.\n- require_admin dependency guards every new route except the login form.\n- GET /admin/secrets lists names/metadata via vault.list_secrets (never\n  decrypts). GET+POST /admin/secrets/new writes straight through to\n  vault.set_secret (same function/audit log as `factory secret set`),\n  never logs/echoes/caches the submitted value.\n- CSRF: Origin/Referer header checked against request host on both POSTs,\n  fail-closed when both are absent (single-trusted-user model, not a full\n  CSRF token system per the spec).\n- Cookie defaults to non-secure (FACTORY_WEB_COOKIE_SECURE=1 to flip on)\n  because the VPS has no TLS in front yet -- a `secure` cookie would be\n  silently dropped over the current plain-HTTP/SSH-tunnel setup.\n- V1 (dashboard, /api/*, /healthz, /metrics) is untouched: still GET-only,\n  unauthenticated, verified by the full existing test_web.py suite passing\n  unchanged.\n- README's \"Factory Web V1\" section updated: new /admin/* endpoint table,\n  setup instructions for the two vault secrets, and an explicit TLS\n  warning (SSH tunnel/localhost only until Caddy is in front).\n\n24 new tests in tests/test_web_admin.py covering: correct/wrong password,\ncookie forgery/tampering, require_admin on every guarded route, secret\nvalue never leaking into responses/logs/audit log, invalid name handling,\nand CSRF rejection of cross-origin POSTs. Full suite: 353 passed.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Claude Sonnet 5 <noreply@anthropic.com>",
+              "url": "https://api.github.com/repos/thiagopatzdorf/fabrica-de-sites/commits/3c3bd179c132d3c5badbe4e22fbaebcdaec291c2",
+              "html_url": "https://github.com/thiagopatzdorf/fabrica-de-sites/commit/3c3bd179c132d3c5badbe4e22fbaebcdaec291c2",
+              "diff": null,
+              "files": null,
+              "repository_full_name": "thiagopatzdorf/fabrica-de-sites",
+              "comments": null,
+              "author": null,
+              "committer": null,
+              "created_at": "2026-08-19T17:11:25.000-03:00",
+              "git_author_email": null,
+              "display_url": "https://github.com/thiagopatzdorf/fabrica-de-sites/commit/3c3bd179c132d3c5badbe4e22fbaebcdaec291c2",
+              "display_title": "Factory Web V2 Phase 1: admin login + credential entry form (#3)"
+            }
+          ]
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "commits": [
+            {
+              "sha": "5a8f2b742a64d79af942a33460eb0d399d504750",
+              "message": "Merge pull request #1351 from andrea-ligios/master\n\nAdded Meterian.io",
+              "url": "https://api.github.com/repos/thiagopatzdorf/fabrica-de-sites/commits/5a8f2b742a64d79af942a33460eb0d399d504750",
+              "html_url": "https://github.com/thiagopatzdorf/fabrica-de-sites/commit/5a8f2b742a64d79af942a33460eb0d399d504750",
+              "diff": null,
+              "files": null,
+              "repository_full_name": "thiagopatzdorf/fabrica-de-sites",
+              "comments": null,
+              "author": null,
+              "committer": null,
+              "created_at": "2019-12-09T19:24:32.000+01:00",
+              "git_author_email": null,
+              "display_url": "https://github.com/thiagopatzdorf/fabrica-de-sites/commit/5a8f2b742a64d79af942a33460eb0d399d504750",
+              "display_title": "Merge pull request #1351 from andrea-ligios/master"
+            }
+          ]
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "commits": []
+        },
+        "isError": false
+      }
+    }
+  ],
+  "other_trees": [
+    {
+      "repo": "james",
+      "tree": "246315db29a368b6259d040faf0ac3aaf307d791",
+      "matches": []
+    },
+    {
+      "repo": "JamesCoder",
+      "tree": "08421924fd60c719514c966a8f37ea7ca92376e2",
+      "matches": []
+    },
+    {
+      "repo": "James.V1",
+      "tree": "54935c5318bf50a0d9eb56e3c82ac0b6df35f852",
+      "matches": []
+    }
+  ],
+  "factory_tree": {
+    "sha": "7d0de8d082a7b22f91475242ea07e3123108e25f",
+    "truncated": false,
+    "relevant_matches": []
+  }
+}

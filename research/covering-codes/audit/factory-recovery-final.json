@@ -1,0 +1,8 @@
+{
+  "codigo": 0,
+  "stdout": "/home/worker/maos/factory-cauteloso\n[\n  {\n    \"root\": \"/home/worker/.codex/sessions\",\n    \"exists\": true,\n    \"files_scanned\": 5,\n    \"matches\": []\n  },\n  {\n    \"root\": \"/home/worker/.claude/projects\",\n    \"exists\": true,\n    \"files_scanned\": 2,\n    \"matches\": []\n  },\n  {\n    \"root\": \"/home/worker/maos/factory-cauteloso/apps/factory/state\",\n    \"exists\": true,\n    \"files_scanned\": 8,\n    \"matches\": [\n      \"/home/worker/maos/factory-cauteloso/apps/factory/state/mcp/audit.jsonl\",\n      \"/home/worker/maos/factory-cauteloso/apps/factory/state/mcp/blocos/1d77a858b052430dbbec91d64665e7d7.sh\"\n    ]\n  },\n  {\n    \"root\": \"/tmp\",\n    \"exists\": true,\n    \"files_scanned\": 14882,\n    \"matches\": []\n  }\n]\n",
+  "stderr": "",
+  "duracao_s": 50.195,
+  "truncado": false,
+  "tempo_esgotado": false
+}

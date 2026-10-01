@@ -1,0 +1,8 @@
+{
+  "codigo": 0,
+  "stdout": "[\n  \"/tmp/chk1.html\",\n  \"/tmp/chk2.html\",\n  \"/tmp/chk3.html\",\n  \"/tmp/chk4.html\",\n  \"/tmp/chk5.html\",\n  \"/tmp/chk722.done\",\n  \"/tmp/chk722.log\",\n  \"/home/worker/.codex/.tmp/plugins/plugins/build-web-apps/skills/supabase-best-practices/references/query-covering-indexes.md\",\n  \"/home/worker/.codex/.tmp/plugins/plugins/supabase/skills/supabase-postgres-best-practices/references/query-covering-indexes.md\",\n  \"/home/worker/.npm/_cacache/content-v2/sha512/a0/9a/1fb6fd0b4ae683644dcb7b80db297f8a4bd1b7e8dcce7926a9f745082b4c8c03f36128986a9521ad3433913516886d07f38d70eb41ad32b49ea63511b3fd\"\n]\n",
+  "stderr": "",
+  "duracao_s": 8.822,
+  "truncado": false,
+  "tempo_esgotado": false
+}

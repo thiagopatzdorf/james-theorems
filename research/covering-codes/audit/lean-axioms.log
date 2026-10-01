@@ -1,0 +1,4 @@
+'CoveringRecords.principalClaim_of_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoveringRecords.q2_n3_r1_m2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoveringRecords.covers_of_selector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoveringRecords.principal_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]

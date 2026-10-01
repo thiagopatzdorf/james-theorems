@@ -1,0 +1,8 @@
+{
+  "codigo": 0,
+  "stdout": "/home/worker/maos/factory-cauteloso\n",
+  "stderr": "/home/worker/maos/factory-cauteloso/apps/factory/state/mcp/blocos/f6c31a6cb7754f8884f7b839b96961bc.sh: 2: rg: not found\n",
+  "duracao_s": 2.906,
+  "truncado": false,
+  "tempo_esgotado": false
+}

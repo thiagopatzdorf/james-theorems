@@ -1,0 +1,22 @@
+make -C research/covering-codes fast
+make[1]: Entering directory '/workspace/james-theorems/research/covering-codes'
+python3 -m unittest discover -s tests -v
+test_all_frozen_artifacts_and_large_lean_word_linkage (test_certificate.CertificateTests.test_all_frozen_artifacts_and_large_lean_word_linkage) ... ok
+test_witness_roundtrip_and_adversarial_mutations (test_certificate.CertificateTests.test_witness_roundtrip_and_adversarial_mutations) ... ok
+test_preserves_bytes_order_and_unknown_fields (test_ingestion.Ingestion.test_preserves_bytes_order_and_unknown_fields) ... ok
+test_rejects_malformed_and_wrong_size_but_preserves_original (test_ingestion.Ingestion.test_rejects_malformed_and_wrong_size_but_preserves_original) ... ok
+test_adversarial_parser (test_verifiers.IndependentChecks.test_adversarial_parser) ... ok
+test_all_binary_length3_subsets_all_radii (test_verifiers.IndependentChecks.test_all_binary_length3_subsets_all_radii) ... ok
+test_duplicates_and_boundaries (test_verifiers.IndependentChecks.test_duplicates_and_boundaries) ... ok
+test_other_alphabets_and_packing (test_verifiers.IndependentChecks.test_other_alphabets_and_packing) ... ok
+test_parameter_and_overflow_rejection (test_verifiers.IndependentChecks.test_parameter_and_overflow_rejection) ... ok
+test_repetition_231 (test_verifiers.IndependentChecks.test_repetition_231) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 4.978s
+
+OK
+python3 tools/generate_table.py --check
+cd fixtures/q2_n3_r1 && sha256sum --check SHA256SUMS
+code.txt: OK
+make[1]: Leaving directory '/workspace/james-theorems/research/covering-codes'

@@ -1,0 +1,18 @@
+/workspace/james-theorems/research/covering-codes/verifiers/verify_b.cpp: In lambda function:
+/workspace/james-theorems/research/covering-codes/verifiers/verify_b.cpp:23:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   23 |    if(k!=v.size()) throw std::runtime_error("bad integer");return a;};
+      |    ^~
+/workspace/james-theorems/research/covering-codes/verifiers/verify_b.cpp:23:60: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   23 |    if(k!=v.size()) throw std::runtime_error("bad integer");return a;};
+      |                                                            ^~~~~~
+test_adversarial_parser (test_verifiers.IndependentChecks.test_adversarial_parser) ... ok
+test_all_binary_length3_subsets_all_radii (test_verifiers.IndependentChecks.test_all_binary_length3_subsets_all_radii) ... ok
+test_duplicates_and_boundaries (test_verifiers.IndependentChecks.test_duplicates_and_boundaries) ... ok
+test_other_alphabets_and_packing (test_verifiers.IndependentChecks.test_other_alphabets_and_packing) ... ok
+test_parameter_and_overflow_rejection (test_verifiers.IndependentChecks.test_parameter_and_overflow_rejection) ... ok
+test_repetition_231 (test_verifiers.IndependentChecks.test_repetition_231) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 5.493s
+
+OK
