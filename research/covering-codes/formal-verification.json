@@ -1,0 +1,29 @@
+{
+  "lean_version": "4.30.0-rc2",
+  "upstream_commit": "460df105545c2d6b04ba71f29de6b56dbda92825",
+  "build": "PASS",
+  "sorry_count": 0,
+  "admit_count": 0,
+  "new_axiom_count": 0,
+  "principal_theorem": null,
+  "requested_principal_theorem": "CoveringRecords.q7_n9_r4_m1351",
+  "principal_coverage": "NOT_PROVED",
+  "principal_cardinality_theorem": "CoveringRecords.principal_card_le",
+  "tiny_theorem": "CoveringRecords.q2_n3_r1_m2",
+  "certificate_sha256": "6f4425a72b66efa284e7ffc1bfd20117fc058e44bb46b37650f2c9dca5a72d2a",
+  "certificate_replayed_in_lean": false,
+  "standard_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "native_decide_used": false,
+  "upstream_text_audit": {
+    "sorry_count": 0,
+    "admit_count": 0,
+    "new_axiom_count": 0
+  },
+  "lake_update": "PASS with MATHLIB_NO_CACHE_ON_UPDATE=1",
+  "initial_cache_download": "403/429; source build used",
+  "scope": "PASS is library/tiny/cardinality build, NOT principal covering theorem"
+}

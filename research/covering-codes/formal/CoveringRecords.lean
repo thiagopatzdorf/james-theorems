@@ -1,1 +1,4 @@
 import CoveringRecords.Candidate
+import CoveringRecords.Tiny
+import CoveringRecords.Selector
+import CoveringRecords.PrincipalCode

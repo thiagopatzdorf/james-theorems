@@ -1,0 +1,7 @@
+{
+  "code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "source": "CoveringRecords/PrincipalCode.lean",
+  "source_sha256": "c2f1e0535868e68db0469ae3e2dc15164dee27ed69f568cb7f26ebe208dcd30d",
+  "coverage_proof": false,
+  "principal_theorem": null
+}

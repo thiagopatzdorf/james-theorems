@@ -1,36 +1,33 @@
-# Covering-code record certificates (Lean 4)
+# Separately pinned Lean project
 
-This is a **separate pinned Lean project** for record-candidate certificates. It intentionally does not modify the root `james-theorems` toolchain.
+Florath upstream: `460df105545c2d6b04ba71f29de6b56dbda92825`.
+Toolchain: Lean 4.30.0-rc2, as pinned upstream; nested lake-manifest pins dependencies.
+The root repository toolchain is unchanged.
 
-It depends on Andreas Florath's `covering-codes-lean` at commit:
+Actual library build: PASS. Principal **coverage** theorem: NOT_PROVED.
 
-`460df105545c2d6b04ba71f29de6b56dbda92825`
+* `Candidate.lean`: conditional adapters/proposition shapes, not witnesses.
+* `Tiny.lean`: 000/111 gives `QaryKUpper 2 3 1 2` with `covering_decide +kernel`.
+* `Selector.lean`: existing upstream CoversFinset from checked membership/distance.
+* `PrincipalCode.lean`: original-order 1351 words and cardinality <=1351; no coverage assertion.
+* `PrincipalCodeManifest.json`: exact source/code hash linkage, expressly coverage=false.
+* `Audit.lean`: printed dependencies for actual theorems. Standard logical axioms only.
 
-The upstream artifact defines `QaryKUpper q n r U` and `ExplicitQaryUpper q n r U`.
-The local file `CoveringRecords/Candidate.lean` currently formalizes only the *shape* of the target claims and the bridge:
-
-```lean
-theorem principalClaim_of_explicit
-    (E : ExplicitQaryUpper 7 9 4 1351) : QaryKUpper 7 9 4 1351
 ```
-
-It does **not** claim `K_7(9,4) <= 1351` yet. That statement becomes formally certified only after the canonical 1351-word construction and a checked coverage certificate are ingested.
-
-## Build
-
-```bash
-lake update
+elan toolchain install leanprover/lean4:v4.30.0-rc2
+MATHLIB_NO_CACHE_ON_UPDATE=1 lake update
 lake build
+lake env lean Audit.lean
 ```
 
-## Promotion rule
+The upstream-supported environment setting bypasses only optional cache download,
+not source/proof verification. In this environment initial caches failed 403/429;
+dependencies were fetched at manifest pins and compiled from source. The first
+build attempted before a newly added Selector module was scheduled failed; the
+subsequent clean dependency graph build succeeded. Earlier no-op `lake build`
+without a default target was not accepted; the library now has an explicit default.
 
-Do not add a theorem named `q7_n9_r4_m1351` until:
-
-1. `certificates/q7_n9_r4_m1351/code.txt` exists;
-2. its SHA-256 is frozen;
-3. two independent exhaustive verifiers agree on `uncovered = 0`;
-4. the Lean certificate is generated for exactly those bytes;
-5. the project builds with no `sorry` or `admit`.
-
-Current runtime note: the ChatGPT working container used to prepare this branch did not have `lake` installed, so the adapter build has not been executed here.
+`formal-verification.json` reports build scope. A principal proof would need an
+unconditional `q7_n9_r4_m1351`, with original byte linkage and coverage proof;
+`tools/verify_case.py` then checks its exact type and standard-axiom dependencies.
+No PrincipalManifest.json is fabricated for the conditional adapters.

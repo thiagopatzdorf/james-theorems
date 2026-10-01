@@ -1,0 +1,5 @@
+import CoveringRecords
+#print axioms CoveringRecords.principalClaim_of_explicit
+#print axioms CoveringRecords.q2_n3_r1_m2
+#print axioms CoveringRecords.covers_of_selector
+#print axioms CoveringRecords.principal_card_le
