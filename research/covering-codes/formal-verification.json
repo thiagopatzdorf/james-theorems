@@ -25,5 +25,25 @@
   },
   "lake_update": "PASS with MATHLIB_NO_CACHE_ON_UPDATE=1",
   "initial_cache_download": "403/429; source build used",
-  "scope": "PASS is library/tiny/cardinality build, NOT principal covering theorem"
+  "scope": "PASS is library/tiny/cardinality/sphere/orbit-algebra build, NOT principal covering theorem",
+  "compact_certificate_sha256": "014e806eaec285341392cbc2df13043e3d44612070c77215486d6432d2fe76e1",
+  "compact_certificate_replayed_in_lean": false,
+  "sphere_lower_theorem": "CoveringRecords.hammingSphere_q7_n9_r4",
+  "sphere_lower_bound": 221,
+  "sphere_lower_rebuilt_and_axioms_checked": true,
+  "build_jobs_after_concurrent_lower_proof": 3334,
+  "build_jobs": 3335,
+  "orbit_algebra": "PASS",
+  "orbit_theorems": [
+    "linear_add",
+    "hamming_translate",
+    "normalize_prefix",
+    "coefficients_linear",
+    "linear_injective",
+    "decomposition",
+    "coset_transport",
+    "coset_card",
+    "cosets_transport",
+    "transport_normalization"
+  ]
 }

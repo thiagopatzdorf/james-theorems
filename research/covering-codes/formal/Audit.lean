@@ -5,3 +5,13 @@ import CoveringRecords
 #print axioms CoveringRecords.principal_card_le
 #print axioms CoveringRecords.hammingSphere_q7_n9_r4
 #print axioms CoveringRecords.sphereLower_q7_n9_r4
+#print axioms CoveringRecords.Orbit.linear_add
+#print axioms CoveringRecords.Orbit.hamming_translate
+#print axioms CoveringRecords.Orbit.normalize_prefix
+#print axioms CoveringRecords.Orbit.coefficients_linear
+#print axioms CoveringRecords.Orbit.linear_injective
+#print axioms CoveringRecords.Orbit.decomposition
+#print axioms CoveringRecords.Orbit.coset_transport
+#print axioms CoveringRecords.Orbit.coset_card
+#print axioms CoveringRecords.Orbit.cosets_transport
+#print axioms CoveringRecords.Orbit.transport_normalization

@@ -1,4 +1,4 @@
-import hashlib,json,shutil,sys,tempfile,unittest
+import hashlib,json,re,shutil,sys,tempfile,unittest
 from pathlib import Path
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
@@ -14,6 +14,8 @@ class PartitionTests(unittest.TestCase):
    result=run(d);self.assertEqual(result['covered_by_symmetry']+result['checked_exception_words'],40353607)
    self.assertEqual((result['sentinel_orbits'],result['checked_exception_words']), (27,9261))
    qraw=(d/'quotient.u16le').read_bytes();eraw=(d/'exceptions.u16le').read_bytes();meta=json.loads((d/'partition-metadata.json').read_text())
+   rows=re.findall(r'!\[([0-6](?:,\s*[0-6]){8})\]',(ROOT/'formal/CoveringRecords/Orbit.lean').read_text())
+   self.assertEqual([[int(x) for x in row.split(',')] for row in rows],meta['generator_rows'])
    code=np.array([[int(c) for c in w] for w in (d/'code.txt').read_text().splitlines()])
    bad=int(np.flatnonzero(np.count_nonzero(code[:1029],axis=1)>4)[0])
    for q,e in ((qraw[:-2],eraw),(int(1100).to_bytes(2,'little')+qraw[2:],eraw),(bad.to_bytes(2,'little')+qraw[2:],eraw),(qraw,int(1351).to_bytes(2,'little')+eraw[2:])):

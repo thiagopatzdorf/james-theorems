@@ -5,7 +5,7 @@ not a general reader that makes arbitrary external JSON a theorem. `ExplicitQary
 contains a `Finset (Fin n → Fin q)`, `card_le`, and `CoversFinset`. `toUpper` supplies
 the existential witness for `QaryKUpper`. This audit reuses these definitions.
 
-## Selected route
+## Flat route (preserved; compact route below is now preferred)
 
 For the tiny fixture, an explicit two-word Finset and `covering_decide +kernel`
 are simplest. For the principal instance, the proposed scalable route is a
@@ -97,8 +97,7 @@ The original flat witness remains preserved as a separate full-space certificate
 coverage proof yet. The compact route is now preferred for future Lean replay:
 prove the modular-translation isometry, normalization/partition and coset
 membership once, then reflect about 1.14 million coordinate comparisons rather
-than 363 million, plus original code linkage. The binary decoder and those
-instance-specific proof obligations remain unimplemented. The generic upstream
+than 363 million, plus original code linkage. The binary decoder and finite data checks remain unimplemented in Lean. The actual matrix normalization, injectivity, 343-word coset cardinality, modular-translation isometry and coset transport are now kernel-checked in `formal/CoveringRecords/Orbit.lean`; the remaining original-Finset inclusion and certificate data checks are not. The generic upstream
 selector bridge and actual principal cardinality proof are already built.
 No new covering-code foundations are required; arithmetic/membership derivations
 must be kernel checked, not imported as true JSON. External TCB includes Python,

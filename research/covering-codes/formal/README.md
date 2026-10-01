@@ -33,3 +33,5 @@ unconditional `q7_n9_r4_m1351`, with original byte linkage and coverage proof;
 No PrincipalManifest.json is fabricated for the conditional adapters.
 
 The concurrent research-branch commit `f5129539417d55e4a91303a5f7fb0f7d7d06b7de` adds the classical sphere lower bound `QaryKLower 7 9 4 221`; its source is preserved and included in the actual final build. This is separate from principal upper-bound coverage and from the stronger computationally rechecked LB 241.
+
+`Orbit.lean` proves the actual generator matrix normalization, injection, 343-word coset cardinality, modular-translation Hamming isometry and coset transport. All ten algebraic theorem dependencies were printed and are standard logical axioms only. These discharge structural proof obligations; original-Finset coset inclusion and replay of the 253820-byte compact certificate still remain. Final default build: 3335 jobs, PASS.
