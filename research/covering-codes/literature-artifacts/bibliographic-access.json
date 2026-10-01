@@ -1,0 +1,26 @@
+[
+  {
+    "source": "crossref",
+    "url": "https://api.crossref.org/works?query.title=New%20upper%20and%20lower%20bounds%20on%20covering%20codes&rows=5",
+    "http_status": 200,
+    "bytes": 34913
+  },
+  {
+    "source": "scholar",
+    "url": "https://scholar.google.com/scholar?q=%22K_7%289%2C4%29%22",
+    "http_status": 429,
+    "bytes": 1959
+  },
+  {
+    "source": "zbmath",
+    "url": "https://zbmath.org/?q=covering+codes+Marosi",
+    "http_status": 403,
+    "bytes": 6149
+  },
+  {
+    "source": "mathscinet",
+    "url": "https://mathscinet.ams.org/mathscinet/publications-search?query=covering%20codes%20Marosi",
+    "http_status": 403,
+    "bytes": 1097
+  }
+]

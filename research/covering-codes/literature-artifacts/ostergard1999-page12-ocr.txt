@@ -1,0 +1,49 @@
+Ks(7,2) < 525: 11100, 11010; 03324, 04214, 12320, 13213, 14210, 14431,
+21100, 21321, 23101, 24041, 30102, 31042, 32432, 33043, 33212, 33321,
+40044, 40433, 41430, 42323, 44104.
+
+K,(8,2) < 1875: 11100, 32100, 43110; 00144, 01221, 03442, 04003, 11423,
+14200, 20041, 22202, 24404, 30243, 31324, 33020, 40440, 41022, 44301.
+Ks(9, 2) < 7500: 11000, 21000, 31000, 41110; 01001, 01122, 10003, 10132,
+10213, 24142, 24210, 33211, 33424, 42000, 42124, 42344.
+
+References
+
+[1] A. Blokhuis and C. W. H. Lam, More coverings by rook domains, J.
+Combin. Theory Ser. A 36 (1984), 240-244.
+
+[2] R. C. Bose, S. S. Shrikhande, and E. T. Parker, Further results on the
+construction of mutually orthogonal Latin squares and the falsity of
+Euler’s conjecture, Canad. J. Math. 12 (1960), 189-203.
+
+[3] R.A. Brualdi, V. 5. Pless, and R. M. Wilson, Short codes with a given
+covering radius, IEEE Trans. Inform. Theory 35 (1989), 99-109.
+
+[4] W. A. Carnielli, Hyper-rook domain inequalities, Stud. Appl. Math.
+82 (1990), 59-69.
+
+[5] W. Chen and I. S. Honkala, Lower bounds for q-ary covering codes,
+IEEE Trans. Inform. Theory 36 (1990), 664-671.
+
+[6] A. A. Davydov, Constructions and families of covering codes and satu-
+rated sets of points in projective geometry, JEEE Trans. Inform. The-
+ory 41 (1995), 2071-2080.
+
+[7] S. W. Golomb and E. C. Posner, Rook domains, Latin squares, affine
+planes, and error-distributing codes, IEEE Trans. Inform. Theory 10
+(1964), 196-208.
+
+[8] H. Hamalainen and S. Rankinen, Upper bounds for football pool prob-
+lems and mixed covering codes, J. Combin. Theory Ser. A 56 (1991),
+84-95.
+
+[9] I. S. Honkala, On (k,t)-subnormal covering codes, IEEE Trans. In-
+form. Theory 37 (1991), 1203-1206.
+
+[10] I. $. Honkala, On lengthening of covering codes, Discrete Math.
+106/107 (1992), 291-295.
+
+[11] H.J. L. Kamps and J. H. van Lint, A covering problem, Collog. Math.
+Soc. Jénos Bolyai 4 (1970), 679-685.
+
+62

@@ -1,0 +1,8 @@
+rebuilding model for q=5 n=9 R=3 ...
+model q=5 n=9 R=3 : 189 vars, 2356 linear ineqs, 90 psd blocks (sum size 377, sum size^2 2187)
+CERTIFICATE VALID
+  problem            K_5(9,3)
+  certified SDP bnd  3408822702921115540347998261464580 / 77371252455336267181195264
+                     ~ 44058000.804484  (cube root 353.189889)
+  => K_5(9,3) >= 354
+  claim in file      matches

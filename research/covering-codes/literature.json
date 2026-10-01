@@ -1,0 +1,360 @@
+[
+  {
+    "q": 7,
+    "n": 9,
+    "R": 4,
+    "kind": "upper",
+    "value": 1475,
+    "source": "https://arxiv.org/abs/2608.19872v3",
+    "authors": [
+      "Márk Marosi"
+    ],
+    "date": "2026-09-02",
+    "version": "v3",
+    "primary_or_secondary": "primary construction",
+    "explicit_code_available": true,
+    "verified": true,
+    "verification_level": "independent exhaustive replay"
+  },
+  {
+    "q": 7,
+    "n": 9,
+    "R": 4,
+    "kind": "lower",
+    "value": 264,
+    "source": "Marosi v3 / Gijswijt–Polak v2 / Kéri; see literature.md",
+    "authors": null,
+    "date": null,
+    "version": null,
+    "primary_or_secondary": "mixed primary/theorem and secondary table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "published value; independent replay values separately in bounds.json"
+  },
+  {
+    "q": 4,
+    "n": 10,
+    "R": 4,
+    "kind": "upper",
+    "value": 208,
+    "source": "https://old.sztaki.hu/~keri/codes/index.htm",
+    "authors": [
+      "Gerzson Kéri (table compiler; underlying authors in literature.md)"
+    ],
+    "date": "2011-11",
+    "version": "November 2011 revision",
+    "primary_or_secondary": "secondary bound table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "documentary table checked; construction not replayed"
+  },
+  {
+    "q": 4,
+    "n": 10,
+    "R": 4,
+    "kind": "lower",
+    "value": 62,
+    "source": "Marosi v3 / Gijswijt–Polak v2 / Kéri; see literature.md",
+    "authors": null,
+    "date": null,
+    "version": null,
+    "primary_or_secondary": "mixed primary/theorem and secondary table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "published value; independent replay values separately in bounds.json"
+  },
+  {
+    "q": 5,
+    "n": 7,
+    "R": 2,
+    "kind": "upper",
+    "value": 525,
+    "source": "https://old.sztaki.hu/~keri/codes/index.htm",
+    "authors": [
+      "Gerzson Kéri (table compiler; underlying authors in literature.md)"
+    ],
+    "date": "2011-11",
+    "version": "November 2011 revision",
+    "primary_or_secondary": "secondary bound table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "documentary table checked; construction not replayed"
+  },
+  {
+    "q": 5,
+    "n": 7,
+    "R": 2,
+    "kind": "lower",
+    "value": 236,
+    "source": "Marosi v3 / Gijswijt–Polak v2 / Kéri; see literature.md",
+    "authors": null,
+    "date": null,
+    "version": null,
+    "primary_or_secondary": "mixed primary/theorem and secondary table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "published value; independent replay values separately in bounds.json"
+  },
+  {
+    "q": 5,
+    "n": 9,
+    "R": 3,
+    "kind": "upper",
+    "value": 1275,
+    "source": "https://old.sztaki.hu/~keri/codes/index.htm",
+    "authors": [
+      "Gerzson Kéri (table compiler; underlying authors in literature.md)"
+    ],
+    "date": "2011-11",
+    "version": "November 2011 revision",
+    "primary_or_secondary": "secondary bound table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "documentary table checked; construction not replayed"
+  },
+  {
+    "q": 5,
+    "n": 9,
+    "R": 3,
+    "kind": "lower",
+    "value": 354,
+    "source": "Marosi v3 / Gijswijt–Polak v2 / Kéri; see literature.md",
+    "authors": null,
+    "date": null,
+    "version": null,
+    "primary_or_secondary": "mixed primary/theorem and secondary table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "published value; independent replay values separately in bounds.json"
+  },
+  {
+    "q": 5,
+    "n": 10,
+    "R": 4,
+    "kind": "upper",
+    "value": 875,
+    "source": "https://old.sztaki.hu/~keri/codes/index.htm",
+    "authors": [
+      "Gerzson Kéri (table compiler; underlying authors in literature.md)"
+    ],
+    "date": "2011-11",
+    "version": "November 2011 revision",
+    "primary_or_secondary": "secondary bound table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "documentary table checked; construction not replayed"
+  },
+  {
+    "q": 5,
+    "n": 10,
+    "R": 4,
+    "kind": "lower",
+    "value": 177,
+    "source": "Marosi v3 / Gijswijt–Polak v2 / Kéri; see literature.md",
+    "authors": null,
+    "date": null,
+    "version": null,
+    "primary_or_secondary": "mixed primary/theorem and secondary table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "published value; independent replay values separately in bounds.json"
+  },
+  {
+    "q": 5,
+    "n": 9,
+    "R": 4,
+    "kind": "upper",
+    "value": 255,
+    "source": "https://old.sztaki.hu/~keri/codes/index.htm",
+    "authors": [
+      "Gerzson Kéri (table compiler; underlying authors in literature.md)"
+    ],
+    "date": "2011-11",
+    "version": "November 2011 revision",
+    "primary_or_secondary": "secondary bound table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "documentary table checked; construction not replayed"
+  },
+  {
+    "q": 5,
+    "n": 9,
+    "R": 4,
+    "kind": "lower",
+    "value": 64,
+    "source": "Marosi v3 / Gijswijt–Polak v2 / Kéri; see literature.md",
+    "authors": null,
+    "date": null,
+    "version": null,
+    "primary_or_secondary": "mixed primary/theorem and secondary table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "published value; independent replay values separately in bounds.json"
+  },
+  {
+    "q": 5,
+    "n": 9,
+    "R": 5,
+    "kind": "upper",
+    "value": 55,
+    "source": "https://old.sztaki.hu/~keri/codes/index.htm",
+    "authors": [
+      "Gerzson Kéri (table compiler; underlying authors in literature.md)"
+    ],
+    "date": "2011-11",
+    "version": "November 2011 revision",
+    "primary_or_secondary": "secondary bound table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "documentary table checked; construction not replayed"
+  },
+  {
+    "q": 5,
+    "n": 9,
+    "R": 5,
+    "kind": "lower",
+    "value": 19,
+    "source": "Marosi v3 / Gijswijt–Polak v2 / Kéri; see literature.md",
+    "authors": null,
+    "date": null,
+    "version": null,
+    "primary_or_secondary": "mixed primary/theorem and secondary table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "published value; independent replay values separately in bounds.json"
+  },
+  {
+    "q": 7,
+    "n": 8,
+    "R": 3,
+    "kind": "upper",
+    "value": 2337,
+    "source": "https://old.sztaki.hu/~keri/codes/index.htm",
+    "authors": [
+      "Gerzson Kéri (table compiler; underlying authors in literature.md)"
+    ],
+    "date": "2011-11",
+    "version": "November 2011 revision",
+    "primary_or_secondary": "secondary bound table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "documentary table checked; construction not replayed"
+  },
+  {
+    "q": 7,
+    "n": 8,
+    "R": 3,
+    "kind": "lower",
+    "value": 471,
+    "source": "Marosi v3 / Gijswijt–Polak v2 / Kéri; see literature.md",
+    "authors": null,
+    "date": null,
+    "version": null,
+    "primary_or_secondary": "mixed primary/theorem and secondary table",
+    "explicit_code_available": null,
+    "verified": false,
+    "verification_level": "published value; independent replay values separately in bounds.json"
+  },
+  {
+    "q": 7,
+    "n": 9,
+    "R": 4,
+    "kind": "lower",
+    "value": 241,
+    "source": "literature-artifacts/marosi-v3/cert_q7_n9_R4.json",
+    "authors": [
+      "Márk Marosi"
+    ],
+    "date": null,
+    "version": "coldcase 56a8cce68ec3f6f406c845f5cc3e51711e5b8294 / arXiv v3 ancillary",
+    "primary_or_secondary": "primary rational certificate",
+    "explicit_code_available": null,
+    "verified": true,
+    "verification_level": "exact rational replay of reconstructed SDP constraints; theorem not Lean-formalized"
+  },
+  {
+    "q": 5,
+    "n": 7,
+    "R": 2,
+    "kind": "lower",
+    "value": 236,
+    "source": "literature-artifacts/marosi-v3/cert_q5_n7_R2.json",
+    "authors": [
+      "Márk Marosi"
+    ],
+    "date": null,
+    "version": "coldcase 56a8cce68ec3f6f406c845f5cc3e51711e5b8294 / arXiv v3 ancillary",
+    "primary_or_secondary": "primary rational certificate",
+    "explicit_code_available": null,
+    "verified": true,
+    "verification_level": "exact rational replay of reconstructed SDP constraints; theorem not Lean-formalized"
+  },
+  {
+    "q": 5,
+    "n": 9,
+    "R": 3,
+    "kind": "lower",
+    "value": 354,
+    "source": "literature-artifacts/marosi-v3/cert_q5_n9_R3.json",
+    "authors": [
+      "Márk Marosi"
+    ],
+    "date": null,
+    "version": "coldcase 56a8cce68ec3f6f406c845f5cc3e51711e5b8294 / arXiv v3 ancillary",
+    "primary_or_secondary": "primary rational certificate",
+    "explicit_code_available": null,
+    "verified": true,
+    "verification_level": "exact rational replay of reconstructed SDP constraints; theorem not Lean-formalized"
+  },
+  {
+    "q": 5,
+    "n": 9,
+    "R": 4,
+    "kind": "lower",
+    "value": 62,
+    "source": "literature-artifacts/marosi-v3/cert_q5_n9_R4.json",
+    "authors": [
+      "Márk Marosi"
+    ],
+    "date": null,
+    "version": "coldcase 56a8cce68ec3f6f406c845f5cc3e51711e5b8294 / arXiv v3 ancillary",
+    "primary_or_secondary": "primary rational certificate",
+    "explicit_code_available": null,
+    "verified": true,
+    "verification_level": "exact rational replay of reconstructed SDP constraints; theorem not Lean-formalized"
+  },
+  {
+    "q": 5,
+    "n": 9,
+    "R": 5,
+    "kind": "lower",
+    "value": 16,
+    "source": "literature-artifacts/marosi-v3/cert_q5_n9_R5.json",
+    "authors": [
+      "Márk Marosi"
+    ],
+    "date": null,
+    "version": "coldcase 56a8cce68ec3f6f406c845f5cc3e51711e5b8294 / arXiv v3 ancillary",
+    "primary_or_secondary": "primary rational certificate",
+    "explicit_code_available": null,
+    "verified": true,
+    "verification_level": "exact rational replay of reconstructed SDP constraints; theorem not Lean-formalized"
+  },
+  {
+    "q": 7,
+    "n": 8,
+    "R": 3,
+    "kind": "lower",
+    "value": 471,
+    "source": "literature-artifacts/marosi-v3/cert_q7_n8_R3.json",
+    "authors": [
+      "Márk Marosi"
+    ],
+    "date": null,
+    "version": "coldcase 56a8cce68ec3f6f406c845f5cc3e51711e5b8294 / arXiv v3 ancillary",
+    "primary_or_secondary": "primary rational certificate",
+    "explicit_code_available": null,
+    "verified": true,
+    "verification_level": "exact rational replay of reconstructed SDP constraints; theorem not Lean-formalized"
+  }
+]

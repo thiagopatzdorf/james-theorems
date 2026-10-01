@@ -1,0 +1,8 @@
+rebuilding model for q=7 n=8 R=3 ...
+model q=7 n=8 R=3 : 136 vars, 1640 linear ineqs, 75 psd blocks (sum size 287, sum size^2 1523)
+CERTIFICATE VALID
+  problem            K_7(8,3)
+  certified SDP bnd  9969874233896845712669262539393352274131272124492468864417792 / 95780971304118053647396689196894323976171195136475136
+                     ~ 104090343.814129  (cube root 470.403070)
+  => K_7(8,3) >= 471
+  claim in file      matches

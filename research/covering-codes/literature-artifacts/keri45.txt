@@ -1,0 +1,104 @@
+                           Bounds on K4 (n, R)
+(lower and upper bounds on the size of quaternary optimal covering codes)
+
+            n          R=1                 R=2             R=3
+            1            11
+            2            45                 11
+            3          g 81 g               421             11
+            4          g 24 z             i 78 n            479
+            5          h 64 h             k 16 m            41
+            6        y 228–256          j 32–52 o        k 11–14 x
+            7       z 762–992 x       m 84–128 o        m 19–32 m
+            8      y 2731–3456 o      y 240–352 x       m 44–96 m
+            9     x 9368–12288 o     x 751–1024 o      m 110–256 m
+           10     y 34953–49152       z 2412–4096      y 313–832 x
+           11   z 123846–131072 w   y 7974–15872 x     y 849–2048 x
+
+       n       R=4           R=5            R=6         R=7       R=8
+       4         11
+       5        4269          11
+       6         45          4839             11
+       7      k 9–10 q       421               4          11
+       8    w 13–28 m       t8m               479          4       11
+       9    m 26–64 m     m 10–16 m           41         4 269     4
+      10    m 59–208 o    m 18–54 q         t 8–16        45      4839
+      11    y 148–512 v   m 36–128 v       m 14–32 v   t 8–11 q   421
+
+
+
+
+                                       1
+                        Bounds on K5 (n, R)
+(lower and upper bounds on the size of quinary optimal covering codes)
+
+       n           R=1                   R=2             R=3
+       1             11
+       2             57                 11
+       3          g 131 g               554                11
+       4         s 46–51 z            k 11 n              5471
+       5        u 160–184 z         m 22–35 m             k9n
+       6          h 625 h          m 71–125 m          m 16–25 m
+       7       z 2722–3125         m 225–525 o         m 38–100 u
+       8      z 11945–15625        x 821–1625 q       m 109–325 d
+       9      z 53138–78125       y 3367–6375 q       p 330–1275 d
+      10     z 238993–390625     y 13161–23000 q     x 1163–3125 p
+      11   y 1087416–1525877 k   z 52842–78125 q     f 4255–15625 q
+
+  n       R=4            R=5              R=6         R=7        R=8
+  4         11
+  5          5            11
+  6         51             5                11
+  7     m 12–21 q         57                 5          11
+  8     m 25–65 d      k 11-15 q            554          5        11
+  9     m 64–255 d     m 19–55 d         k 10–12 q     5 471      5
+ 10    y 162–875 d    m 41–175 d        m 16–45 d      k9y        5
+ 11    y 535–3125 d   m 103–625 d       m 29–125 d   m 12–25 d    51
+
+
+
+
+                                    2
+Key to the tables for K4 (n, R), K5 (n, R)
+
+
+          Lower bounds
+ unmarked trivial
+ f        (Chen–Honkala, 1990)
+ g        (Kalbfleisch–Stanton, 1969)
+ h        Hamming code
+ i        (Cohen–Honkala–Litsyn–Lobstein, 1997)
+ j        (Haas, 2006)
+ k        (Haas–Schlage-Puchta–Quistorff, 2008–2009)
+ m        (Haas–Halupczok–Schlage-Puchta, 2009)
+ p        (Habsieger–Plagne, 2000)
+ s        (Kamps–van Lint, 1970)
+ t        (Kéri–Östergård, 2003)
+ u        (Quistorff, 2001)
+ w        (Kéri, 2008)
+ x        (Lang–Quistorff–Schneider, 2006)
+ y        improved sphere-covering bound
+ z        (Gijswijt, 2005)
+
+             Upper bounds
+ unmarked    trivial
+ d           (Bhandari–Durairajan, 1996)
+ g           (Kalbfleisch–Stanton, 1969)
+ h           Hamming code
+ k           using known bound for the same n, R and smaller q
+ m           (Östergård, 1991)
+ n           (Östergård, 1994)
+ o           (Östergård, 1999)
+ p           (Davydov–Östergård, 2000)
+ q           (Rivas Soriano, 2006–2008)
+ u           (Gommard–Plagne, 2003)
+ v           amalgamated direct sum
+ w           (Välinen, 2002)
+ x           (Bertolo–Di Pasquale–Santisi, 2004–2006)
+ y           (Mendes–Monte Carmelo–Poggi, 2009)
+ z           (Stanton–Horton–Kalbfleisch, 1969)
+
+
+
+
+                                      3
+

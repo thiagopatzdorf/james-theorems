@@ -1,0 +1,12 @@
+independent verifier
+  code       : literature-artifacts/marosi-v3/code-1475.txt
+  parameters : q=7 n=9 R=4   q^n=40353607
+  codewords  : 1475 in file, 1475 distinct
+  dilate     : 1475 codeword cells set
+  dilate     : after radius 1, covered 81125 / 40353607
+  dilate     : after radius 2, covered 1977816 / 40353607
+  dilate     : after radius 3, covered 22114512 / 40353607
+  dilate     : after radius 4, covered 40353607 / 40353607
+  methods run: dilate=covers
+RESULT: VERIFIED  -- every one of the 40353607 words of Z_7^9 is within distance 4 of the code
+        K_7(9,4) <= 1475
