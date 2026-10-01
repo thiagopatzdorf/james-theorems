@@ -31,3 +31,5 @@ without a default target was not accepted; the library now has an explicit defau
 unconditional `q7_n9_r4_m1351`, with original byte linkage and coverage proof;
 `tools/verify_case.py` then checks its exact type and standard-axiom dependencies.
 No PrincipalManifest.json is fabricated for the conditional adapters.
+
+The concurrent research-branch commit `f5129539417d55e4a91303a5f7fb0f7d7d06b7de` adds the classical sphere lower bound `QaryKLower 7 9 4 221`; its source is preserved and included in the actual final build. This is separate from principal upper-bound coverage and from the stronger computationally rechecked LB 241.

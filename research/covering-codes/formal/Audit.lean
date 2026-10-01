@@ -3,3 +3,5 @@ import CoveringRecords
 #print axioms CoveringRecords.q2_n3_r1_m2
 #print axioms CoveringRecords.covers_of_selector
 #print axioms CoveringRecords.principal_card_le
+#print axioms CoveringRecords.hammingSphere_q7_n9_r4
+#print axioms CoveringRecords.sphereLower_q7_n9_r4

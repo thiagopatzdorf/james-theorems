@@ -36,3 +36,5 @@ From root: `make covering-fast`, `make verify-all-computational`,
 `make verify-computational` reproduces the completed B-level result successfully.
 No optimization jobs were run. The next work is kernel replay of the frozen
 certificate; 1350 is not approved by a claimed Lean success.
+
+The concurrent research-branch commit `f5129539417d55e4a91303a5f7fb0f7d7d06b7de` adds the classical sphere lower bound `QaryKLower 7 9 4 221`; its source is preserved and included in the actual final build. This is separate from principal upper-bound coverage and from the stronger computationally rechecked LB 241.
