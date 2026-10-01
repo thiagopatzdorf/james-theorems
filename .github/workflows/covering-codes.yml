@@ -22,7 +22,7 @@ jobs:
       - run: make covering-fast
   lean:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v4
       - uses: actions/cache@v4
@@ -36,6 +36,9 @@ jobs:
             curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
           fi
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Optional upstream Mathlib cache
+        continue-on-error: true
+        run: cd research/covering-codes/formal && MATHLIB_NO_CACHE_ON_UPDATE=1 lake update && lake exe cache get
       - run: make covering-formal
       # The library/tiny/cardinality build is deliberately distinct from coverage.
       - run: python3 -c "import json; d=json.load(open('research/covering-codes/formal-verification.json')); assert d['principal_coverage']=='NOT_PROVED'"
