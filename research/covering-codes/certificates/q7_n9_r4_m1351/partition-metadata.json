@@ -1,0 +1,58 @@
+{
+  "q": 7,
+  "n": 9,
+  "R": 4,
+  "M": 1351,
+  "base_prefix_size": 1029,
+  "code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "generator_rows": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      2,
+      3,
+      2,
+      3,
+      6,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      5,
+      3,
+      0,
+      6,
+      4,
+      4,
+      3,
+      5
+    ]
+  ],
+  "coset_representatives": [
+    "000000000",
+    "000401620",
+    "000622001"
+  ],
+  "quotient_words": 117649,
+  "exception_words": 9261,
+  "quotient_sha256": "a6db791fe5a6cfa8af603d5c4c4a4cbbd9342cb53900325001c1285b15ac8aef",
+  "exceptions_sha256": "201de24a8fd5597fd6e61a08b8a520dbf8f93fd1814160591072c2458bd7a538",
+  "combined_payload_sha256": "014e806eaec285341392cbc2df13043e3d44612070c77215486d6432d2fe76e1",
+  "payload_bytes": 253820,
+  "format": "uint16 little-endian; quotient index <1029 or sentinel65535; exceptions original codeword index <1351",
+  "quotient_order": "prefix000 followed by six base7 digits, most-significant first",
+  "exception_order": "ascending ambient base7 integer over all sentinel orbits",
+  "formal_status": "NOT_REPLAYED_IN_LEAN"
+}

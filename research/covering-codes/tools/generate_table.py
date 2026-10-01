@@ -33,7 +33,7 @@ def rows():
             b=json.loads((directory/'verification-b.json').read_text())
             sha=hashlib.sha256((directory/'code.txt').read_bytes()).hexdigest()
             keys=('q','n','R','M_parsed','M_unique','duplicates','invalid_lines','ambient_words','uncovered','max_min_distance','sha256')
-            verified=all(a[k]==b[k] for k in keys) and a['sha256']==sha and a['uncovered']==0 and a['invalid_lines']==0 and a['M_parsed']==M and a['exhaustive'] and b['exhaustive'] and [a[k] for k in ('q','n','R')]==[q,n,R]
+            verified=a.get('status')=='PASS' and b.get('status')=='PASS' and a['canonical'] and b['canonical'] and all(a[k]==b[k] for k in keys) and a['sha256']==sha and a['uncovered']==0 and a['invalid_lines']==0 and a['M_parsed']==M and a['exhaustive'] and b['exhaustive'] and [a[k] for k in ('q','n','R')]==[q,n,R]
         except (OSError,KeyError,ValueError):
             pass
         ub=min(M,prior or fallback) if verified else (prior or fallback)

@@ -11,8 +11,8 @@ verify-q7-9-4-1351:
 tables:
 	$(PYTHON) tools/generate_table.py
 paper: tables
-	cd preprint && pdflatex -interaction=nonstopmode -halt-on-error paper.tex
-	cd preprint && pdflatex -interaction=nonstopmode -halt-on-error paper.tex
+	cd preprint && SOURCE_DATE_EPOCH=1790812800 FORCE_SOURCE_DATE=1 pdflatex -interaction=nonstopmode -halt-on-error paper.tex
+	cd preprint && SOURCE_DATE_EPOCH=1790812800 FORCE_SOURCE_DATE=1 pdflatex -interaction=nonstopmode -halt-on-error paper.tex
 
 .PHONY: verify-computational verify-all-computational certificate
 verify-computational:
@@ -21,3 +21,4 @@ verify-all-computational:
 	@for case in q7_n9_r4_m1351 q4_n10_r4_m192 q5_n7_r2_m500 q5_n9_r3_m1250 q5_n10_r4_m625 q5_n9_r4_m250 q5_n9_r5_m50 q7_n8_r3_m1893; do $(PYTHON) tools/verify_case.py $$case --computational-only || exit $$?; done
 certificate:
 	$(PYTHON) tools/witness_certificate.py certificates/q7_n9_r4_m1351
+	$(PYTHON) tools/partition_certificate.py certificates/q7_n9_r4_m1351

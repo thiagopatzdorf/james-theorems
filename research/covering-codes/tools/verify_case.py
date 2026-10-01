@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -11,14 +12,16 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def run(case, computational_only=False):
+    identity=re.fullmatch(r'q([0-9]+)_n([0-9]+)_r([0-9]+)_m([0-9]+)',case)
+    if not identity:raise ValueError('invalid case identity')
     d=ROOT/'certificates'/case
     for f in ('code.txt','metadata.json','SHA256SUMS'):
         if not (d/f).is_file():
             print(json.dumps(dict(status='BLOCKED_BY_MISSING_ARTIFACT',missing=str(d/f))))
             return 2
     meta=json.loads((d/'metadata.json').read_text())
-    if case=='q7_n9_r4_m1351' and [meta.get(k) for k in ('q','n','R','M')]!=[7,9,4,1351]:
-        raise ValueError('principal parameters mismatch')
+    if [meta.get(k) for k in ('q','n','R','M')]!=list(map(int,identity.groups())):
+        raise ValueError('named-case parameters mismatch')
     sha=hashlib.sha256((d/'code.txt').read_bytes()).hexdigest()
     if sha!=meta['code_sha256']:raise ValueError('metadata hash mismatch')
     subprocess.run(['sha256sum','--check','SHA256SUMS'],cwd=d,check=True)
@@ -42,6 +45,7 @@ def run(case, computational_only=False):
     if reports[0]['uncovered']!=0 or reports[0]['M_parsed']!=meta['M']:return 1
     if case=='q7_n9_r4_m1351':
         subprocess.run([sys.executable,str(ROOT/'tools/witness_certificate.py'),str(d)],check=True)
+        subprocess.run([sys.executable,str(ROOT/'tools/partition_certificate.py'),str(d)],check=True)
     if computational_only:
         print(json.dumps(dict(status='COMPUTATIONALLY_VERIFIED',formal='NOT_CLAIMED',sha256=sha)))
         return 0
@@ -68,7 +72,6 @@ def run(case, computational_only=False):
         result=subprocess.run(['lake','env','lean',f.name],cwd=ROOT/'formal',check=True,
                               capture_output=True,text=True)
         # Standard logical axioms only; reject native evaluator trust additions.
-        import re
         groups=re.findall(r'depends on axioms:\s*\[([^\]]*)\]',result.stdout)
         if not groups and 'does not depend on any axioms' not in result.stdout:
             raise ValueError('could not audit theorem axioms')

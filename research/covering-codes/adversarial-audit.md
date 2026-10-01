@@ -42,3 +42,7 @@ The independent BFS computes shortest paths in the graph changing one coordinate
 whose distance is Hamming distance. It exhausts its queue regardless of R.
 The certificate checker independently decodes every consecutive ambient integer
 and checks its chosen original-order codeword, including witness length and hashes.
+
+## Compact partition attacks
+
+The compact checker confirms all 343 distinct prefix projections and equality of the actual 1029-word prefix with three complete cosets. It checks every one of 117649 quotient entries and regenerates all exception ids; exact partition counts total 40353607. Tests reject truncated quotient data, out-of-base indices, wrong but in-range witnesses, out-of-code exception indices, and a degenerate generator matrix, including attacks that update all payload hashes. The mathematical transport uses modular-addition Hamming isometry and span closure, not old stdout. Formal partition replay remains incomplete.

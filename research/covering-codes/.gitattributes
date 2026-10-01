@@ -1,0 +1,10 @@
+# Canonical source files stay LF even with a Windows checkout.
+* text eol=lf
+*.pdf -text
+*.gz -text
+*.tar -text
+*.bin -text
+*.u16le -text
+# Retrieved originals and primary evidence preserve their exact bytes.
+audit/recovered/** -text
+literature-artifacts/** -text
