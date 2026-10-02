@@ -1,0 +1,31 @@
+{
+  "q": 7,
+  "n": 9,
+  "R": 4,
+  "M": 1346,
+  "metric": "Hamming",
+  "alphabet": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "code_sha256": "3506511566dfa02adda6d2c6558e37ff136fdea38f79d0addef96b806ebdd882",
+  "source_path": "research/covering-codes/experiments/exact-q7/orbit-search/candidate.txt",
+  "source_commit": null,
+  "generator": "experiments/exact-q7/orbit-search/repair.py",
+  "seed": 70941351,
+  "created_at": null,
+  "canonicalized_at": "2026-10-02T00:40:58.597192+00:00",
+  "provenance_status": "DERIVED_SEARCH_ARTIFACT_FROM_FROZEN_ORIGINAL",
+  "parent_code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "base_prefix_words_preserved": 1029,
+  "patch_words": 317,
+  "formal_status": "NOT_PROVED",
+  "optimality": "NOT_ESTABLISHED",
+  "generator_sha256": "329664dae3f2b99c53f410a8c11352dee4c09bb050ffdbee307e95f7d39b978a",
+  "improvement_iteration": 4995
+}

@@ -1,0 +1,21 @@
+{
+  "q": 7,
+  "n": 9,
+  "R": 4,
+  "M_parsed": 1346,
+  "M_unique": 1346,
+  "duplicates": 0,
+  "invalid_lines": 0,
+  "invalid_line_numbers": [],
+  "ambient_words": 40353607,
+  "sha256": "3506511566dfa02adda6d2c6558e37ff136fdea38f79d0addef96b806ebdd882",
+  "canonical": true,
+  "covered": 40353607,
+  "uncovered": 0,
+  "max_min_distance": 4,
+  "first_uncovered": null,
+  "exhaustive": true,
+  "runtime_seconds": 0.5293160820001503,
+  "method": "transform",
+  "status": "PASS"
+}

@@ -1,0 +1,60 @@
+{
+  "q": 7,
+  "n": 9,
+  "R": 4,
+  "M": 1346,
+  "base_prefix_size": 1029,
+  "code_sha256": "3506511566dfa02adda6d2c6558e37ff136fdea38f79d0addef96b806ebdd882",
+  "generator_rows": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      2,
+      3,
+      2,
+      3,
+      6,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      5,
+      3,
+      0,
+      6,
+      4,
+      4,
+      3,
+      5
+    ]
+  ],
+  "coset_representatives": [
+    "000000000",
+    "000401620",
+    "000622001"
+  ],
+  "quotient_words": 117649,
+  "exception_words": 9261,
+  "quotient_sha256": "a6db791fe5a6cfa8af603d5c4c4a4cbbd9342cb53900325001c1285b15ac8aef",
+  "exceptions_sha256": "f645cda72ff68a09da01bf7f3376ea935009f650ceb9db8c10798f4a14bdd42e",
+  "combined_payload_sha256": "ed0192c67cfe5ccac28a92d7d6735e9ee8a948fc586596280baec69c636dbfac",
+  "payload_bytes": 253820,
+  "format": "uint16 little-endian; quotient index <1029 or sentinel65535; exceptions original codeword index <1351",
+  "quotient_order": "prefix000 followed by six base7 digits, most-significant first",
+  "exception_order": "ascending ambient base7 integer over all sentinel orbits",
+  "formal_status": "NOT_REPLAYED_IN_LEAN",
+  "parent_code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "generator": "tools/certify_fixed_base_candidate.py"
+}
