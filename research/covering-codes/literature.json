@@ -22,14 +22,18 @@
     "R": 4,
     "kind": "lower",
     "value": 264,
-    "source": "Marosi v3 / Gijswijt–Polak v2 / Kéri; see literature.md",
-    "authors": null,
-    "date": null,
-    "version": null,
-    "primary_or_secondary": "mixed primary/theorem and secondary table",
-    "explicit_code_available": null,
+    "source": "https://doi.org/10.37236/222",
+    "authors": [
+      "Wolfgang Haas",
+      "Immanuel Halupczok",
+      "Jan-Christoph Schlage-Puchta"
+    ],
+    "date": "2009-11-07",
+    "version": "published EJC16(1)R133",
+    "primary_or_secondary": "primary published table/theorem",
+    "explicit_code_available": false,
     "verified": false,
-    "verification_level": "published value; independent replay values separately in bounds.json"
+    "verification_level": "Table5 directly confirmed; target winning-game computation unreplayed after bounded independent attempts"
   },
   {
     "q": 4,

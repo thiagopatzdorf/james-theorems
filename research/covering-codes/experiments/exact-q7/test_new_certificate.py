@@ -4,7 +4,7 @@ import hashlib,json,shutil,sys,tempfile,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'tools'))
 from certify_fixed_base_candidate import run
-DATA=ROOT/'certificates/q7_n9_r4_m1346'
+DATA=ROOT/'certificates/q7_n9_r4_m1344'
 class CertificateAttacks(unittest.TestCase):
  def test_real_and_forged_objects(self):
   mutations=['wrongM','wrongrows','wrongquotienthash','wronglength','outofrange','wronginrange','truncated','basechange']

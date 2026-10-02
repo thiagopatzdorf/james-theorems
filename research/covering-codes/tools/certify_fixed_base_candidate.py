@@ -34,7 +34,7 @@ def run(directory,generate=False):
    chosen.extend(map(int,witness))
   if M>65535:raise ValueError('index capacity')
   eraw=np.array(chosen,dtype='<u2').tobytes();(d/'quotient.u16le').write_bytes(qraw);(d/'exceptions.u16le').write_bytes(eraw)
-  meta=dict(original_meta,M=M,code_sha256=sha(raw),exceptions_sha256=sha(eraw),combined_payload_sha256=sha(qraw+eraw),parent_code_sha256=FROZEN,generator='tools/certify_fixed_base_candidate.py',formal_status='NOT_REPLAYED_IN_LEAN')
+  meta=dict(original_meta,M=M,code_sha256=sha(raw),exceptions_sha256=sha(eraw),combined_payload_sha256=sha(qraw+eraw),parent_code_sha256=FROZEN,generator='tools/certify_fixed_base_candidate.py',format=f'uint16 little-endian; quotient index <1029 or sentinel65535; exceptions codeword index <{M}',formal_status='NOT_REPLAYED_IN_LEAN')
   (d/'partition-metadata.json').write_text(json.dumps(meta,indent=2)+'\n')
  meta=json.loads((d/'partition-metadata.json').read_text());eraw=(d/'exceptions.u16le').read_bytes()
  if [meta[k] for k in ('q','n','R','M')]!=[7,9,4,M] or meta['code_sha256']!=sha(raw):raise ValueError('identity')

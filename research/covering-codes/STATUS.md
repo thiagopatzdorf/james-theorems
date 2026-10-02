@@ -1,4 +1,7 @@
-# Covering codes — audited status, 2026-10-01
+> Latest independently verified UB: **1344**, preserving the original1351 artifact.
+> Follow-up evidence and precise global/restricted gaps: experiments/exact-q7/REPORT.md.
+
+# Covering codes — audited status, 2026-10-02
 
 **Principal outcome B: COMPUTATIONALLY_VERIFIED, formalization incomplete.**
 Novelty: **CANDIDATE_NEW_UPPER_BOUND** relative to the independently replayed
@@ -45,3 +48,18 @@ The final real build passed 3335 jobs, including ten kernel-checked orbit algebr
 theorems (normalization, injectivity, decomposition, Hamming isometry and coset
 transport). Finite compact-payload checks and linkage to the actual original
 Finset remain the principal coverage gap; this is not a formal upper-bound proof.
+
+## Bounded exact-value investigation, 2026-10-02
+
+Global rechecked interval: 241 <= K_7(9,4) <= 1344. The published lower bound
+264 is confirmed in its primary source, but target game replay times out.
+Retaining the fixed 1029-word base forces at least 153 patch words (1182 total),
+checked by an independent exact rational dual audit over all potential centers.
+This restricted bound is not a global lower bound.
+
+The new 1344 code passes full A/B and compact-partition checks. All 1344 words
+have independently checked private witnesses. Seed 70941346 and 4829 iterations
+reproduce its exact bytes. Thirteen fast test methods pass. Lean now builds
+3336 jobs and proves the conditional partition bridge plus 2048 sampled witness
+distances; full coverage remains NOT_PROVED. Additional paid infrastructure
+spend is USD 0; no cloud resources were provisioned.

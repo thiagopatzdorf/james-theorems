@@ -51,7 +51,7 @@
   "exceptions_sha256": "29fd778c54fa59c26a6e828b1b799a6279bc1850d644004b6d590fdeeacbc824",
   "combined_payload_sha256": "00e85022026d2da1ddca727891e2188e389dbba7eb5a5595beec4b3de5389d81",
   "payload_bytes": 253820,
-  "format": "uint16 little-endian; quotient index <1029 or sentinel65535; exceptions original codeword index <1351",
+  "format": "uint16 little-endian; quotient index <1029 or sentinel65535; exceptions codeword index <1345",
   "quotient_order": "prefix000 followed by six base7 digits, most-significant first",
   "exception_order": "ascending ambient base7 integer over all sentinel orbits",
   "formal_status": "NOT_REPLAYED_IN_LEAN",

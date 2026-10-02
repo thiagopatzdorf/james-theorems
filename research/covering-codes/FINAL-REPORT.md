@@ -1,3 +1,7 @@
+> Historical initial audit, frozen in commit36674025d9dd0c52242aa585d75d07fba6ea0054.
+> The2026-10-02 follow-up improves the construction to1344; see experiments/exact-q7/REPORT.md.
+> Paper and table at current paths have since been updated; historical hashes below refer to that frozen commit.
+
 # Final audit report — 2026-10-01
 
 Outcome **B: COMPUTATIONALLY_VERIFIED + explicitly incomplete formalization**.

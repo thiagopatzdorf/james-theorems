@@ -1,8 +1,10 @@
 {
   "status": "PASS",
-  "pdf_sha256": "85f1cf4f26ab619d9c98751546a2577fd4ecaf3eaef52d77d30e398d77e15118",
+  "pdf_sha256": "4b6e46ef28a1381bf28f19228bbfe2f77f0567cc7f92bbc670216a032e1b9a45",
   "two_independent_make_paper_invocations_same_bytes": true,
   "SOURCE_DATE_EPOCH": 1790812800,
   "FORCE_SOURCE_DATE": 1,
-  "scope": "same TeX distribution; canonical PDF metadata time, not construction creation time"
+  "scope": "same TeX distribution; canonical PDF metadata time, not construction creation time",
+  "pages": 6,
+  "draft_date": "2026-10-02"
 }

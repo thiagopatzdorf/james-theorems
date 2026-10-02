@@ -7,7 +7,7 @@
 \newtheorem{theorem}{Theorem}
 \title{Improved Upper Bounds for q-ary Covering Codes with Reproducible and Proof-Carrying Verification}
 \author{Research artifact: \path{thiagopatzdorf/james-theorems}}
-\date{Audit draft, 1 October 2026}
+\date{Audit and bounded-search draft, 2 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -15,8 +15,9 @@ We archive eight recovered explicit covering-code constructions and independentl
 verify their complete ambient spaces by an exact coordinate-wise min-plus transform
 and multi-source breadth-first search. The principal construction has 1351 distinct
 words over an alphabet of size seven, length nine and covering radius exactly four.
-It establishes computational evidence for $K_7(9,4)\le1351$, improving the verified
-bound 1475 found in our literature audit by 124 words. Its original-order bytes are
+A bounded reproducible follow-up replaces its 322-word patch with 315 words,
+giving a new 1344-word construction and computational evidence for
+$K_7(9,4)\le1344$, improving the verified bound 1475 by 131 words. Its original-order bytes are
 frozen by SHA-256. A packed selector certificate gives an independently checked
 radius-four witness for every one of the $7^9=40\,353\,607$ ambient words.
 A separately pinned Lean project proves a small explicit construction and the
@@ -29,8 +30,9 @@ is made.
 \section{Introduction}
 The purpose is a checkable construction, independent of confidence in a search
 agent or its logs. Recovered codewords, canonical bytes, executable results and
-kernel-checked proofs are distinct objects. No new construction search or
-optimization was performed during this audit. The principal result is classified
+kernel-checked proofs are distinct objects. No optimization was performed during the initial artifact audit. The follow-up
+reported here performs bounded fixed-base set-cover search, preserving the original
+file and verifying every promoted construction afresh. The principal result is classified
 \path{COMPUTATIONALLY_VERIFIED}; its novelty classification is
 \path{CANDIDATE_NEW_UPPER_BOUND} relative to the audited comparison.
 
@@ -58,7 +60,10 @@ v2~\cite{gp} supply documentary comparisons for the remaining cells.
 The tables below distinguish documentary bounds from independently replayed ones.
 Six exact rational lower-bound certificates were checked with Marosi's standalone
 checker; these give 241 for the principal cell, weaker than the published 264.
-The audit does not relabel 264 as a replayed lower-bound certificate.
+The primary 2009 paper~\cite{hhsp} directly confirms 264. An independent
+implementation of its game recurrence passes 80 small concrete-partition
+cross-checks, but two bounded target runs time out. The audit does not relabel
+264 as a replayed lower-bound certificate.
 
 \section{Construction method}
 The files were recovered from \path{thiagopatzdorf/fabrica-de-sites}, branch
@@ -82,6 +87,15 @@ The principal LF hash is
 Converting these bytes to CRLF reproduces the old raw-file hash, while sorting
 LF lines reproduces the old certificate hash. These comparisons support archive
 consistency but neither sorted nor reconstructed bytes replace the frozen code.
+
+The follow-up fixes the verified 1029-word base and searches replacements for
+the patch. All potential center orbits are scored against the 9261 holes; a
+center covers at most 68 holes. The expanded pool contains all 343 translates
+of 62 quotient classes scoring at least 60, totaling 21266 centers. Seeded
+destroy-and-repair search reaches 315 patch words. The final round uses seed
+70941346; the 1344-word file is first reached at iteration 4829. Its
+original base is unchanged; search scripts and intermediate 1346/1345 files
+are archived separately. No solver or heuristic optimum is claimed.
 
 \section{Verification protocol}
 Verifier A includes a literal exhaustive nearest-codeword oracle for small tests
@@ -135,8 +149,8 @@ are not substituted for a Lean theorem.
 
 \section{Verified and candidate upper bounds}
 \begin{theorem}[Computationally verified construction]
-The frozen 1351-word file has 1351 distinct elements of $A_7^9$ and satisfies
-$\max_x\min_{c\in C}d_H(x,c)=4$. Consequently $K_7(9,4)\le1351$.
+The frozen follow-up file has 1344 distinct elements of $A_7^9$ and satisfies
+$\max_x\min_{c\in C}d_H(x,c)=4$. Consequently $K_7(9,4)\le1344$.
 \end{theorem}
 \noindent The evidence for this theorem is exhaustive execution and the explicit
 object; it is not yet a Lean proof. Both checkers report 40\,353\,607 covered
@@ -151,6 +165,15 @@ certificates. ``Rechecked UB'' is a replayed \emph{prior} code, hence absent for
 secondary cells. Candidate cardinalities in this table are all computationally
 verified; the word candidate qualifies novelty/formal status, not a missing file.
 Machine-generated exact rational $\alpha$ intervals are in \path{bounds.json}.
+
+For completions retaining the original base, a rational weighted hole-orbit
+certificate gives patch size at least $\lceil76217001/500000\rceil=153$,
+hence total size at least 1182. An independent literal-Hamming kernel checks
+all 117649 quotient-center inequalities in integer arithmetic. This is a
+restricted architectural lower bound, not a bound for unrestricted $K_7(9,4)$.
+A third, ball-enumeration audit checks the full 1344-word code and supplies a
+private witness for each word: none can be singly deleted. Neither irredundancy
+nor absence of two-remove/one-add moves in the searched pool proves optimality.
 
 \section{Lean formal verification}
 We pin Florath's library~\cite{florath} at
@@ -171,7 +194,9 @@ only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
 Native mode is not enabled; upstream native mode overrides the kernel flag if
 explicitly enabled. The principal coverage theorem is absent. A generic theorem
 requiring an \texttt{ExplicitQaryUpper} hypothesis is not a proof that such an
-object exists. The modular-translation isometry, explicit matrix normalization, injectivity, 343-word coset cardinality and coset transport are now proved in Lean. Decoding the actual compact payloads, linking the cosets to the original Finset and reflecting the finite witness checks remain work.
+object exists. The modular-translation isometry, explicit matrix normalization, injectivity, 343-word coset cardinality and coset transport are now proved in Lean. Decoding the actual compact payloads, linking the cosets to the original Finset and reflecting the complete finite witness checks remain work. A conditional
+partition-to-coverage bridge is proved, and 2048 real witness distances pass
+chunked kernel reflection; these sampled checks do not discharge full coverage.
 
 \section{Reproducibility}
 Install Python 3.12, NumPy 2.3.5, g++ and OpenSSL headers; install elan for the
@@ -179,6 +204,8 @@ pinned nested project, and TeX for the paper. From the repository root:
 \begin{lstlisting}[basicstyle=\ttfamily\small]
 make covering-fast
 make verify-all-computational
+make verify-q7-9-4-1344-computational
+make exact-q7-audit
 make covering-formal
 make verify-q7-9-4-1351
 make paper
@@ -196,26 +223,34 @@ were built from source. \texttt{lake update} succeeds with the upstream-supporte
 \section{Limitations}
 The computational trusted base includes Python/NumPy, C++/OpenSSL, their compilers
 and the operating system; testing is not a proof of all executable semantics.
-The principal selector has external validation but no kernel replay. Generator
-revision/seed is incompletely recorded. Novelty review covered primary arXiv texts,
+The principal selector has external validation but no kernel replay. The original generator
+revision/seed is incompletely recorded; the new search seed and source hashes
+are recorded. The published global lower264 game replay remains incomplete. Novelty review covered primary arXiv texts,
 ancillaries, historical tables, citation paths, Exa and Crossref; Google Scholar
 returned HTTP 429, zbMATH and MathSciNet HTTP 403. A complete literature or
 forward-citation search is not claimed. Secondary novelty remains unresolved,
 including potential older linear covering constructions. No assertion is made
-that 1351 is optimal or that a 1350-word search has been exhausted.
+that 1344 is optimal. Independently rechecked global evidence gives
+$241\le K_7(9,4)\le1344$; the published lower bound264 is documented separately.
 
 \section{Conclusion}
 The explicit object and two independent exhaustive algorithms support the eight
-stated upper bounds. The principal construction improves the verified 1475 bound
+stated upper bounds, including the bounded-search improvement to1344.
+The principal construction improves the verified 1475 bound
 found in this audit. The formal gap is precisely coverage replay for the frozen
 principal object, rather than construction recovery or executable coverage.
 
 \appendix
 \section{Certificate references}
 Canonical files, metadata, original byte archives, hash files and reports reside
-under \path{research/covering-codes/certificates/}. The principal directory is
+under \path{research/covering-codes/certificates/}. The preserved original directory is
 \path{q7_n9_r4_m1351}; it also contains \texttt{witness.u16le.gz},
 \path{witness-metadata.json} and \path{certificate-check.json}.
+The improved file and compact certificate are in \path{q7_n9_r4_m1344}.
+Its code SHA-256 is
+\begin{center}\small
+\texttt{6a1653b6697b4ed2c8753b2ae5f5a6c0878a05b7cc47873d11b0387b11703db9}.
+\end{center}
 The flat payload hash is
 \begin{center}\small
 \texttt{6f4425a72b66efa284e7ffc1bfd20117fc058e44bb46b37650f2c9dca5a72d2a}.
@@ -236,5 +271,8 @@ codes, arXiv:2504.01932v2, 2026.
 \url{https://github.com/florath/covering-codes-lean}, pinned commit as above.
 \bibitem{ostergard} P. R. J. \"Osterg\aa rd, New constructions for $q$-ary
 covering codes, Ars Combinatoria 52 (1999), 51--63.
+\bibitem{hhsp} W. Haas, I. Halupczok and J.-C. Schlage-Puchta.
+Lower Bounds for q-ary Codes with Large Covering Radius.
+Electronic Journal of Combinatorics 16(1), R133, 2009. DOI:10.37236/222.
 \end{thebibliography}
 \end{document}

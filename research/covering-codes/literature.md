@@ -91,3 +91,18 @@ novelty unresolved. No code is declared KNOWN_RESULT without identified evidence
 
 Machine-readable records with value, authors, date, version, source classification,
 explicit-code availability and verification level are in `literature.json`.
+
+## Follow-up primary-source audit, 2026-10-02
+
+The original publisher PDF of Haas, Halupczok and Schlage-Puchta (2009),
+DOI 10.37236/222, is archived in experiments/exact-q7/lower/. Table 5,
+printed page 17, directly gives K_7(9,4)>=264. This replaces reliance on a
+secondary table for locating that published bound. It does not independently
+replay its winning-game computation.
+
+An independent histogram-game implementation and concrete labeled-partition
+oracle agree on 80 small cases. The target M=263 attempts time out after
+120 and 60 seconds, with UNKNOWN status. No stronger global LB is established.
+The exact rational SDP lower bound 241 is independently rerun. See the new
+experiment report for the improved construction with 1344 words; global
+novelty remains unresolved and no world-record claim is made.

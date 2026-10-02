@@ -1,0 +1,9 @@
+{
+  "ceiling_usd": 5,
+  "additional_provisioned_infrastructure_usd": 0,
+  "paid_resources_created": [],
+  "cloud_identity_available": false,
+  "platform_and_subagent_inference_cost_observable": false,
+  "policy": "No paid provisioning; bounded jobs on already-attached executor.",
+  "date": "2026-10-02"
+}

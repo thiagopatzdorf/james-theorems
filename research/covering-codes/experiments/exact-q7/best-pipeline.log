@@ -1,3 +1,7 @@
+make -C research/covering-codes verify-q7-9-4-1344-computational
+make[1]: Entering directory '/workspace/james-theorems/research/covering-codes'
+python3 tools/verify_case.py q7_n9_r4_m1344 --computational-only
+code.txt: OK
 {
   "status": "PASS",
   "q": 7,
@@ -13,5 +17,7 @@
   "ambient_words": 40353607,
   "payload_bytes": 253820,
   "formal_status": "NOT_REPLAYED_IN_LEAN",
-  "runtime_seconds": 0.026451443001860753
+  "runtime_seconds": 0.03674767800112022
 }
+{"status": "COMPUTATIONALLY_VERIFIED", "formal": "NOT_CLAIMED", "sha256": "6a1653b6697b4ed2c8753b2ae5f5a6c0878a05b7cc47873d11b0387b11703db9"}
+make[1]: Leaving directory '/workspace/james-theorems/research/covering-codes'

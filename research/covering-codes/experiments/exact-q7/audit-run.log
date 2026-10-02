@@ -1,0 +1,77 @@
+make -C research/covering-codes exact-q7-audit
+make[1]: Entering directory '/workspace/james-theorems/research/covering-codes'
+python3 experiments/exact-q7/test_new_certificate.py
+test_real_and_forged_objects (__main__.CertificateAttacks.test_real_and_forged_objects) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.130s
+
+OK
+python3 experiments/exact-q7/patch/verify_private_certificate.py
+{"status": "PASS", "witness_count": 322, "restricted_patch_minimum": 322, "global_K_lower_bound_claimed": false}
+python3 experiments/exact-q7/lower/audit_lower.py
+{"status": "PASS", "rechecked_lower": 241, "primary_documentary_lower": 264, "264_independently_replayed": false, "new_lower_bound_found": false, "runtime_seconds": 1.3822961920013768}
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 experiments/exact-q7/lower/audit_fixed_base.py
+{
+  "status": "PASS",
+  "scope": "FIXED_BASE_ONLY; no global K7(9,4) lower bound",
+  "base_words": 1029,
+  "holes": 9261,
+  "hole_orbits": 27,
+  "kernel_rechecked_pairs": 40353607,
+  "kernel_strategy": "literal Hamming distances representatives versus all343spanwords",
+  "kernel_hash_matches": true,
+  "center_coverage_hash_matches": true,
+  "random_literal_centers_checked": 200,
+  "maximizer_literal_checked": true,
+  "all343_hole_translations_checked": true,
+  "each_hole_min_distance_to_actual_base": 5,
+  "maximum_holes_covered_by_one_arbitrary_center": 68,
+  "fixed_base_patch_lower_bound": 137,
+  "fixed_base_total_lower_bound": 1166,
+  "global_lower_bound_claimed": false,
+  "source_sha256": "f79d5ecadd56b7884ba806949970982502e875ade97a25cccf25358a91fa41cb",
+  "analysis_json_sha256": "baca051d542d056a1ecd4c404cf9130013d0136ce4faec9098e1e1e015f8449f",
+  "kernel_sha256": "d66fde8bf5eb51751206eb010b11e4f18b935f23205ab5fa49a9bec6cc2177b9",
+  "coverage_sha256": "49dfeff0574b634097ec24ad8b39dd2194135a44ad93cf59b4f640dfd70a476d",
+  "code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "quotient_sha256": "a6db791fe5a6cfa8af603d5c4c4a4cbbd9342cb53900325001c1285b15ac8aef",
+  "derived_coset_representatives": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      4,
+      0,
+      1,
+      6,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      6,
+      2,
+      2,
+      0,
+      0,
+      1
+    ]
+  ],
+  "runtime_seconds": 5.3672157260007225,
+  "paid_infrastructure_spend_usd": 0
+}
+make[1]: Leaving directory '/workspace/james-theorems/research/covering-codes'

@@ -46,6 +46,8 @@ def run(case, computational_only=False):
     if case=='q7_n9_r4_m1351':
         subprocess.run([sys.executable,str(ROOT/'tools/witness_certificate.py'),str(d)],check=True)
         subprocess.run([sys.executable,str(ROOT/'tools/partition_certificate.py'),str(d)],check=True)
+    elif (d/'partition-metadata.json').is_file():
+        subprocess.run([sys.executable,str(ROOT/'tools/certify_fixed_base_candidate.py'),str(d)],check=True)
     if computational_only:
         print(json.dumps(dict(status='COMPUTATIONALLY_VERIFIED',formal='NOT_CLAIMED',sha256=sha)))
         return 0
