@@ -1,0 +1,49 @@
+{
+  "scope": "FIXED_BASE_RESTRICTED_POOL_ONLY",
+  "method": "seeded destroy3..16 and randomized greedy repair, neutral moves allowed",
+  "candidate_centers": 9947,
+  "iterations": 9344,
+  "accepted_equal": 8136,
+  "best_patch": 317,
+  "best_total": 1346,
+  "improvements": [
+    {
+      "method": "destroy-repair-730",
+      "patch_words": 321,
+      "M": 1350,
+      "sha256": "a75ccd5905fde136017b197a60c80a8dfc79c88a3884f873b9b906ee0b053124",
+      "elapsed": 5.11088030099927
+    },
+    {
+      "method": "destroy-repair-1785",
+      "patch_words": 320,
+      "M": 1349,
+      "sha256": "4f48e866cf70749e96df78dd3f5c468afa3caa34a820207475598857cfa8b12e",
+      "elapsed": 11.38863183400099
+    },
+    {
+      "method": "destroy-repair-1796",
+      "patch_words": 319,
+      "M": 1348,
+      "sha256": "edc9d6e30ac8387c46e37af5f9555b6f93001272d64f6a57ae9941fb22e308ca",
+      "elapsed": 11.46536133599875
+    },
+    {
+      "method": "destroy-repair-3480",
+      "patch_words": 318,
+      "M": 1347,
+      "sha256": "575e633d8aefab3707a19f80bb27b31e8723322c15994f08925216f21896c4e0",
+      "elapsed": 21.335778687003767
+    },
+    {
+      "method": "destroy-repair-4995",
+      "patch_words": 317,
+      "M": 1346,
+      "sha256": "3506511566dfa02adda6d2c6558e37ff136fdea38f79d0addef96b806ebdd882",
+      "elapsed": 30.480195695003204
+    }
+  ],
+  "runtime_seconds": 55.688707690998854,
+  "optimality": "NOT_ESTABLISHED",
+  "paid_resources_used": false
+}

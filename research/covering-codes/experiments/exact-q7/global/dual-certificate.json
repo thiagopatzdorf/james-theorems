@@ -1,0 +1,174 @@
+{
+  "scope": "FIXED_BASE_ONLY; no globalK lower-bound claim",
+  "status": "EXACT_RATIONAL_CERTIFICATE_PASS",
+  "original_code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "hole_orbit_representatives": [
+    "000013453",
+    "000023113",
+    "000025262",
+    "000036453",
+    "000042245",
+    "000104416",
+    "000123210",
+    "000134202",
+    "000163532",
+    "000216206",
+    "000233521",
+    "000234521",
+    "000244511",
+    "000252124",
+    "000260511",
+    "000263055",
+    "000346063",
+    "000354443",
+    "000416561",
+    "000423214",
+    "000435505",
+    "000444504",
+    "000533110",
+    "000564102",
+    "000616665",
+    "000651444",
+    "000665245"
+  ],
+  "weights": [
+    {
+      "numerator": 2143,
+      "denominator": 200000
+    },
+    {
+      "numerator": 1683,
+      "denominator": 500000
+    },
+    {
+      "numerator": 13051,
+      "denominator": 1000000
+    },
+    {
+      "numerator": 2267,
+      "denominator": 250000
+    },
+    {
+      "numerator": 22631,
+      "denominator": 1000000
+    },
+    {
+      "numerator": 146,
+      "denominator": 15625
+    },
+    {
+      "numerator": 4723,
+      "denominator": 200000
+    },
+    {
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "numerator": 5893,
+      "denominator": 500000
+    },
+    {
+      "numerator": 20923,
+      "denominator": 1000000
+    },
+    {
+      "numerator": 2767,
+      "denominator": 250000
+    },
+    {
+      "numerator": 1321,
+      "denominator": 62500
+    },
+    {
+      "numerator": 3221,
+      "denominator": 125000
+    },
+    {
+      "numerator": 14049,
+      "denominator": 1000000
+    },
+    {
+      "numerator": 6383,
+      "denominator": 200000
+    },
+    {
+      "numerator": 1649,
+      "denominator": 125000
+    },
+    {
+      "numerator": 3561,
+      "denominator": 125000
+    },
+    {
+      "numerator": 37729,
+      "denominator": 1000000
+    },
+    {
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "numerator": 6869,
+      "denominator": 1000000
+    },
+    {
+      "numerator": 1653,
+      "denominator": 125000
+    },
+    {
+      "numerator": 6731,
+      "denominator": 1000000
+    },
+    {
+      "numerator": 227,
+      "denominator": 12500
+    },
+    {
+      "numerator": 106,
+      "denominator": 15625
+    },
+    {
+      "numerator": 22017,
+      "denominator": 1000000
+    },
+    {
+      "numerator": 25559,
+      "denominator": 1000000
+    },
+    {
+      "numerator": 18613,
+      "denominator": 500000
+    }
+  ],
+  "fractional_patch_bound": "76217001/500000",
+  "integer_patch_lower_bound": 153,
+  "fixed_base_total_lower_bound": 1182,
+  "all_quotient_centers_checked": 117649,
+  "max_constraint_before_safe_rescale": "11623939455272707381498692874157214403335876408270427625470274193377133446579428494548607630257095105962812204401328444399501908551723949/11623939455285554825652413255637071272198299132175735573910419514296002641823594492047891333045452971135612019694796429418753703171538840",
+  "iterations": [
+    {
+      "iteration": 0,
+      "constraints": 500,
+      "objective": 152.45320304138838,
+      "violations": 2,
+      "max_load": 1.0107585994122443
+    },
+    {
+      "iteration": 1,
+      "constraints": 502,
+      "objective": 152.4390528001937,
+      "violations": 1,
+      "max_load": 1.0009817106210899
+    },
+    {
+      "iteration": 2,
+      "constraints": 503,
+      "objective": 152.43866965563961,
+      "violations": 0,
+      "max_load": 1.0000000000000064
+    }
+  ],
+  "runtime_seconds": 2.201080605998868,
+  "argument": "Give every point of hole orbit i weightlambda_i. Anyambientcenter coverssum_i A_ij lambda_i <=1. Covering9261holesthereforeneedsatleast343sum_i lambda_iwords."
+}

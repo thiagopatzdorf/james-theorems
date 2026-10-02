@@ -1,0 +1,927 @@
+                         Lower Bounds for q-ary Codes
+                          with Large Covering Radius
+                                      Wolfgang Haas
+                                    Immanuel Halupczok∗
+                                Jan-Christoph Schlage-Puchta
+
+                                      Albert-Ludwigs-Universität
+                                       Mathematisches Institut
+                                              Eckerstr. 1
+                                       79104 Freiburg, Germany
+                                       wolfgang haas@gmx.net
+                                          math@karimmi.de
+                                         jcsp@cage.ugent.be
+
+
+             Submitted: Jan 12, 2009; Accepted: Oct 27, 2009; Published: Nov 7, 2009
+                           Mathematics Subject Classification: 94B65
+
+
+
+
+                                               Abstract
+             Let Kq (n, R) denote the minimal cardinality of a q-ary code of length n and
+         covering radius R. Recently the authors gave a new proof of a classical lower bound
+         of Rodemich on Kq (n, n − 2) by the use of partition matrices and their transversals.
+         In this paper we show that, in contrast to Rodemich’s original proof, the method
+         generalizes to lower-bound Kq (n, n − k) for any k > 2. The approach is best-
+         understood in terms of a game where a winning strategy for one of the players
+         implies the non-existence of a code. This proves to be by far the most efficient
+         method presently known to lower-bound Kq (n, R) for large R (i.e. small k). One
+         instance: the trivial sphere-covering bound K12 (7, 3) ⩾ 729, the previously best
+         bound K12 (7, 3) ⩾ 732 and the new bound K12 (7, 3) ⩾ 878.
+
+             Keywords: covering codes, lower bounds, partition matrices.
+
+
+   ∗
+       The second author was supported by the Fondation Sciences mathématiques de Paris.
+
+
+
+
+the electronic journal of combinatorics 16 (2009), #R133                                         1
+1     Introduction
+Let q ⩾ 2 and Zq = {0, 1, . . . , q − 1}. The Hamming distance d(x, y) between x =
+(x0 , . . . , xn−1 ) ∈ Znq and y = (y0 , . . . , yn−1) ∈ Znq is defined by
+
+                            d(x, y) = |{i ∈ {0, . . . , n − 1} : xi 6= yi }|.
+
+We say C ⊂ Znq is a q-ary code of length n and covering radius (at most) R, if
+
+                              ∀x ∈ Znq ∃y ∈ C       with    d(x, y) ⩽ R                   (1)
+
+is satisfied. Let Kq (n, R) denote the minimal cardinality of a q-ary code of length n and
+covering radius R.
+    For a monograph on covering codes see [2]. An updated table of bounds on Kq (n, R)
+is published online by Kéri [5]. An easy lower bound on Kq (n, R) is the sphere-covering
+bound
+                                                    qn
+                                    Kq (n, R) ⩾           ,                             (2)
+                                                Vq (n, R)
+where
+                                                                 X n
+                   Vq (n, R) = |{y ∈ Znq : d(y, x) ⩽ R}| =              (q − 1)i
+                                                                0⩽i⩽R
+                                                                      i
+denotes the cardinality of a Hamming-sphere with radius R centered on an arbitrary word
+x ∈ Znq .
+   The following classical lower bound due to Rodemich [7] improves on the sphere-
+covering bound in case of R = n − 2:
+
+                                                      q2
+                                    Kq (n, n − 2) ⩾      .                                 (3)
+                                                    n−1
+In a previous paper the first and the third author together with Jörn Quistorff [3] presented
+a new proof of Rodemich’s bound by the use of partition matrices and their transversals. In
+this paper we show that, in contrast to Rodemich’s original proof, the method generalizes
+to lower-bound Kq (n, n − k) for any k > 2. We present the method by considering the
+following game between player P (the “partition searcher”) and player T (the “transversal
+searcher”). Player P successively offers n partitions of ZM into q subsets, while player T
+chooses one set per partition. Player T wins if each element of ZM occurs in less than k
+of the sets he has chosen. It turns out that if player T has a winning strategy for that
+game, then Kq (n, n − k) > M holds true.
+    We make extensive computer calculations to compute winning strategies for player T
+with various values of n, k and q to lower-bound Kq (n, n − k). Although the computing
+time grows rapidly with increasing k, the method yields almost 150 new lower bounds for
+Kq (n, R) in Kéri’s tables, most of them with substantial improvements.
+    This paper is organized as follows. In Section 2 we define partition matrices, their
+(generalized) transversals and the connection to covering codes. In Section 3 we consider
+the game from above and describe how to compute winning strategies for player T. In
+
+the electronic journal of combinatorics 16 (2009), #R133                                    2
+Section 4 we study the computational algorithms in detail. In Section 5 we present the
+results of these computations.
+    We always assume that k, n, q, m, M are integers with 3 ⩽ k ⩽ n, q ⩾ 2 and
+0 ⩽ m ⩽ M.
+    Added in Proof. After the submission of the article we recognized, that by a sim-
+ple modification of the method we are able to produce new lower bounds not only for
+Kq (n, n − k), but also for Kq (n, k), where k is small compared to n. The details will
+appear elsewhere.
+
+
+2     Partition Matrices and Covering Codes
+The following definition generalizes the one given in [3].
+
+Definition 1. A q × n-matrix M, whose entries are subsets P ⊂ ZM with |P | ⩾ m is
+called an (n, M, q; m)-partition matrix, if the sets in each of the n columns of M form a
+partition of ZM into q subsets. In case of m = 0 we simply speak of a (n, M, q)-partition
+matrix.
+    A sequence T = (P1 , . . . , Pd ) of d subsets Pi ⊂ ZM , 1 ⩽ i ⩽ d is called a d-transversal.
+If P1 , . . . , Pd stem from pairwise different columns of a partition matrix M, we speak of
+a d-transversal in M.
+    For z ∈ ZM and i ⩾ 0 we set
+
+                         mult(z) = mult(z, T ) = |{1 ⩽ i ⩽ d | z ∈ Pi }|,
+
+                          Zi = Zi (T ) = {z ∈ ZM | mult(z) = i} ⊂ ZM ,
+                        Z⩾i = Z⩾i (T ) = {z ∈ ZM | mult(z) ⩾ i} ⊂ ZM .
+If l ⩾ 0, then a (d, l)-transversal is a d-transversal with Z⩾l = ∅. For any given k, we
+say that a transversal T is of type (a1 , . . . , ak ; d) if it is a d-transversal and |Z⩾j (T )| = aj
+holds for 1 ⩽ j ⩽ k.
+
+   Clearly transversals of type (a1 , . . . , ak ; d) exists if and only if M ⩾ a1 ⩾ a2 ⩾ . . . ⩾
+ak ⩾ 0 and moreover ai = 0 for i > d. We will call such tuples (a1 , . . . , ak ; d) admissible.
+
+Theorem 2. If R ⩽ n − 2 then the following two statements are equivalent:
+    (i) Every (n, M, q)-partition matrix has an (n, n − R)-transversal.
+    (ii) Kq (n, R) > M.
+
+Proof. (i) ⇒ (ii): Let C ⊂ Znq be a code of cardinality M. Let C = (cjk ) (j ∈ ZM , k ∈ Zn )
+be an M × n-matrix whose rows are the codewords of C (in an arbitrary order). For
+i ∈ Zq , k ∈ Zn set Pik = {j ∈ ZM | cjk = i}. Then M = (Pik ) is an (n, M, q)-partition
+matrix. By assumption, it has an (n, n − R)-transversal (Pxi ,i )0⩽i⩽n−1 with xi ∈ Zq
+(0 ⩽ i ⩽ n − 1). Then for every j ∈ ZM the equation cji = xi holds for less than n − R
+values of i ∈ Zn . Hence, C has covering radius > R.
+
+the electronic journal of combinatorics 16 (2009), #R133                                            3
+   (ii) ⇒ (i): Let M = (Pik ), (i ∈ Zq , k ∈ Zn ) be a (n, M, q)-partition matrix. For every
+j ∈ ZM and every k ∈ Zn there exists exactly one cjk := i ∈ Zq with j ∈ Pik . Then
+C := {(cj,0, . . . , cj,n−1) ∈ Znq | j ∈ ZM } is a code of cardinality |C| ⩽ M, which by our
+assumption has covering radius > R. Hence, there exists a tuple (x0 , . . . , xn−1 ) ∈ Znq such
+that for every j ∈ ZM the equation cji = xi holds for less than n − R values of i ∈ Zn .
+Consequently, (Pxi ,i)0⩽i⩽n−1 is the desired (n, n − R)-transversal.
+    Very recently Kéri [5] announced a computer-aided proof of the new bound K4 (6, 3) ⩾
+10, improving on the bound K4 (6, 3) ⩾ 8 due to Chen and Honkala [1]. As an example
+application of Theorem 2, we give a non-computational proof of this result.
+Lemma 3. Every (4, 9, 4)-partition matrix contains a (3, 2)-transversal.
+Proof. Let M be a (4, 9, 4)-partition matrix with the columns 0, 1, 2, 3, whose entries are
+subsets P ⊂ Z9 . Note that a (3, 2)-transversal in M simply is a 3-transversal in M
+consisting of pairwise disjoint sets.
+    A set P ⊂ Z9 in M with |P | ⩽ 1 can easily be extended to a (3, 2)-transversal, so
+without loss each column of M consists of three 2-(element-)sets and one 3-set.
+    Moreover we may assume that any two 2-sets in different columns are distinct. Oth-
+erwise without loss let {0, 1}, {0, 1}, {2, 3} occur in the columns 0, 1, 2. Let R 6= {0, 1} be
+a set in column 1 disjoint to {2, 3}. Then {0, 1}, R, {2, 3} is a (3, 2)-transversal.
+    We may assume that there is a 2-set and an intersecting 3-set, say in columns 0, 1,
+since otherwise two disjoint 2-set in any two columns and the 3-set in another were a
+(3, 2)-transversal. So let P0 = {0, 1} occur in column 0 and Q1 = {5, 6} as well as {7, 8}
+in column 1. Now all four sets P0i , P1i , P2i , P3i in column i, i = 2, 3 intersect {0, 1, 5, 6} as
+well as {0, 1, 7, 8}, since {0, 1}, {5, 6} or {7, 8} together with a counterexample would be
+a (3, 2)-transversal. Without loss assume that P2i and P3i do not intersect {0, 1}, i = 2, 3.
+Then P2i and P3i intersect {5, 6} as well as {7, 8}, implying {5, 6, 7, 8} ⊂ P2i ∪ P3i .
+Therefore in column i (i = 2, 3) one of the two sets P2i and P3i must be a 2-set Qi
+satisfying Qi ⊂ {5, 6, 7, 8} and one of the two sets P0i and P1i is a 2-set Pi intersecting
+{0, 1} with Pi ⊂ {0, 1, 2, 3, 4}.
+    There exists a 2-set Q0 in column 0 intersecting {5, 6, 7, 8}. Now Q0 ⊂ {5, 6, 7, 8}
+is impossible, since then at least two of the four pairwise distinct sets Q0 , . . . , Q3 ⊂
+{5, 6, 7, 8} are disjoint and would give a (3, 2)-transversal together with P0 , P2 or P3 ; so
+without loss Q0 = {4, 5}. Then Q0 , {7, 8} and P2 are a (3, 2)-transversal except when
+P2 = {y, 4} with y ∈ {0, 1}. Now in the first column there exists a 2-set Q different from
+Q0 and {0, 1}. Again Q ⊂ {5, 6, 7, 8} is impossible. Then Q, {5, 6} or {7, 8}, P2 is a
+(3, 2)-transversal.
+Theorem 4 (Kéri [5]). K4 (6, 3) ⩾ 10.
+Proof. By Theorem 2 it suffices to show that every (6, 9, 4)-partition matrix M has a
+(6, 3)-transversal. Let Mi,l (resp. Mi,r ) denote the sub-matrix of M consisting of the
+first (resp. last) i columns of M.
+    (i) Without loss each set in M has cardinality ⩾ 2 and no 2-set occurs twice.
+
+the electronic journal of combinatorics 16 (2009), #R133                                          4
+   Otherwise we may assume that in M2,r there occurs a ⩽ 1-set or the same 2-set twice.
+By Lemma 3, M4,l has a (3, 2)-transversal T1 , contained in, say M3,l . Now one easily sees
+that M3,r has a (3, 2)-transversal T2 , which together with T1 forms a (6, 3)-transversal in
+M.
+   We now know that each column of M consists of three 2-sets and one 3-set. We denote
+the 3-set in column i by Qi , 0 ⩽ i ⩽ 5.
+    (ii) Without loss M3,l has a (3, 2)-transversal T1 = (P0 , P1 , P2 ) with P0 ∪P1 ∪P2 = Z6 .
+    It suffices to show that there exists a (3, 2)-transversal in M consisting of 2-sets. We
+may assume that in two different columns there exists a 2-set (say {0, 1} in column 0)
+and an intersecting 3-set (say in column 1), since otherwise two disjoint 2-sets in M2,l ,
+two disjoint 2-sets in columns 2 and 3 and Q4 , Q5 in M2,r would form a (6, 3)-transversal.
+Now there must be two 2-sets in column 1 disjoint to {0, 1}, say the sets {2, 3} and {4, 5}.
+In each of the columns i = 2, 3, 4, 5 there exists a 2-set Ri disjoint to {0, 1}. We may
+assume Ri ⊂ {2, 3, 4, 5}, since otherwise {0, 1}, {2, 3} or {4, 5} and Ri would be a (3, 2)-
+transversal consisting of 2-sets. Now at least two of the four sets R2 . . . , R5 are equal or
+disjoint, say R2 and R3 . The first case is impossible by (i) and the latter case gives us
+the (3, 2)-transversal {0, 1}, R2 and R3 .
+   The proof of Theorem 4 is complete, if we are able to show that there exists a (3, 3)-
+transversal T2 in M3,r with the additional property that
+    (*) if x ∈ Z9 occurs in two sets of T2 then x ∈ {6, 7, 8},
+since then T1 together with T2 forms the desired (6, 3)-transversal in M.
+    (iii) No set P in M3,r satisfies P ⊂ {6, 7, 8}.
+   If P in M3,r satisfies P ⊂ {6, 7, 8}, then P and any two disjoint sets from the other
+two columns of M3,r form a (3, 3)-transversal in M3,r with the property (*) and we are
+done.
+    (iv) No element of {6, 7, 8} lies in two 2-sets of M3,r .
+   If an element of {6, 7, 8} lies in two 2-sets R1 and R2 of M3,r , then by (i) we have
+|R1 ∪ R2 | = 3, and R1 , R2 and any set R disjoint to R1 and R2 in the remaining column
+of M3,r form a (3, 3)-transversal in M3,r with the property (*).
+    Now in each of the columns i with i = 3, 4, 5 there occurs a 2-set Pi in M3,r intersecting
+{6, 7, 8}, since otherwise Qi must be the set {6, 7, 8} itself, contradicting (iii).
+   (v) For each i = 3, 4, 5 we have {6, 7, 8} ⊂ Pi ∪ Qi . Pi as well as Qi have exactly one
+element in common with Z6 .
+    By (iii) Pi has exactly one element in common with Z6 . By (iv) no 2-set intersecting
+{6, 7, 8} can occur in M3,r besides P3 , P4 and P5 . Thus both elements of {6, 7, 8} \ Pi lie
+in Qi and (v) follows.
+     We now complete the proof of Theorem 4. At least two of the three sets P3 , P4 and
+P5 , say P3 and P4 , have nonempty intersection, since otherwise P3 , P4 and P5 are a (3, 2)-
+transversal in M3,r . By (i) and (iv) P3 ∩ P4 = {x} with x ∈ Z6 . Let R denote a set
+
+the electronic journal of combinatorics 16 (2009), #R133                                     5
+among the two sets P5 and Q5 not containing x. By (v) R ∩ Z6 = {y} with x 6= y. Again
+by (v) there occur two 2-sets ⊂ Z6 in column 4. Let S denote the one from this two sets
+not containing y. Then P3 , R and S form a (3, 3)-transversal in M3,r with the property
+(*), since S neither contains x by P3 ∩ P4 = {x} and S 6= P4 .
+    It appears, that Theorem 2 leads to many similar improvements for lower-bounding
+Kq (n, n − 3) with some small values of q and n by the use of individual considerations.
+For instance in a forthcoming paper [4] we further improve Theorem 4 to K4 (6, 3) ⩾ 11
+and settle K4 (5, 2) = 16. In the next section we develop a mechanical approach for the
+use of Theorem 2 which is well suitable for computer calculations.
+
+
+3     The Game
+We consider a game between player P, who tries to find a certain covering code and player
+T, who tries to prove that no such code exists. More precisely, player P wants to show
+Kq (n, n − k) ⩽ M and player T wants to show Kq (n, n − k) > M. We describe the game
+in the following definition.
+
+Definition 5. The game G(n, M, q, k; m) between player P and player T goes as follows.
+Player P chooses a partition of ZM consisting of q subsets B1 , . . . , Bq ⊂ ZM satisfying
+|Bi | ⩾ m for 1 ⩽ i ⩽ q and player T chooses one of the sets. Then player P chooses
+a second partition with the same properties and again player T chooses one of the sets.
+This goes on until player P has chosen n such partitions and player T has chosen an
+n-transversal T . Player T wins, if T is an (n, k)-transversal, otherwise he loses.
+     In case of m = 0 we simply speak of the game G(n, M, q, k).
+
+   If Kq (n, n − k) ⩽ M, then by Theorem 2 there exists an (n, M, q)-partition matrix
+M without an (n, k)-transversal. Then player P has a winning strategy for the game
+G(n, M, q, k): he simply chooses the n partitions from the columns of M. Thus we get:
+
+Theorem 6. If player T has a winning strategy for the game G(n, M, q, k), then Kq (n, n−
+k) > M.
+
+    Note that conversely Kq (n, n − k) > M does not imply that player T has a winning
+strategy for the game G(n, M, q, k). In fact, the existence of a covering code is equivalent
+to the statement that player P has a winning strategy which does not depend on the
+choices of player T.
+    By Theorem 6 it is our task to compute a winning strategy for player T for the game
+G(n, M, q, k), if we want to lower-bound Kq (n, n − k). We begin by the definition of
+winning tuples. Note that, if after d steps of the game G(n, M, q, k; m) player T has
+chosen a d-transversal T , the winner of the game depends only on the type (a1 , . . . , ak ; d)
+of T , provided both players finish the game playing optimal.
+
+Definition 7. Suppose that in the game G(n, M, q, k; m), after d steps (0 ⩽ d ⩽ n)
+player T has chosen a d-transversal T . We then call T a winning transversal, if player T
+
+the electronic journal of combinatorics 16 (2009), #R133                                      6
+has a winning strategy in this situation; otherwise we call T losing. An admissible tuple
+(a1 , . . . , ak−1 ; d) is a winning tuple if a transversal of type (a1 , . . . , ak−1, 0; d) is winning;
+otherwise it is a loosing tuple.
+   Note: a non-admissible tuple is neither winning nor loosing. Some admissible tuples
+can not occur in the game G(n, M, q, k; m) because the corresponding transversal would
+have to contain sets of cardinality less than m. Of course it is unnecessary to consider
+such tuples; however, for simplicity we still call them winning or losing, depending on the
+winner when the remainder of the game is played with sets of cardinality at least m.
+   The following lemma is evident.
+Lemma 8. Let a′i , 1 ⩽ i ⩽ k − 1 be integers with a′i ⩽ ai (1 ⩽ i ⩽ k − 1), such
+that (a′1 , . . . , a′k−1 ; d) is admissible. If (a1 , . . . , ak−1; d) is a winning tuple for the game
+G(n, M, q, k; m), then so is (a′1 , . . . , a′k−1 ; d).
+    The idea is now to recursively determine the winning tuples for the game G(n, M, q, k)
+with decreasing d by starting with d = n; if (0, . . . , 0; 0) turns out to be a winning tuple,
+then player T has a winning strategy for the game G(n, M, q, k) and Kq (n, n − k) > M
+follows by Theorem 6. However, we can do better. It may happen that (0, . . . , 0; 0) is not
+a winning tuple, but (a1 , 0, . . . , 0; 1) is winning for some a1 ⩾ 0 (i.e. player T can win the
+game if the first partition contains a set with at most a1 elements by choosing that set).
+In that case, we may still be able to prove Kq (n, n − k) > M using the following theorem,
+as winning the game G(n, M, q, k; m) for m > 0 is often easier than winning the game
+G(n, M, q, k).
+Theorem 9. Suppose that 0 = m0 < m1 < · · · < ml are integers such that (mi+1 −
+1, 0, . . . , 0; 1) is a winning tuple for the game G(n, M, q, k; mi ) for 0 ⩽ i ⩽ l − 1 and such
+that player T has a winning strategy for the game G(n, M, q, k; ml ). Then Kq (n, n − k) >
+M holds true.
+Proof. By Theorem 2 it suffices to show that under the assumptions of the theorem,
+every (n, M, q)-partition matrix M has an (n, k)-transversal, so suppose that M is given.
+Denote by m the cardinality of the smallest set P0 occuring in M, and let i be maximal
+with mi ⩽ m. Without loss, we may suppose that P0 occurs in the first column of M.
+   We play the game G(n, M, q, k; mi ), and we let player P choose the n columns of M;
+as mi ⩽ m, he is allowed to do so. Suppose first i = l. Then by assumption player T
+has a winning strategy, and thus there exists an (n, k)-transversal in M. Now suppose
+i < l. Then player T can choose P0 in the first step of the game. Since m ⩽ mi+1 − 1,
+by assumption and Lemma 8 we get that (m, 0, . . . , 0; 1) is a winning tuple, so (P0 ) is a
+winning 1-transversal, and again there exists an (n, k)-transversal in M.
+    So the enhanced strategy to prove Kq (n, n − k) > M is now the following. Determine
+the winning tuples for the game G(n, M, q, k). If player T has a winning strategy, we are
+done. Otherwise, check whether there exists a winning tuple of the form (a1 , 0, . . . , 0; 1).
+If not, give up. If yes, then repeat the procedure for the game G(n, M, q, k; a1 + 1). If we
+obtain a winning tuple (a2 , 0, . . . , 0; 1) with a2 > a1 , then repeat again; go on until either
+
+the electronic journal of combinatorics 16 (2009), #R133                                               7
+ai+1 = ai (in that case, give up) or player T has a winning strategy for one of the games
+(then Theorem 9 implies Kq (n, n − k) > M).
+    In the remainder of this section, we show how winning tuples (a1 , . . . , ak−1 ; d) can be
+determined manually. Clearly, for d = n any tuple is a winning tuple. For d ⩾ n − 2,
+we will get explicit formulas (Lemmas 10 and 11), and for smaller d, we will prove the
+general Lemma 12, which is essentially a method of checking every possible partition, but
+adapted to manual computations. It can be applied with a reasonable amount of work
+when k = 3 and n and q are not too big (say, n, q ⩽ 12). As an example how this works
+in practice, we will prove Theorem 13.
+Lemma 10. If ak−1 ⩽ q − 1, then (a1 , . . . , ak−1; n − 1) is a winning tuple for the game
+G(n, M, q, k; m), provided it is admissible.
+Proof. Assume that in the game G(n, M, q, k; m), after n − 1 steps player T has chosen a
+transversal T of type (a1 , . . . , ak−1 , 0; n − 1) with ak−1 ⩽ q − 1 and player P has chosen
+the partition B1 , . . . , Bq of ZM in step n. Then as |Z⩾k−1| ⩽ q − 1, at least one of the sets
+B1 , . . . , Bq does not intersect Z⩾k−1 and this set can be taken by player T to complete T
+to an (n, k)-transversal.
+Lemma 11. Assume r := q − ak−1 > 0. If ak−2 ⩽ q + r 2 − r − 1 or M ⩽ (q − r)m + r 2 − 1,
+then (a1 , . . . , ak−1 ; n − 2) is a winning tuple for the game G(n, M, q, k; m), provided it is
+admissible.
+Proof. Assume that in the game G(n, M, q, k; m), player T has chosen a transversal T of
+type (a1 , . . . , ak−2 , q − r, 0; n − 2) after n − 2 steps and player P has chosen the partition
+B1 , . . . , Bq of ZM in step n − 1. By |Z⩾k−1| = q − r, at least r = q − |Z⩾k−1| sets, say
+B1 , . . . , Br , do not intersect Z⩾k−1 and thus all extend T to an (n − 1, k)-transversal.
+    If ak−2 ⩽ q + r 2 − r − 1, then we have |Zk−2 ∩ (B1 ∪ . . . ∪ Br )| ⩽ |Zk−2| = |Z⩾k−2| −
+|Z⩾k−1| ⩽ q + r 2 − r − 1 − (q − r) = r 2 − 1 < r 2 . This implies that at least one of the sets
+B1 , . . . , Br , say B1 , intersects Zk−2 in at most r−1 elements, which means that B1 extends
+T to an (n − 1, k)-transversal T ′ satisfying |Z⩾k−1(T ′ )| = |Zk−1(T )| + |Zk−2 (T ) ∩ B1 | ⩽
+(q − r) + (r − 1) = q − 1. Thus the (admissible) type of T ′ satisfies the prerequisites of
+Lemma 10, and thus T ′ and also T are winning transversals. If M ⩽ (q − r)m + r 2 − 1,
+then
+        |Zk−2 ∩ (B1 ∪ . . . ∪ Br )| ⩽ M − |Br+1 ∪ . . . ∪ Bq | ⩽ M − (q − r)m ⩽ r 2 − 1
+and the lemma follows again.
+   We now show how the winning tuples of step d + 1 can be used to determine the
+winning tuples of step d. The statement of the lemma is long and complicated, but it will
+become clear in the proof.
+Lemma 12. Suppose that l := q − ak−1 > 0 and that for any integers bij ⩾ 0 (1 ⩽ i ⩽ l,
+1 ⩽ j ⩽ k − 2) satisfying
+                          X
+                            bij ⩽ aj − aj+1 (1 ⩽ j ⩽ k − 2)                        (4)
+                             1⩽i⩽l
+
+
+the electronic journal of combinatorics 16 (2009), #R133                                        8
+there exist integers bi ⩾ 0 (1 ⩽ i ⩽ l) with the properties
+
+  (i) if 1 ⩽ i ⩽ l then (a1 + bi , a2 + bi1 , . . . , ak−1 + bi,k−2 ; d + 1) is a winning tuple for the
+      game G(n, M, q, k; m),
+      P             P       P
+ (ii)    1⩽i⩽l bi +   1⩽i⩽l   1⩽j⩽k−2 bij + max{1, m} · ak−1 + l > M.
+
+    Then (a1 , . . . , ak−1 ; d) is a winning tuple for the game G(n, M, q, k; m).
+
+Proof. Assume in the game G(n, M, q, k; m) player T has chosen a transversal T of type
+(a1 , . . . , ak−1 , 0; d) after d steps and player P the partition B1 , . . . , Bq of ZM in step d + 1.
+We have
+                                         |Bi | ⩾ m     (1 ⩽ i ⩽ q),                                  (5)
+since we are playing the game G(n, M, q, k; m). Without loss suppose that B1 , . . . , Bl do
+not intersect Z⩾k−1; this is possible as |Z⩾k−1| = ak−1 = q − l. Moreover, if some of
+the sets Bi are empty, then suppose that B1 is one of the empty sets. For 1 ⩽ i ⩽ l,
+0 ⩽ j ⩽ k − 2 we set
+                                        bij = |Zj ∩ Bi |.
+                                     P
+Clearly for 1 ⩽ j ⩽ k − 2 we have 1⩽i⩽l bij ⩽ |Zj | = |Z⩾j \ Z⩾j+1 | = aj − aj+1 , so that
+(4) is satisfied. By the prerequisites of Lemma 12 there exist integers bi ⩾ 0 for 1 ⩽ i ⩽ l
+satisfying (i) and (ii). We now verify that there is an integer i0 with 1 ⩽ i0 ⩽ l and
+                                                   X
+                                  |Bi0 | ⩽ bi0 +          bi0 j .                        (6)
+                                                     1⩽j⩽k−2
+
+
+If there exist empty sets Bi , then B1 is empty and i0 = 1 does the
+                                                                P job. Otherwise, suppose
+that (6) is false. Then for 1 ⩽ i ⩽ l we have |Bi | ⩾ bi + 1 + 1⩽j⩽k−2 bij . For i > l, we
+use (5) to get |Bi| ⩾ max{1, m}; hence
+             X           X              X            X X
+      M=         |Bi | +        |Bi| ⩾      bi + l +            bij + max{1, m} · ak−1
+            1⩽i⩽l         l+1⩽i⩽q         1⩽i⩽l            1⩽i⩽l 1⩽j⩽k−2
+
+
+contradicting (ii).
+    Now in step d+1 of the game G(n, M, q, k; m) let player T choose the set Bi0 . Consider
+the (d + 1)-transversal T ′ = (T , Bi0 ). Since Bi0 does not
+                                                         S intersect Z⩾k−1 (T ), we know
+        ′
+that T P  is a (d + 1, k)-transversal. Furthermore Bi0 = 0⩽j⩽k−2(Zj (T ) ∩ Bi0 ), implying
+|Bi0 | = 0⩽j⩽k−2 bi0 j and thus
+                                           bi0 ,0 ⩽ bi0                                 (7)
+by (6). Since for j ⩾ 1 we have Z⩾j (T ′ ) = Z⩾j (T ) ∪ (Zj−1 (T ) ∩ Bi0 ), we find |Z⩾j (T ′ )| =
+aj + bi0 ,j−1 (1 ⩽ j ⩽ k − 1). Therefore T ′ is of the admissible type (a1 + bi0 ,0 , a2 +
+bi0 ,1 , . . . , ak−1 +bi0 ,k−2, 0; d+1), which by (i), (7) and Lemma 8 is a winning tuple. Therefore
+T ′ and, consequently T are winning transversals, implying that (a1 , a2 , . . . , ak−1 ; d) is a
+winning tuple and Lemma 12 follows.
+
+
+the electronic journal of combinatorics 16 (2009), #R133                                              9
+   Using Lemmas 10, 11 and 12, we obtain winning tuples for smaller and smaller d,
+until we (hopefully) prove that player T wins the game, or at least that (a1 , 0, . . . , 0; 1) is
+a winning tuple for some a1 . As an example let us use the previous lemmas to improve
+on the presently best bound K9 (7, 4) ⩾ 35 due to Lang, Quistorff and Schneider [6].
+Theorem 13. K9 (7, 4) ⩾ 45.
+Proof. By Theorem 6 it suffices to show that player T has a winning strategy for the game
+G(7, 44, 9, 3). By Lemma 10 and 11 we find the winning tuples (44, 8; 6) and (44, 2; 5),
+(38, 3; 5), (28, 4; 5), (20, 5; 5), (14, 6; 5), (10, 7; 5), (8, 8; 5). We next want to show that
+(7, 5; 4) is also a winning tuple.
+     We apply Lemma 12 with n = 7, M = 44, q = 9, k = 3, m = 0, a1 = 7, a2 = 5 and
+     P we have l = q − a2 = 4. Assume that the integers bi1 ⩾ 0 (1 ⩽ i ⩽ 4) satisfy (4),
+d = 4;
+i.e.     1⩽i⩽4 bi1 ⩽ 2. For 1 ⩽ i ⩽ 4, we choose the integers bi ⩾ 0 as a function of bi1
+according to the following table:
+                                             bi1 0 1 2
+                                             bi 13 7 3
+Clearly (i) from Lemma 12 is satisfied by the winning tuples statedPabove. ToP        verify (ii)
+from Lemma 12, it suffices to consider the case when the sum b := 1⩽i⩽4 bi + 1⩽i⩽4 bi1
+is minimal. As the sequence 13, 7, 3 is convex, b is minimal if b1 , . . . , b4 are as equal as
+possible, i.e. if two of them equal one and two values equals zero. Then b = 42 and (ii)
+from Lemma 12 is satisfied, too. An application of Lemma 12 now yields that indeed
+(7, 5; 4) is a winning tuple for the game G(7, 44, 9, 3). In a similar way we proceed to get
+the following winning tuples
+                       (33, 0; 4)(26, 1; 4)(20, 2; 4)(15, 3; 4)(11, 4; 4)(7, 5; 4)
+                       (18, 0; 3)(14, 1; 3)(10, 2; 3)(7, 3; 3)
+                       (10, 0; 2)(7, 1; 2)(4, 2; 2)
+                       (4, 0; 1)(2, 1; 1).
+In the final stage we see that (4, 0; 1) is a winning tuple. Since by 44/9 < 5 player T may
+choose a transversal of type (a, 0; 1) with a ⩽ 4 in step 1. This means that indeed player
+T has a winning strategy for the game G(7, 44, 9, 3).
+    The bound K9 (7, 4) ⩾ 45 may be further improved to K9 (7, 4) ⩾ 51 (see the tables
+in Section 5) with the help of Theorem 9. In the same way as above one shows that
+(3, 0; 1) is a winning tuple for the game G(7, 50, 9, 3; 0), that (4, 0; 1) is a winning tuple for
+G(7, 50, 9, 3; 4) and that (5, 0; 1) is a winning tuple for G(7, 50, 9, 3; 5). Since 50/9 < 6 we
+see that player T has a winning strategy for G(7, 50, 9, 3; 5) and the bound K9 (7, 4) ⩾ 51
+follows from Theorem 9.
+
+
+4     The implementation
+To prove a statement of the form Kq (n, n − k) > M using a computer, we use the strategy
+described after Theorem 9. We now describe in detail the algorithm to compute all
+
+the electronic journal of combinatorics 16 (2009), #R133                                       10
+winning tuples of a game G(n, M, q, k; m). It will be slightly more handy to work with
+losing tuples than with winning tuples (Lemma 16 would be more complicated otherwise).
+Given the set of losing tuples for step d + 1, we have to determine the set of losing
+tuples for step d. In principle, this means that we iterate through all admissible tuples
+(a1 , . . . , ak−1 ; d) and check whether player P can find a partition, such that no matter
+which of its sets player T chooses, he gets a losing (d + 1)-transversal.
+     Let us now make this precise. Fix an admissible tuple (a1 , . . . , ak−1; d) and a corre-
+sponding transversal Td = (P1 , . . . , Pd ) of type (a1 , . . . , ak−1 , 0; d).
+
+Definition 14. A subset B ⊂ ZM is losing if |B| ⩾ m, and when added to Td , it yields
+a losing (d + 1)-transversal. We call a partition of a subset B ⊂ ZM losing if it consists
+only of losing sets.
+
+    Clearly the tuple (a1 , . . . , ak−1 ; d) is losing iff there is a losing partition of ZM consisting
+of q sets. If B ⊂ ZM , then for 0 ⩽ j ⩽ k − 1 we set
+
+                                          cj = |Zj (Td ) ∩ B|.                                         (8)
+
+Adding a set B to Td yields a transversal of type (a1 + c0 , . . . , ak−1 + ck−2 , ck−1 ; d + 1).
+Thus the following lemma holds true.
+
+Lemma 15. B is losing if |B| ⩾ m and if moreover ck−1 > 0 or (a1 + c0 , . . . , ak−1 +
+ck−2 ; d + 1) is a losing tuple.
+
+    Set a0 := M, ak := 0 and c̃j := Zj (Td ) = aj − aj+1 for 0 ⩽ j ⩽ k − 1. Then the integers
+cj (0 ⩽ j ⩽ k − 1) defined in (8) satisfy 0 ⩽ cj ⩽ c̃j . We say that the tuple [c0 , . . . , ck−1 ; r]
+(1 ⩽ r ⩽ q) is losing if there is a losing partition B1 ∪ . . . ∪ Br of B. Our goal is then to
+determine whether [c̃0 , . . . , c̃k−1 ; q] is losing, since this just means that (a1 , . . . , ak−1; d) is
+losing.
+    For r = 1, the tuple [c0 , . . . , ck−1; 1] is losing if and only if a set B ⊂ ZM satisfying (8)
+is losing. We then proceed by recursion on r. The following lemma is evident.
+
+Lemma 16. Suppose r > 1 and r ′ , r ′′ ⩾ 1 with r ′ + r ′′ = r. Then the tuple [c0 , . . . , ck−1 ; r]
+is losing if and only if there exist non-negative integers c′j , c′′j (0 ⩽ j ⩽ k − 1) satisfying
+c′j + c′′j = cj , such that [c′0 , . . . , c′k−1; r ′ ] and [c′′0 , . . . , c′′k−1; r ′′ ] are losing.
+
+    Using this lemma we can determine whether [c0 , . . . , ck−1; r] is a losing tuple by first
+choosing a fixed value r ′ (with 1 ⩽ r ′ < r) and then iterating through all tuples (c′j )0⩽j⩽k−1
+with 0 ⩽ c′j ⩽ cj . Finally we find out whether [c̃0 , . . . , c̃k−1; q], and thus (a1 , . . . , ak−1 ; d)
+is losing.
+     Now let us take a break and compute the running time of the algorithm described
+so far. A game consists of n steps. In each step, we have to check roughly M k−1 tuples
+(a1 , . . . , ak−1 ; d). To compute the losing tuples for partial partitions with r sets out of
+those with r ′ and r ′′ sets (r ′ + r ′′ = r), we have to run through M k c′i -tuples. By choosing
+r ′ carefully, roughly log q of these steps are necessary. Thus the total running time (for
+
+the electronic journal of combinatorics 16 (2009), #R133                                                11
+one game) is n · M 2k−1 · log q, which is a lot. Moreover, the memory needed to store all
+losing tuples is roughly M k , which is a lot, too. We will now describe some significant
+improvements; however the precise running time will be difficult to determine. For one of
+the improvements, we need the following lemma.
+Lemma 17.            1. Suppose (a1 , . . . , ak−1 ; d) is a losing tuple and 1 ⩽ µ < ν ⩽ k − 1. For
+   1 ⩽ j ⩽ k − 1 define a′j = aj − δjµ + δjν (where δij is the Dirac function). Then
+   (a′1 , . . . , a′k−1 ; d) is losing, too (provided it is admissible).
+
+   2. Fix a tuple (a1 , . . . , ak−1; d) and suppose that a corresponding tuple [c0 , . . . , ck−1 ; r]
+      is losing. Let 0 ⩽ µ < ν ⩽ k − 1. Define c′j = cj − δjµ + δjν and suppose that for
+      0 ⩽ j ⩽ k − 1 we still have 0 ⩽ c′j ⩽ c̃j . Then [c′0 , . . . , c′k−1; r] is losing, too.
+   In other words, if ν > µ then augmenting aν is worse than augmenting aµ , and
+augmenting cν is worse than augmenting cµ .
+Proof. (1) We use induction over d, starting at d = n. For d = n, this is clear, since there
+are no losing tuples (a1 , . . . , ak−1 ; n). Now let 1 ⩽ d ⩽ n − 1 and suppose that the lemma
+is true for d + 1; we want to prove it for d.
+    Fix any transversal Td of type (a1 , . . . , ak−1 , 0; d). By a′µ ⩾ a′µ+1 we have aµ > aµ+1 .
+Therefore there exists x ∈ ZM satisfying mult(x, Td ) = µ. Similarly, aν−1 > aν implies
+the existence of y ∈ ZM satisfying mult(y, Td) = ν − 1.
+    Note that we may assume x 6= y. This is clear if µ < ν − 1. If µ = ν − 1, this follows
+from aµ ⩾ aν + 2 by a′µ ⩾ a′ν .
+    We now build another d-transversal Td′ from Td by deleting x from a set P from Td with
+x ∈ P and adding y to a set P ′ from Td with y 6∈ P ′ . Then clearly Td′ satisfies mult(x, Td′ ) =
+µ − 1, mult(y, Td′ ) = ν and mult(z, Td′ ) = mult(z, Td ) whenever z ∈ ZM \ {x, y}. Therefore
+Td′ is of type (a′1 , . . . , a′k−1 , 0; d) and it remains to show that Td′ is a losing transversal.
+To prove this, it suffices to check that whenever B ⊂ ZM is a set, such that the (d + 1)-
+                                                         ′
+transversal Td+1 := (Td , B) is losing, then Td+1           := (Td′ , B) loses, too, since then a losing
+partition of ZM for Td is also a losing partition for Td′ .
+                                                              ′
+    Now for z ∈ ZM \ {x, y} we still have mult(z, Td+1          ) = mult(z, Td+1 ). Moreover we have
+                                       ′                                                             ′
+mult(x, Td+1 ) = µ, mult(x, Td+1 ) = µ −1 if x ∈         / B and mult(x, Td+1 ) = µ + 1, mult(x, Td+1   )
+                                                                                  ′
+= µ if x ∈ B. Similarly we have mult(y, Td+1 ) = ν − 1, mult(y, Td+1 ) = ν if y ∈               / B and
+                                       ′
+mult(y, Td+1) = ν, mult(y, Td+1           ) = ν + 1 if y ∈ B.
+                                                                                        ′
+    Now one easily sees that the tuples (. . . ; d + 1) describing Td+1 and Td+1            again satisfy
+the prerequisites of the lemma, with µ and (or) ν possibly increased by 1, unless the new
+values of µ and ν become equal, or the new value of ν is equal to k. In the first case, the
+                                        ′                                                 ′
+tuples describing Td+1 and Td+1            are the same; in the second case mult(y, Td+1    ) = k. In all
+                ′
+cases indeed Td+1 is losing (using the induction hypothesis).
+    (2) Let Td be a transversal of type (a1 , . . . , ak−1 , 0; d) and let B ⊂ ZM be a subset
+corresponding to [c0 , . . . , ck−1 ; r], i.e. |Zj (Td )∩B| = cj for 0 ⩽ j ⩽ k−1. By 0 ⩽ c′µ = cµ −1
+we get cµ ⩾ 1, implying Zµ (Td ) ∩ B 6= ∅. Thus there exists x ∈ B with mult(x, Td ) = µ.
+Similarly c′ν ⩽ aν − aν+1 implies cν + 1 ⩽ aν − aν+1 and thus cν = |Zν (Td ) ∩ B| < aν − aν+1 .
+Therefore there exists y ∈ ZM \ B with mult(y, Td ) = ν. Then B ′ = (B \ {x}) ∪ {y} ⊂ ZM
+
+the electronic journal of combinatorics 16 (2009), #R133                                              12
+corresponds to [c′0 , . . . , c′k−1 ; r] and we have to show that there exists a partition of B ′
+consisting of r losing sets.
+   We claim that a losing partition of B = B1 ∪ . . . ∪ Br yields a losing partition of B ′
+by replacing x by y. For the sets not containing x, this doesn’t change anything. If, say
+x ∈ B1 ⊂ B and B1′ := (B1 \ {x}) ∪ {y} ⊂ B ′ , then either the tuples describing (Td , B1 )
+and (Td , B1′ ) satisfy the prerequisite of part (1), or ν = k − 1 and mult(y, (Td, B1′ )) = k. In
+both cases we find that (Td , B1′ ) is a losing transversal, hence indeed B1′ is a losing set.
+     Now let us get back to the algorithm. First of all, it is not necessary to iterate
+through all tuples (a1 , . . . , ak−1 ; d): increasing an ai only makes the tuple more likely to
+be a losing one (see Lemma 8), so it suffices to walk along the hypersurface between losing
+and winning. Let us make this precise.
+     Suppose that ai+1 , . . . , ak−1 are fixed. Then we determine the tuples (a1 , . . . , ai ) such
+that (a1 , . . . , ak−1 ; d) loses in the following way. Denote by A := A(ai+1 , . . . , ak−1) the
+smallest integer such that any a1 , . . . , ai with ai ⩾ A loses. Equivalently by Lemma 8, A
+is the smallest integer such that (A, . . . , A, ai+1 , . . . , ak−1 ; d) loses, so A can be determined
+quickly using binary search or something similar. After that, it remains to iterate through
+all ai < A and apply the same algorithm recursively with ai , . . . , ak−1 fixed. This method
+is also used to save memory: for fixed ai+1 , . . . , ak−1 , store the corresponding value A =
+A(ai+1 , . . . , ak−1 ), and store further details concerning a1 , . . . , ai only if ai < A.
+     It turned out (experimentally) that for any fixed ai+1 , . . . , ak−1 , almost all losing
+a1 , . . . , ai satisfy ai ⩾ A, so the above method yields a huge gain in efficiency. We
+can gain some more time by using the observation that usually, A(ai+1 , . . . , ak−1 ) is not
+much bigger than A(ai+1 + 1, . . . , ak−1): use A(ai+1 + 1, . . . , ak−1 ) as a first estimate to
+find A(ai+1 , . . . , ak−1 ) more quickly. (This means that when iterating through values for
+ai+1 , we have to start from the big values.)
+     Concerning the losing tuples [c0 , . . . , ck−1 ; r], a similar strategy can be used. For each
+given partial tuple ci , . . . , ck−1 let C := C(ci , . . . , ck−1 ; r) be the smallest integer such that
+whenever ci−1 ⩾ C, the total tuple loses; equivalently, C is the smallest integer such that
+the tuple [0, . . . , 0, C, ci, . . . , ck−1; r] loses. By Lemma 16, this can be computed using the
+formula
+
+                                                      C(c′i , . . . , c′k−1 ; r ′) + C(c′′i , . . . , c′′k−1 ; r ′′ ) ,
+                                                                                                                     
+              C(ci , . . . , ck−1; r) = ′ min′′                                                                         (*)
+                                      (cj )j⩾i ,(cj )j⩾i
+                                         c′j +c′′
+                                               j =cj
+
+
+where r ′ +r ′′ = r. Now whenever we are interested in such a value C(ci , . . . , ck−1 ; r), before
+we apply (*) to compute it, we first compute C(ci+1 , . . . , ck−1; r) (which takes much less
+time); if this turns out to be less or equal to ci , then C(ci , . . . , ck−1; r) = 0 anyway. To
+determine whether [c̃0 , . . . , c̃k−1; q] is losing (the only thing we are really interested in),
+we compute C(c̃1 , . . . , c̃k−1 ; q) in the above way and compare it with c̃0 .
+   Many values C(ci , . . . , ck−1 ; r) will be needed several times in the computation, so each
+time we compute such a value, we store it for later re-use.
+   When computing (*), we may save a lot of time by computing C(c′′i , . . . , c′′k−1; r ′′ ) only
+when this is really necessary. Suppose that we already know that the minimum will be
+
+the electronic journal of combinatorics 16 (2009), #R133                                                                13
+at most C0 , that we now want to treat the pair of tuples (c′i )i , (c′′i )i , and that somehow
+we got an estimate C(c′′i , . . . , c′′k−1 ; r ′′ ) ⩾ e. We first compute C(c′i , . . . , c′k−1; r ′ ); if it turns
+out that C(c′i , . . . , c′k−1 ; r ′) + e ⩾ C0 , then we skip the computation of C(c′′i , . . . , c′′k−1; r ′′ ).
+Of course, we might always use the trivial estimate e = 0, but we can do better.
+    We iterate through the tuples (c′′j )j⩾i in an order such that tuples with larger en-
+tries come first. Fix µ ⩾ i and consider the tuple (d′′j )j⩾i , where d′′j = c′′j + δjµ . We
+get a first estimate from the obvious inequality C(c′′i , . . . , c′′k−1 ; r ′′) ⩾ C(d′′i , . . . , d′′k−1; r ′′ ).
+If C(c′′i , . . . , c′′k−1 ; r ′′) > 0, then indeed C(c′′i , . . . , c′′k−1; r ′′ ) ⩾ C(d′′i , . . . , d′′k−1; r ′′ ) + 1 by
+Lemma 17. Of course we do not know whether C(c′′i , . . . , c′′k−1; r ′′ ) > 0 or not as we didn’t
+compute it yet but C(d′′i , . . . , d′′k−1; r ′′ ) > 0 is a sufficient condition for C(c′′i , . . . , c′′k−1 ; r ′′ ) >
+0. These are the estimates which we use. (When m > 0, it happens very often that we
+have exactly C(c′i , . . . , c′k−1 ; r ′ ) + C(d′′i , . . . , d′′k−1 ; r ′′) + 1 = C0 ; therefore, the additional
+“+1” obtained using Lemma 17 reduces computation time extremly.)
+    Finally, there is one thing to note concerning the decompositions r = r ′ + r ′′ . Of
+course we may choose and fix those decompositions once and for all in the beginning in
+an optimal way. However, due to the fact that all C(c′i , . . . , c′k−1 ; r ′ ) are computed but not
+all C(c′′i , . . . , c′′k−1 ; r ′′ ), it is sometimes preferable to keep r ′ small and instead need a few
+more steps. One could probably write an algorithm which chooses a good decomposition
+sequence, but as anyway the maximal number q of sets in a partition we are considering
+is about 20, we just chose some (experimentally) good decompositions by hand.
+    The program implementing the above algorithm (in C++) can be obtained from the
+authors. Maybe it could be further improved in the following way. In the manual compu-
+tations in the example K9 (7, 4) > 44, we significantly reduced the work by exploiting the
+convexity of the sequence bi . In general, this sequence does not need to be convex, but it
+seems to be close to convex most of the time. If this could be exploited by the computer,
+this should yield a big gain of running time.
+
+
+5      The results
+In this section we list the results we obtained by applying our algorithm. All values in the
+tables below are the best ones one can obtain by using the strategy given after Theorem 9.
+The computations were performed on a cluster of standard PC’s. The range was limited
+by both time and memory. In the simplest case k = 3 a very short program suffices to
+calculate the new bounds for the usually tabulated range q ⩽ 21 in total time of roughly
+a minute. In case of k > 3 we had to implement the ideas mentioned in Section 4 and we
+were restricted to q ⩽ 16 in the case k = 4 and to q ⩽ 9 in the case k = 5. For k > 5 the
+computational effort became too large for a systematical treatment. Here we got only a
+few sporadic new bounds: six bounds for k = 6, two bounds for k = 7 and still a new
+bound for a ternary code in the case k = 8. In the most difficult case K9 (10, 5), checking
+a single game took about one week, and it takes about four games (with increasing m) to
+verify Kq (n, R) > M when M is close to the best we can do. In several cases the memory
+used almost reached the physical limit of 1 GB.
+
+the electronic journal of combinatorics 16 (2009), #R133                                                                 14
+    The results of the computations are compiled in the following tables. We included the
+sphere-covering bound (2) and the upper bound for comparison as well as a column for
+k, since this is the most important parameter for the computation time.
+    As can be seen from the tables, the bigger q and n are, the better our approach works.
+If n is big but q is small, then the values of Kq (n, n − k) are known for small k, so our
+method doesn’t help here, as for large k, it is too slow.
+
+
+                                              Table 1. q = 3
+
+                  Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                      Bound Bound [5]     Bound Bound [5]
+                  K3 (10, 4)   6          14        16        17      36
+                  K3 (11, 4)   7          26        28        30      81
+                  K3 (11, 5)   6           9        10        11      27
+                  K3 (13, 5)   8          29        32        33     108
+                  K3 (13, 6)   7          10        11        13      36
+
+                                              Table 2. q = 4
+
+                  Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                      Bound Bound [5]     Bound Bound [5]
+                  K4 (7, 2)    5          78        80        84     128
+                  K4 (7, 3)    4          15        16        19      32
+                  K4 (8, 3)    5          37        39        44      96
+                  K4 (9, 3)    6         101       108       110     256
+                  K4 (8, 4)    4           9        10       13∗      28
+                  K4 (9, 4)    5          21        23        26      64
+                  K4 (10, 4)   6          51        55        59     208
+                  K4 (9, 5)    4           7         8        10      16
+                  K4 (10, 5)   5          13        15        18      54
+                  K4 (11, 5)   6          30        31        36     128
+                  K4 (11, 6)   5           9        11        14      32
+
+   ∗
+       The bound K4 (8, 4) ⩾ 13 was very recently also obtained by Kéri
+
+
+
+
+the electronic journal of combinatorics 16 (2009), #R133                                15
+                                             Table 3. q = 5
+
+                  Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                      Bound Bound [5]     Bound Bound [5]
+                  K5 (5, 2)    3          18        21        22      35
+                  K5 (6, 2)    4          59        65        71     125
+                  K5 (7, 2)    5         215       222       225     525
+                  K5 (6, 3)    3          11        13        16      25
+                  K5 (7, 3)    4          30        34        38     100
+                  K5 (8, 3)    5          97        99       109     325
+                  K5 (7, 4)    3           7        11        12      21
+                  K5 (8, 4)    4          18        21        25      65
+                  K5 (9, 4)    5          52        55        64     255
+                  K5 (9, 5)    4          12        13        19      55
+                  K5 (10, 5)   5          31        34        41     175
+                  K5 (11, 5)   6          86        90       103     625
+                  K5 (10, 6)   4           9        11        16      45
+                  K5 (11, 6)   5          20        21        29     125
+                  K5 (11, 7)   4           7        11        12      25
+
+                                             Table 4. q = 6
+
+                  Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                      Bound Bound [5]     Bound Bound [5]
+                  K6 (5, 2)    3          29        33        36      66
+                  K6 (6, 2)    4         115       120       133     274
+                  K6 (6, 3)    3          17        19        24      41
+                  K6 (7, 3)    4          57        62        70     246
+                  K6 (8, 3)    5         217       234       246    1080
+                  K6 (7, 4)    3          11        13        18      36
+                  K6 (8, 4)    4          33        36        46     216
+                  K6 (9, 4)    5         112       114       136     738
+                  K6 (8, 5)    3           8        13        15     30†
+                  K6 (9, 5)    4          21        24        32     144
+                  K6 (10, 5)   5          65        71        83     615
+                  K6 (10, 6)   4          15        16        25      72
+
+
+   †
+       A recent update in [5] from September 16, 2009
+
+
+
+
+the electronic journal of combinatorics 16 (2009), #R133                    16
+                                             Table 5. q = 7
+
+                  Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                      Bound Bound [5]     Bound Bound [5]
+                  K7 (5, 2)    3          43        47        55      97
+                  K7 (6, 2)    4         204       210       233     343
+                  K7 (6, 3)    3          25        28        36      77
+                  K7 (7, 3)    4          99       101       127     343
+                  K7 (7, 4)    3          16        19        25      49
+                  K7 (8, 4)    4          56        58        76     343
+                  K7 (9, 4)    5         221       227       264    1843
+                  K7 (8, 5)    3          11        17        20      49
+                  K7 (9, 5)    4          35        39        52     323
+                  K7 (10, 5)   5         126       131       160    1225
+                  K7 (9, 6)    3           8        14        17      37
+                  K7 (10, 6)   4          24        27        39     175
+
+                                             Table 6. q = 8
+
+                  Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                      Bound Bound [5]     Bound Bound [5]
+                  K8 (5, 2)    3          63        64        83     128
+                  K8 (6, 2)    4         337       354       382     512
+                  K8 (6, 3)    3          35        40        52     107
+                  K8 (7, 3)    4         161       171       196     512
+                  K8 (7, 4)    3          22        24        37      92
+                  K8 (8, 4)    4          89        96       118     512
+                  K8 (8, 5)    3          15        22        29     90‡
+                  K8 (9, 5)    4          55        58        80     384
+                  K8 (10, 5)   5         225       232       287    2461
+                  K8 (9, 6)    3          11        17        22      48
+                  K8 (10, 6)   4          37        40        58     342
+                  K8 (10, 7)   3           9        17        20     44‡
+
+   ‡
+       A recent update in [5] from September 16, 2009
+
+
+
+
+the electronic journal of combinatorics 16 (2009), #R133                    17
+                                            Table 7. q = 9
+               Kq (n, R)     k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+               K9 (5, 2)     3          87        90       113     189
+               K9 (6, 2)     4         527       546       585     729
+               K9 (6, 3)     3          48        57        71     147
+               K9 (7, 3)     4         248       252       308     729
+               K9 (7, 4)     3          30        35        51     120
+               K9 (8, 4)     4         136       144       181     729
+               K9 (8, 5)     3          21        27        39     120
+               K9 (9, 5)     4          83        88       120     729
+               K9 (10, 5)    5         380       390       481    3969
+               K9 (9, 6)     3          15        21        31      81
+               K9 (10, 6)    4          55        60        87     477
+               K9 (10, 7)    3          12        21        25      81
+
+                                           Table 8. q = 10
+               Kq (n, R)     k    Sph.-Cov. Old Lower New Lower   Upper
+                                     Bound Bound [5]     Bound Bound [5]
+               K10 (5, 2)    3          117       128       149     250
+               K10 (6, 2)    4          788       800       890    1350
+               K10 (6, 3)    3           64        74        92     209
+               K10 (7, 3)    4          367       382       451    1350
+               K10 (7, 4)    3           39        46        66     168
+               K10 (8, 4)    4          200       210       265    1156
+               K10 (8, 5)    3           27        34        48     168
+               K10 (9, 5)    4          121       128       174    1088
+               K10 (9, 6)    3           19        26        39     114
+               K10 (10, 6)   4           79        85       122     826
+               K10 (10, 7)   3           15        26        33     114
+
+                                           Table 9. q = 11
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K11 (5, 2)   3         154       165       208     365
+                K11 (6, 2)   4        1135      1174      1276    2343
+                K11 (6, 3)   3          83        94       119     275
+                K11 (7, 3)   4         525       539       636    2343
+                K11 (7, 4)   3          51        59        84     216
+                K11 (8, 4)   4         283       293       374    1681
+                K11 (8, 5)   3          34        41        64     216
+
+the electronic journal of combinatorics 16 (2009), #R133                   18
+                                          Table 10. q = 12
+
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K12 (5, 2)   3         197       216       256     468
+                K12 (6, 2)   4        1587      1612      1764    3884
+                K12 (6, 3)   3         105       120       144     384
+                K12 (7, 3)   4         729       732       878    3456
+                K12 (7, 4)   3          64        72       104     264
+                K12 (8, 4)   4         390       406       513    2304
+                K12 (8, 5)   3          43        48        78     264
+
+                                          Table 11. q = 13
+
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K13 (5, 2)   3         248       278       311     583
+                K13 (6, 3)   3         132       145       193     495
+                K13 (7, 3)   4         987      1006      1198    4294
+                K13 (7, 4)   3          80        91       132     356
+                K13 (8, 4)   4         526       537       684    3249
+                K13 (8, 5)   3          53        61        98     356
+
+                                          Table 12. q = 14
+
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K14 (5, 2)   3         307       342       381     686
+                K14 (6, 3)   3         162       175       235     610
+                K14 (7, 3)   4        1309      1340      1570    4802
+                K14 (7, 4)   3          98       112       162     448
+                K14 (8, 4)   4         694       718       917    4356
+                K14 (8, 5)   3          65        70       119     448
+
+                                          Table 13. q = 15
+
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K15 (5, 2)   3         374       414       465     855
+                K15 (6, 3)   3         197       209       291     730
+                K15 (7, 4)   3         119       134       192     519
+                K15 (8, 4)   4         900       932      1181    5625
+                K15 (8, 5)   3          78        88       141     519
+
+
+the electronic journal of combinatorics 16 (2009), #R133                  19
+                                          Table 14. q = 16
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K16 (5, 2)   3         451       491       576    1024
+                K16 (6, 3)   3         237       248       344     896
+                K16 (7, 4)   3         142       161       227     611
+                K16 (8, 4)   4        1149      1180      1507    7569
+                K16 (8, 5)   3          93       106       168     611
+
+                                          Table 15. q = 17
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K17 (5, 2)   3         538       568       671    1241
+                K17 (6, 3)   3         282       289       407    1241
+                K17 (7, 4)   3         168       191       271     703
+                K17 (8, 5)   3         110       121       198     703
+
+                                          Table 16. q = 18
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K18 (5, 2)   3         635       646       807    1458
+                K18 (6, 3)   3         332       342       471    1353
+                K18 (7, 4)   3         198       223       316     774
+                K18 (8, 5)   3         129       144       233     774
+
+                                          Table 17. q = 19
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K19 (5, 2)   3         744       759       957    1779
+                K19 (6, 3)   3         387       399       557    1568
+                K19 (7, 4)   3         231       256       367     866
+                K19 (8, 5)   3         150       167       271     866
+
+                                          Table 18. q = 20
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K20 (5, 2)   3         864       896      1088    2000
+                K20 (6, 3)   3         449       461       650    1600
+                K20 (7, 4)   3         267       295       419     979
+                K20 (8, 5)   3         173       191       312     979
+
+the electronic journal of combinatorics 16 (2009), #R133                  20
+                                          Table 19. q = 21
+
+                Kq (n, R)    k   Sph.-Cov. Old Lower New Lower   Upper
+                                    Bound Bound [5]     Bound Bound [5]
+                K21 (5, 2)   3         996      1043      1257    2381
+                K21 (6, 3)   3         517       542       738    2058
+                K21 (7, 4)   3         306       336       497    1029
+                K21 (8, 5)   3         199       221       354    1029
+
+References
+ [1] W. Chen, I. S. Honkala, Lower bounds for q-ary covering codes, IEEE Trans.
+     Inform. Theory 36 (1990), 664-671.
+ [2] G. Cohen, I. Honkala, S. Litsyn, A. Lobstein, Covering Codes, North Holland, Ams-
+     terdam, 1997.
+ [3] W. Haas, J. Quistorff, J.-C. Schlage-Puchta, Lower Bounds on Covering Codes via
+     Partition Matrices, J. Combin. Theory Ser. A 116 (2009), 478-484.
+ [4] W. Haas, J. Quistorff, J.-C. Schlage-Puchta, New Lower Bounds for Covering Codes,
+     preprint.
+ [5] G. Kéri, Tables for Covering Codes, http://www.sztaki.hu/∼ keri/codes/, ac-
+     cessed 30 December 2008.
+ [6] W. Lang, J. Quistorff, E. Schneider, Integer Programming for Covering Codes, J.
+     Comb. and Comb. Comp. 66 (2008), 279-288.
+ [7] E.R. Rodemich, Coverings by rook domains, J. Combin. Theory Ser. A 9 (1970),
+     117-128.
+
+
+
+
+the electronic journal of combinatorics 16 (2009), #R133                            21
+

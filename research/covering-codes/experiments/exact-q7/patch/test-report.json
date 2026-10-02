@@ -1,0 +1,17 @@
+{
+  "private_certificate": "PASS",
+  "forged_witness_rejection": "PASS",
+  "original_patch_LP_optimum": 322,
+  "original_patch_MILP_optimum": 322,
+  "private_certificate_sha256": "2fce10f78d060e204b326b4cebce2244b899cce535b8b9354ee5112ac96d4bdb",
+  "paid_infrastructure_spend_usd": 0,
+  "scope": "Fixed base and original patch pool; no global K lower-bound inference",
+  "total_private_exception_words": 2450,
+  "private_exception_words_per_patch_min": 2,
+  "private_exception_words_per_patch_max": 18,
+  "expanded_pool_size": 17668,
+  "expanded_LP_status": "TIME_LIMIT",
+  "expanded_MILP_status": "TIME_LIMIT",
+  "expanded_MILP_runtime_seconds": 120.9999443669949,
+  "improvement_found": false
+}

@@ -1,0 +1,12 @@
+  OK  q=3 n=3 R=1 |C|=27 covrad=0  vars=14 lin=116 psd=18 obj=19683 (|C|^3=19683)
+  OK  q=4 n=2 R=1 |C|=16 covrad=0  vars=7 lin=48 psd=12 obj=4096 (|C|^3=4096)
+  OK  q=3 n=4 R=1 |C|=9 covrad=1  vars=25 lin=235 psd=27 obj=729 (|C|^3=729)
+  OK  q=3 n=4 R=2 |C|=9 covrad=1  vars=25 lin=235 psd=27 obj=729 (|C|^3=729)
+  OK  q=5 n=3 R=2 |C|=5 covrad=2  vars=14 lin=116 psd=18 obj=125 (|C|^3=125)
+  OK  q=6 n=3 R=2 |C|=6 covrad=2  vars=14 lin=116 psd=18 obj=216 (|C|^3=216)
+  OK  q=6 n=4 R=1 |C|=200 covrad=1  vars=25 lin=235 psd=27 obj=8000000 (|C|^3=8000000)
+  OK  q=6 n=4 R=2 |C|=27 covrad=2  vars=25 lin=235 psd=27 obj=19683 (|C|^3=19683)
+  OK  q=6 n=5 R=3 |C|=22 covrad=3  vars=41 lin=423 psd=36 obj=10648 (|C|^3=10648)
+  OK  q=7 n=4 R=2 |C|=44 covrad=2  vars=25 lin=235 psd=27 obj=85184 (|C|^3=85184)
+  OK  q=8 n=4 R=2 |C|=71 covrad=2  vars=25 lin=235 psd=27 obj=357911 (|C|^3=357911)
+SELFTEST PASSED

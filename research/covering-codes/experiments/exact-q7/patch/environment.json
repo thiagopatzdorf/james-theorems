@@ -1,0 +1,11 @@
+{
+  "scipy_version": "1.17.0",
+  "numpy_version": "2.3.5",
+  "solver": "SciPy HiGHS",
+  "OPENBLAS_NUM_THREADS": 1,
+  "OMP_NUM_THREADS": 1,
+  "external_paid_infrastructure_spend_usd": 0,
+  "first_expanded_attempt": "Terminated after approximately240wallseconds with no LP result; lexicographic row deduplication removed in optimized rerun",
+  "optimized_LP_time_limit_seconds": 90,
+  "MILP_time_limit_seconds": 120
+}

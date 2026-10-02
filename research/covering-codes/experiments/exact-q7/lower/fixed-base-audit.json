@@ -1,0 +1,1069 @@
+{
+  "status": "PASS",
+  "scope": "FIXED_BASE_ONLY; no global K7(9,4) lower bound",
+  "base_words": 1029,
+  "holes": 9261,
+  "hole_orbits": 27,
+  "kernel_rechecked_pairs": 40353607,
+  "kernel_strategy": "literal Hamming distances representatives versus all343spanwords",
+  "kernel_hash_matches": true,
+  "center_coverage_hash_matches": true,
+  "random_literal_centers_checked": 200,
+  "maximizer_literal_checked": true,
+  "all343_hole_translations_checked": true,
+  "each_hole_min_distance_to_actual_base": 5,
+  "maximum_holes_covered_by_one_arbitrary_center": 68,
+  "fixed_base_patch_lower_bound": 137,
+  "fixed_base_total_lower_bound": 1166,
+  "global_lower_bound_claimed": false,
+  "source_sha256": "f79d5ecadd56b7884ba806949970982502e875ade97a25cccf25358a91fa41cb",
+  "analysis_json_sha256": "baca051d542d056a1ecd4c404cf9130013d0136ce4faec9098e1e1e015f8449f",
+  "kernel_sha256": "d66fde8bf5eb51751206eb010b11e4f18b935f23205ab5fa49a9bec6cc2177b9",
+  "coverage_sha256": "49dfeff0574b634097ec24ad8b39dd2194135a44ad93cf59b4f640dfd70a476d",
+  "code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "quotient_sha256": "a6db791fe5a6cfa8af603d5c4c4a4cbbd9342cb53900325001c1285b15ac8aef",
+  "derived_coset_representatives": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      4,
+      0,
+      1,
+      6,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      6,
+      2,
+      2,
+      0,
+      0,
+      1
+    ]
+  ],
+  "samples": [
+    {
+      "center": "063060201",
+      "quotient": 67190,
+      "literal_count": 33
+    },
+    {
+      "center": "251013511",
+      "quotient": 86537,
+      "literal_count": 25
+    },
+    {
+      "center": "463004146",
+      "quotient": 15566,
+      "literal_count": 42
+    },
+    {
+      "center": "352045656",
+      "quotient": 28223,
+      "literal_count": 44
+    },
+    {
+      "center": "302161336",
+      "quotient": 26447,
+      "literal_count": 44
+    },
+    {
+      "center": "654511636",
+      "quotient": 115536,
+      "literal_count": 44
+    },
+    {
+      "center": "442643621",
+      "quotient": 91321,
+      "literal_count": 41
+    },
+    {
+      "center": "404530611",
+      "quotient": 59598,
+      "literal_count": 34
+    },
+    {
+      "center": "535113562",
+      "quotient": 81538,
+      "literal_count": 43
+    },
+    {
+      "center": "051036653",
+      "quotient": 51506,
+      "literal_count": 48
+    },
+    {
+      "center": "300211405",
+      "quotient": 89189,
+      "literal_count": 43
+    },
+    {
+      "center": "510056010",
+      "quotient": 20205,
+      "literal_count": 54
+    },
+    {
+      "center": "205601331",
+      "quotient": 82552,
+      "literal_count": 39
+    },
+    {
+      "center": "425633420",
+      "quotient": 92372,
+      "literal_count": 41
+    },
+    {
+      "center": "610350543",
+      "quotient": 99741,
+      "literal_count": 48
+    },
+    {
+      "center": "211655220",
+      "quotient": 107161,
+      "literal_count": 40
+    },
+    {
+      "center": "441656326",
+      "quotient": 55277,
+      "literal_count": 33
+    },
+    {
+      "center": "100562641",
+      "quotient": 111146,
+      "literal_count": 45
+    },
+    {
+      "center": "236460420",
+      "quotient": 112793,
+      "literal_count": 44
+    },
+    {
+      "center": "663644613",
+      "quotient": 32368,
+      "literal_count": 44
+    },
+    {
+      "center": "104460216",
+      "quotient": 114815,
+      "literal_count": 41
+    },
+    {
+      "center": "521006301",
+      "quotient": 110807,
+      "literal_count": 37
+    },
+    {
+      "center": "241206333",
+      "quotient": 69962,
+      "literal_count": 42
+    },
+    {
+      "center": "443551041",
+      "quotient": 115911,
+      "literal_count": 43
+    },
+    {
+      "center": "443650153",
+      "quotient": 14434,
+      "literal_count": 48
+    },
+    {
+      "center": "620343041",
+      "quotient": 27150,
+      "literal_count": 44
+    },
+    {
+      "center": "202322453",
+      "quotient": 38779,
+      "literal_count": 43
+    },
+    {
+      "center": "334251401",
+      "quotient": 27010,
+      "literal_count": 40
+    },
+    {
+      "center": "165450251",
+      "quotient": 85835,
+      "literal_count": 37
+    },
+    {
+      "center": "604606233",
+      "quotient": 109564,
+      "literal_count": 43
+    },
+    {
+      "center": "666302326",
+      "quotient": 70875,
+      "literal_count": 39
+    },
+    {
+      "center": "156003303",
+      "quotient": 12594,
+      "literal_count": 45
+    },
+    {
+      "center": "563031123",
+      "quotient": 16955,
+      "literal_count": 41
+    },
+    {
+      "center": "506543251",
+      "quotient": 31399,
+      "literal_count": 40
+    },
+    {
+      "center": "501241000",
+      "quotient": 42295,
+      "literal_count": 48
+    },
+    {
+      "center": "220233564",
+      "quotient": 60834,
+      "literal_count": 49
+    },
+    {
+      "center": "560216241",
+      "quotient": 82987,
+      "literal_count": 44
+    },
+    {
+      "center": "021542213",
+      "quotient": 111913,
+      "literal_count": 39
+    },
+    {
+      "center": "505003611",
+      "quotient": 18359,
+      "literal_count": 46
+    },
+    {
+      "center": "654410545",
+      "quotient": 100695,
+      "literal_count": 42
+    },
+    {
+      "center": "016360166",
+      "quotient": 74719,
+      "literal_count": 40
+    },
+    {
+      "center": "344036455",
+      "quotient": 37018,
+      "literal_count": 38
+    },
+    {
+      "center": "344620613",
+      "quotient": 17927,
+      "literal_count": 39
+    },
+    {
+      "center": "542361562",
+      "quotient": 59436,
+      "literal_count": 41
+    },
+    {
+      "center": "634542512",
+      "quotient": 10411,
+      "literal_count": 35
+    },
+    {
+      "center": "562115536",
+      "quotient": 7726,
+      "literal_count": 40
+    },
+    {
+      "center": "152061545",
+      "quotient": 108647,
+      "literal_count": 44
+    },
+    {
+      "center": "052555516",
+      "quotient": 61945,
+      "literal_count": 41
+    },
+    {
+      "center": "011221326",
+      "quotient": 7279,
+      "literal_count": 38
+    },
+    {
+      "center": "011052435",
+      "quotient": 98915,
+      "literal_count": 45
+    },
+    {
+      "center": "516521332",
+      "quotient": 75025,
+      "literal_count": 40
+    },
+    {
+      "center": "336530331",
+      "quotient": 33553,
+      "literal_count": 44
+    },
+    {
+      "center": "523334124",
+      "quotient": 112495,
+      "literal_count": 45
+    },
+    {
+      "center": "600006106",
+      "quotient": 107716,
+      "literal_count": 37
+    },
+    {
+      "center": "431303653",
+      "quotient": 79766,
+      "literal_count": 42
+    },
+    {
+      "center": "243530426",
+      "quotient": 69718,
+      "literal_count": 46
+    },
+    {
+      "center": "431100612",
+      "quotient": 47495,
+      "literal_count": 33
+    },
+    {
+      "center": "366440450",
+      "quotient": 43698,
+      "literal_count": 45
+    },
+    {
+      "center": "420543624",
+      "quotient": 20155,
+      "literal_count": 51
+    },
+    {
+      "center": "535136546",
+      "quotient": 68200,
+      "literal_count": 46
+    },
+    {
+      "center": "265105442",
+      "quotient": 51661,
+      "literal_count": 46
+    },
+    {
+      "center": "346401440",
+      "quotient": 56275,
+      "literal_count": 43
+    },
+    {
+      "center": "000522303",
+      "quotient": 89673,
+      "literal_count": 39
+    },
+    {
+      "center": "210331224",
+      "quotient": 30446,
+      "literal_count": 47
+    },
+    {
+      "center": "143423142",
+      "quotient": 39657,
+      "literal_count": 49
+    },
+    {
+      "center": "154314251",
+      "quotient": 106849,
+      "literal_count": 34
+    },
+    {
+      "center": "056106624",
+      "quotient": 1403,
+      "literal_count": 43
+    },
+    {
+      "center": "126340032",
+      "quotient": 30174,
+      "literal_count": 46
+    },
+    {
+      "center": "462461056",
+      "quotient": 42398,
+      "literal_count": 45
+    },
+    {
+      "center": "454101322",
+      "quotient": 4822,
+      "literal_count": 32
+    },
+    {
+      "center": "563110146",
+      "quotient": 47842,
+      "literal_count": 40
+    },
+    {
+      "center": "432066436",
+      "quotient": 65082,
+      "literal_count": 40
+    },
+    {
+      "center": "526552621",
+      "quotient": 13845,
+      "literal_count": 39
+    },
+    {
+      "center": "105512103",
+      "quotient": 39526,
+      "literal_count": 35
+    },
+    {
+      "center": "544622226",
+      "quotient": 59655,
+      "literal_count": 38
+    },
+    {
+      "center": "140324540",
+      "quotient": 41681,
+      "literal_count": 49
+    },
+    {
+      "center": "153426255",
+      "quotient": 87422,
+      "literal_count": 45
+    },
+    {
+      "center": "454443133",
+      "quotient": 65779,
+      "literal_count": 35
+    },
+    {
+      "center": "041625126",
+      "quotient": 103007,
+      "literal_count": 31
+    },
+    {
+      "center": "430005052",
+      "quotient": 108060,
+      "literal_count": 35
+    },
+    {
+      "center": "240064543",
+      "quotient": 12906,
+      "literal_count": 52
+    },
+    {
+      "center": "501432322",
+      "quotient": 74014,
+      "literal_count": 42
+    },
+    {
+      "center": "452636412",
+      "quotient": 21267,
+      "literal_count": 46
+    },
+    {
+      "center": "326211415",
+      "quotient": 47283,
+      "literal_count": 42
+    },
+    {
+      "center": "562334351",
+      "quotient": 45710,
+      "literal_count": 43
+    },
+    {
+      "center": "631004401",
+      "quotient": 53687,
+      "literal_count": 46
+    },
+    {
+      "center": "560350440",
+      "quotient": 92688,
+      "literal_count": 43
+    },
+    {
+      "center": "425343325",
+      "quotient": 44308,
+      "literal_count": 48
+    },
+    {
+      "center": "412641532",
+      "quotient": 66056,
+      "literal_count": 31
+    },
+    {
+      "center": "461502040",
+      "quotient": 22317,
+      "literal_count": 30
+    },
+    {
+      "center": "340503203",
+      "quotient": 110912,
+      "literal_count": 44
+    },
+    {
+      "center": "252654610",
+      "quotient": 102243,
+      "literal_count": 42
+    },
+    {
+      "center": "365315556",
+      "quotient": 116582,
+      "literal_count": 46
+    },
+    {
+      "center": "020130312",
+      "quotient": 4722,
+      "literal_count": 47
+    },
+    {
+      "center": "225654556",
+      "quotient": 56652,
+      "literal_count": 41
+    },
+    {
+      "center": "601632305",
+      "quotient": 2056,
+      "literal_count": 45
+    },
+    {
+      "center": "002031212",
+      "quotient": 67389,
+      "literal_count": 29
+    },
+    {
+      "center": "210144334",
+      "quotient": 115566,
+      "literal_count": 28
+    },
+    {
+      "center": "606125151",
+      "quotient": 89694,
+      "literal_count": 40
+    },
+    {
+      "center": "626453503",
+      "quotient": 9401,
+      "literal_count": 43
+    },
+    {
+      "center": "306205264",
+      "quotient": 65585,
+      "literal_count": 43
+    },
+    {
+      "center": "506152011",
+      "quotient": 69346,
+      "literal_count": 42
+    },
+    {
+      "center": "035050450",
+      "quotient": 97382,
+      "literal_count": 47
+    },
+    {
+      "center": "555056446",
+      "quotient": 34294,
+      "literal_count": 44
+    },
+    {
+      "center": "105621605",
+      "quotient": 58638,
+      "literal_count": 38
+    },
+    {
+      "center": "241205242",
+      "quotient": 71977,
+      "literal_count": 46
+    },
+    {
+      "center": "020031601",
+      "quotient": 103302,
+      "literal_count": 32
+    },
+    {
+      "center": "254224653",
+      "quotient": 104337,
+      "literal_count": 41
+    },
+    {
+      "center": "241242362",
+      "quotient": 80566,
+      "literal_count": 37
+    },
+    {
+      "center": "260554222",
+      "quotient": 72533,
+      "literal_count": 43
+    },
+    {
+      "center": "042444440",
+      "quotient": 110889,
+      "literal_count": 41
+    },
+    {
+      "center": "164436220",
+      "quotient": 58199,
+      "literal_count": 43
+    },
+    {
+      "center": "511065520",
+      "quotient": 61448,
+      "literal_count": 50
+    },
+    {
+      "center": "021310006",
+      "quotient": 70644,
+      "literal_count": 35
+    },
+    {
+      "center": "515614206",
+      "quotient": 50768,
+      "literal_count": 38
+    },
+    {
+      "center": "434561441",
+      "quotient": 91899,
+      "literal_count": 43
+    },
+    {
+      "center": "010106445",
+      "quotient": 82578,
+      "literal_count": 40
+    },
+    {
+      "center": "132534511",
+      "quotient": 90735,
+      "literal_count": 38
+    },
+    {
+      "center": "602316234",
+      "quotient": 102700,
+      "literal_count": 50
+    },
+    {
+      "center": "342652161",
+      "quotient": 83811,
+      "literal_count": 46
+    },
+    {
+      "center": "000023246",
+      "quotient": 5963,
+      "literal_count": 42
+    },
+    {
+      "center": "206501360",
+      "quotient": 88241,
+      "literal_count": 36
+    },
+    {
+      "center": "065216413",
+      "quotient": 47114,
+      "literal_count": 38
+    },
+    {
+      "center": "460523321",
+      "quotient": 105969,
+      "literal_count": 45
+    },
+    {
+      "center": "412404512",
+      "quotient": 23902,
+      "literal_count": 39
+    },
+    {
+      "center": "224403433",
+      "quotient": 105811,
+      "literal_count": 32
+    },
+    {
+      "center": "141262254",
+      "quotient": 56468,
+      "literal_count": 44
+    },
+    {
+      "center": "132326531",
+      "quotient": 52970,
+      "literal_count": 45
+    },
+    {
+      "center": "625443410",
+      "quotient": 85286,
+      "literal_count": 41
+    },
+    {
+      "center": "620140120",
+      "quotient": 112640,
+      "literal_count": 48
+    },
+    {
+      "center": "251341543",
+      "quotient": 28250,
+      "literal_count": 46
+    },
+    {
+      "center": "106034463",
+      "quotient": 115643,
+      "literal_count": 35
+    },
+    {
+      "center": "220465631",
+      "quotient": 85555,
+      "literal_count": 46
+    },
+    {
+      "center": "365016103",
+      "quotient": 66319,
+      "literal_count": 36
+    },
+    {
+      "center": "416255101",
+      "quotient": 4262,
+      "literal_count": 38
+    },
+    {
+      "center": "023221360",
+      "quotient": 15280,
+      "literal_count": 39
+    },
+    {
+      "center": "166236112",
+      "quotient": 84267,
+      "literal_count": 47
+    },
+    {
+      "center": "560032506",
+      "quotient": 38171,
+      "literal_count": 33
+    },
+    {
+      "center": "061200663",
+      "quotient": 24151,
+      "literal_count": 38
+    },
+    {
+      "center": "643226222",
+      "quotient": 100678,
+      "literal_count": 40
+    },
+    {
+      "center": "236666615",
+      "quotient": 28161,
+      "literal_count": 30
+    },
+    {
+      "center": "205353003",
+      "quotient": 27849,
+      "literal_count": 49
+    },
+    {
+      "center": "313312411",
+      "quotient": 17132,
+      "literal_count": 38
+    },
+    {
+      "center": "534355426",
+      "quotient": 68985,
+      "literal_count": 50
+    },
+    {
+      "center": "243266525",
+      "quotient": 28606,
+      "literal_count": 44
+    },
+    {
+      "center": "040460313",
+      "quotient": 40152,
+      "literal_count": 44
+    },
+    {
+      "center": "245522602",
+      "quotient": 26984,
+      "literal_count": 39
+    },
+    {
+      "center": "260464042",
+      "quotient": 58043,
+      "literal_count": 46
+    },
+    {
+      "center": "400463241",
+      "quotient": 30160,
+      "literal_count": 45
+    },
+    {
+      "center": "120401433",
+      "quotient": 74449,
+      "literal_count": 41
+    },
+    {
+      "center": "634131364",
+      "quotient": 57978,
+      "literal_count": 44
+    },
+    {
+      "center": "554615155",
+      "quotient": 104931,
+      "literal_count": 40
+    },
+    {
+      "center": "542036215",
+      "quotient": 1283,
+      "literal_count": 54
+    },
+    {
+      "center": "253225202",
+      "quotient": 81979,
+      "literal_count": 46
+    },
+    {
+      "center": "535152454",
+      "quotient": 73987,
+      "literal_count": 52
+    },
+    {
+      "center": "526000444",
+      "quotient": 34680,
+      "literal_count": 39
+    },
+    {
+      "center": "315135435",
+      "quotient": 65518,
+      "literal_count": 49
+    },
+    {
+      "center": "403152112",
+      "quotient": 75987,
+      "literal_count": 43
+    },
+    {
+      "center": "564523305",
+      "quotient": 21037,
+      "literal_count": 38
+    },
+    {
+      "center": "634346210",
+      "quotient": 96012,
+      "literal_count": 43
+    },
+    {
+      "center": "330022023",
+      "quotient": 85711,
+      "literal_count": 47
+    },
+    {
+      "center": "356042265",
+      "quotient": 45928,
+      "literal_count": 38
+    },
+    {
+      "center": "252503350",
+      "quotient": 90070,
+      "literal_count": 60
+    },
+    {
+      "center": "635423262",
+      "quotient": 28652,
+      "literal_count": 39
+    },
+    {
+      "center": "346451411",
+      "quotient": 51453,
+      "literal_count": 49
+    },
+    {
+      "center": "140430605",
+      "quotient": 61937,
+      "literal_count": 45
+    },
+    {
+      "center": "060066662",
+      "quotient": 68517,
+      "literal_count": 51
+    },
+    {
+      "center": "623343631",
+      "quotient": 8849,
+      "literal_count": 49
+    },
+    {
+      "center": "544625303",
+      "quotient": 57979,
+      "literal_count": 40
+    },
+    {
+      "center": "002614053",
+      "quotient": 63547,
+      "literal_count": 45
+    },
+    {
+      "center": "325366151",
+      "quotient": 21555,
+      "literal_count": 46
+    },
+    {
+      "center": "264151340",
+      "quotient": 25368,
+      "literal_count": 48
+    },
+    {
+      "center": "362610610",
+      "quotient": 51591,
+      "literal_count": 40
+    },
+    {
+      "center": "145130560",
+      "quotient": 52617,
+      "literal_count": 51
+    },
+    {
+      "center": "623463522",
+      "quotient": 30403,
+      "literal_count": 40
+    },
+    {
+      "center": "212050633",
+      "quotient": 44079,
+      "literal_count": 45
+    },
+    {
+      "center": "166040626",
+      "quotient": 53310,
+      "literal_count": 34
+    },
+    {
+      "center": "423451504",
+      "quotient": 104068,
+      "literal_count": 37
+    },
+    {
+      "center": "522413334",
+      "quotient": 84594,
+      "literal_count": 37
+    },
+    {
+      "center": "662064451",
+      "quotient": 14587,
+      "literal_count": 46
+    },
+    {
+      "center": "325554353",
+      "quotient": 51839,
+      "literal_count": 41
+    },
+    {
+      "center": "402236101",
+      "quotient": 66838,
+      "literal_count": 42
+    },
+    {
+      "center": "123553264",
+      "quotient": 68770,
+      "literal_count": 34
+    },
+    {
+      "center": "521335146",
+      "quotient": 33903,
+      "literal_count": 41
+    },
+    {
+      "center": "613231001",
+      "quotient": 59955,
+      "literal_count": 39
+    },
+    {
+      "center": "314333646",
+      "quotient": 61670,
+      "literal_count": 41
+    },
+    {
+      "center": "135446425",
+      "quotient": 55939,
+      "literal_count": 34
+    },
+    {
+      "center": "321115362",
+      "quotient": 89117,
+      "literal_count": 43
+    },
+    {
+      "center": "643041306",
+      "quotient": 53376,
+      "literal_count": 35
+    },
+    {
+      "center": "623614142",
+      "quotient": 52173,
+      "literal_count": 36
+    },
+    {
+      "center": "001100611",
+      "quotient": 56434,
+      "literal_count": 49
+    },
+    {
+      "center": "620003546",
+      "quotient": 85017,
+      "literal_count": 44
+    },
+    {
+      "center": "244630330",
+      "quotient": 8454,
+      "literal_count": 48
+    },
+    {
+      "center": "561320235",
+      "quotient": 4954,
+      "literal_count": 36
+    },
+    {
+      "center": "014141260",
+      "quotient": 94609,
+      "literal_count": 39
+    },
+    {
+      "center": "445233210",
+      "quotient": 3194,
+      "literal_count": 42
+    },
+    {
+      "center": "213551434",
+      "quotient": 50330,
+      "literal_count": 46
+    },
+    {
+      "center": "611255344",
+      "quotient": 104620,
+      "literal_count": 41
+    },
+    {
+      "center": "134233313",
+      "quotient": 116418,
+      "literal_count": 45
+    },
+    {
+      "center": "260401511",
+      "quotient": 62039,
+      "literal_count": 49
+    },
+    {
+      "center": "000314403",
+      "quotient": 54393,
+      "literal_count": 68
+    }
+  ],
+  "runtime_seconds": 4.986009922999074,
+  "paid_infrastructure_spend_usd": 0
+}

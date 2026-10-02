@@ -8,3 +8,5 @@
 # Retrieved originals and primary evidence preserve their exact bytes.
 audit/recovered/** -text
 literature-artifacts/** -text
+*.npz -text
+*.npy -text

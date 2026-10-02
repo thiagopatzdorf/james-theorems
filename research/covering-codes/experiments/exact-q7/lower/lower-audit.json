@@ -1,0 +1,67 @@
+{
+  "q": 7,
+  "n": 9,
+  "R": 4,
+  "ambient_words": 40353607,
+  "sphere_volume": 182791,
+  "sphere_bound": 221,
+  "sphere_ratio": "5764801/26113",
+  "rechecked_sdp_lower_bound": 241,
+  "rational_bound_on_K_cubed": {
+    "numerator": "1078169490279442539265627245374932",
+    "denominator": "77371252455336267181195264"
+  },
+  "integer_boundary_checks": {
+    "240_cubed_den_lt_num": true,
+    "num_le_241_cubed_den": true
+  },
+  "exact_sdp_check": {
+    "ok": true,
+    "reasons": [],
+    "bound_num": 1078169490279442539265627245374932,
+    "bound_den": 77371252455336267181195264,
+    "bound_float": 13935014.053208359,
+    "cube_root_float": 240.640730351216,
+    "K_lower_bound": 241,
+    "min_slack_times_den": 300965114578057201309016
+  },
+  "model_size": {
+    "variables": 189,
+    "linear_constraints": 2356,
+    "psd_blocks": 90
+  },
+  "negative_tests_passed": [
+    "negative_linear_multiplier",
+    "zero_denominator",
+    "negative_psd_pivot",
+    "unsound_covering_inequality",
+    "indefinite_matrix",
+    "zero_pivot_nonzero_offdiagonal",
+    "asymmetric_matrix"
+  ],
+  "positive_test_passed": "rank_one_singular_psd",
+  "certificate_sha256": "fcbfe200eda66110ebe68a26e468458475de46c4a51ec942406c0f29a8a4a561",
+  "checker_sha256": "4fcaa1c691867e6674dc45e87b75e47e4228104975b60e9d0acfd8ac4f645a3d",
+  "primary_documentary_lower_bound": 264,
+  "primary_source": {
+    "doi": "10.37236/222",
+    "authors": [
+      "Wolfgang Haas",
+      "Immanuel Halupczok",
+      "Jan-Christoph Schlage-Puchta"
+    ],
+    "published": "2009-11-07",
+    "table": 5,
+    "printed_row": "K7 (9, 4)    5         221       227       264    1843",
+    "pdf_sha256": "39748ca3c7b68fd7f6a8e499f82ff0c24c56c11570920ee12eb7e0d29f3a247a",
+    "pdf_bytes": 212250,
+    "download_url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v16i1r133/pdf"
+  },
+  "264_independently_replayed": false,
+  "264_blocker": "No machine-readable winning-game certificate in retrieved paper. An independent exact histogram recursion passed80tinycrosschecks but bounded local target replay did not complete; see game-replay.json and README. Original C++ is not logically necessary, but compressed frontier/min-convolution machinery is not yet implemented.",
+  "global_exact_value_established": false,
+  "new_lower_bound_found": false,
+  "scope": "Exact arithmetic checks SDP dual against reconstructed upstream model; soundness additionally relies on Gijswijt\u2013Polak Theorem4.18 and correctness of model transcription. Not a Lean lower-bound replay.",
+  "runtime_seconds": 2.2727111740023247,
+  "paid_infrastructure_spend_usd": 0
+}

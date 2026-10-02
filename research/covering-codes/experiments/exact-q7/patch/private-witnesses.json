@@ -1,0 +1,2584 @@
+{
+  "status": "PASS",
+  "scope": "Original code deletion only: not arbitrary replacement or global lower bound",
+  "source_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "private_witnesses": [
+    {
+      "original_code_index": 1029,
+      "ambient_id": 64025,
+      "word": "000354443",
+      "distance": 2,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1030,
+      "ambient_id": 1014602,
+      "word": "011424011",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1031,
+      "ambient_id": 7740203,
+      "word": "122535122",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1032,
+      "ambient_id": 3164552,
+      "word": "035620046",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1033,
+      "ambient_id": 2194934,
+      "word": "024441140",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1034,
+      "ambient_id": 8920535,
+      "word": "135552251",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1035,
+      "ambient_id": 15646136,
+      "word": "246663362",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1036,
+      "ambient_id": 272173,
+      "word": "002212336",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1037,
+      "ambient_id": 413690,
+      "word": "003342044",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1038,
+      "ambient_id": 1343861,
+      "word": "014264651",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1039,
+      "ambient_id": 8016050,
+      "word": "125064260",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1040,
+      "ambient_id": 14724795,
+      "word": "236105301",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1041,
+      "ambient_id": 20626853,
+      "word": "340216412",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1042,
+      "ambient_id": 23193822,
+      "word": "401100321",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1043,
+      "ambient_id": 748834,
+      "word": "006236122",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1044,
+      "ambient_id": 934220,
+      "word": "010640450",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1045,
+      "ambient_id": 5073159,
+      "word": "061056360",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1046,
+      "ambient_id": 6031509,
+      "word": "102160401",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1047,
+      "ambient_id": 12740303,
+      "word": "213201512",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1048,
+      "ambient_id": 19465904,
+      "word": "324312623",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1049,
+      "ambient_id": 26191162,
+      "word": "435423034",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1050,
+      "ambient_id": 193800,
+      "word": "001435005",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 18
+    },
+    {
+      "original_code_index": 1051,
+      "ambient_id": 335660,
+      "word": "002565413",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 18
+    },
+    {
+      "original_code_index": 1052,
+      "ambient_id": 1195619,
+      "word": "013106525",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 18
+    },
+    {
+      "original_code_index": 1053,
+      "ambient_id": 2367611,
+      "word": "026060441",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 18
+    },
+    {
+      "original_code_index": 1054,
+      "ambient_id": 3114127,
+      "word": "035320042",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 18
+    },
+    {
+      "original_code_index": 1055,
+      "ambient_id": 4109066,
+      "word": "046632533",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 18
+    },
+    {
+      "original_code_index": 1056,
+      "ambient_id": 9893475,
+      "word": "150043644",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 18
+    },
+    {
+      "original_code_index": 1057,
+      "ambient_id": 1048941,
+      "word": "011626065",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1058,
+      "ambient_id": 3536721,
+      "word": "042030066",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1059,
+      "ambient_id": 2028459,
+      "word": "023145606",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1060,
+      "ambient_id": 8753710,
+      "word": "134256010",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1061,
+      "ambient_id": 12163877,
+      "word": "205251125",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1062,
+      "ambient_id": 18889478,
+      "word": "316362236",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1063,
+      "ambient_id": 24774722,
+      "word": "420403340",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1064,
+      "ambient_id": 2490614,
+      "word": "030112160",
+      "distance": 2,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1065,
+      "ambient_id": 3458348,
+      "word": "041252435",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1066,
+      "ambient_id": 4371712,
+      "word": "052105342",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1067,
+      "ambient_id": 5610692,
+      "word": "065455463",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1068,
+      "ambient_id": 6571443,
+      "word": "106566504",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1069,
+      "ambient_id": 1351033,
+      "word": "014324605",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1070,
+      "ambient_id": 4008653,
+      "word": "046034015",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1071,
+      "ambient_id": 378194,
+      "word": "003133415",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1072,
+      "ambient_id": 4697988,
+      "word": "054634521",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1073,
+      "ambient_id": 3996614,
+      "word": "045653636",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1074,
+      "ambient_id": 6501596,
+      "word": "106156043",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1075,
+      "ambient_id": 12401253,
+      "word": "210260154",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1076,
+      "ambient_id": 17450267,
+      "word": "301216262",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1077,
+      "ambient_id": 24173418,
+      "word": "412320303",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1078,
+      "ambient_id": 49089,
+      "word": "000263055",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1079,
+      "ambient_id": 5110815,
+      "word": "061304223",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1080,
+      "ambient_id": 275842,
+      "word": "002226130",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1081,
+      "ambient_id": 1500899,
+      "word": "015520541",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1082,
+      "ambient_id": 526003,
+      "word": "004320352",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1083,
+      "ambient_id": 7251604,
+      "word": "115431463",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1084,
+      "ambient_id": 1558155,
+      "word": "016146504",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 11
+    },
+    {
+      "original_code_index": 1085,
+      "ambient_id": 2261741,
+      "word": "025136666",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1086,
+      "ambient_id": 8984542,
+      "word": "136240000",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1087,
+      "ambient_id": 1711044,
+      "word": "020354316",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1088,
+      "ambient_id": 8436638,
+      "word": "131465420",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1089,
+      "ambient_id": 15143374,
+      "word": "242500531",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1090,
+      "ambient_id": 21868632,
+      "word": "353610642",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1091,
+      "ambient_id": 28476241,
+      "word": "464021053",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1092,
+      "ambient_id": 1651569,
+      "word": "020016033",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1093,
+      "ambient_id": 8374769,
+      "word": "131120144",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1094,
+      "ambient_id": 3783785,
+      "word": "044106305",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1095,
+      "ambient_id": 10506985,
+      "word": "155210416",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1096,
+      "ambient_id": 17232579,
+      "word": "266321520",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1097,
+      "ambient_id": 44843,
+      "word": "000244511",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1098,
+      "ambient_id": 6770444,
+      "word": "111355622",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1099,
+      "ambient_id": 154426,
+      "word": "001212136",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1100,
+      "ambient_id": 2762249,
+      "word": "032323130",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1101,
+      "ambient_id": 1251292,
+      "word": "013431040",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1102,
+      "ambient_id": 4914257,
+      "word": "056525165",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1103,
+      "ambient_id": 3944646,
+      "word": "045346266",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1104,
+      "ambient_id": 10667790,
+      "word": "156450300",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1105,
+      "ambient_id": 16569848,
+      "word": "260561411",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1106,
+      "ambient_id": 1591617,
+      "word": "016346166",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1107,
+      "ambient_id": 3363168,
+      "word": "040405104",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1108,
+      "ambient_id": 10086711,
+      "word": "151510215",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1109,
+      "ambient_id": 16811969,
+      "word": "262620326",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1110,
+      "ambient_id": 17655113,
+      "word": "303031430",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1111,
+      "ambient_id": 24380714,
+      "word": "414142541",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1112,
+      "ambient_id": 3928271,
+      "word": "045250454",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1113,
+      "ambient_id": 866795,
+      "word": "010240046",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1114,
+      "ambient_id": 5205995,
+      "word": "062151554",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1115,
+      "ambient_id": 354215,
+      "word": "003003461",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1116,
+      "ambient_id": 7079767,
+      "word": "114114502",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1117,
+      "ambient_id": 2339662,
+      "word": "025613113",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1118,
+      "ambient_id": 3097994,
+      "word": "035222024",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1119,
+      "ambient_id": 9823595,
+      "word": "146333135",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1120,
+      "ambient_id": 1179916,
+      "word": "013012663",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 15
+    },
+    {
+      "original_code_index": 1121,
+      "ambient_id": 1987784,
+      "word": "022616201",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 15
+    },
+    {
+      "original_code_index": 1122,
+      "ambient_id": 359178,
+      "word": "003024111",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 15
+    },
+    {
+      "original_code_index": 1123,
+      "ambient_id": 7084779,
+      "word": "114135222",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 15
+    },
+    {
+      "original_code_index": 1124,
+      "ambient_id": 3167773,
+      "word": "035632330",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 15
+    },
+    {
+      "original_code_index": 1125,
+      "ambient_id": 5541733,
+      "word": "065050441",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 15
+    },
+    {
+      "original_code_index": 1126,
+      "ambient_id": 6502533,
+      "word": "106161552",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 15
+    },
+    {
+      "original_code_index": 1127,
+      "ambient_id": 838441,
+      "word": "010061302",
+      "distance": 2,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 16
+    },
+    {
+      "original_code_index": 1128,
+      "ambient_id": 1789410,
+      "word": "021131640",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 16
+    },
+    {
+      "original_code_index": 1129,
+      "ambient_id": 278796,
+      "word": "002240550",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 16
+    },
+    {
+      "original_code_index": 1130,
+      "ambient_id": 3941712,
+      "word": "045334605",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 16
+    },
+    {
+      "original_code_index": 1131,
+      "ambient_id": 10666970,
+      "word": "156445016",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 16
+    },
+    {
+      "original_code_index": 1132,
+      "ambient_id": 5446553,
+      "word": "064203110",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 16
+    },
+    {
+      "original_code_index": 1133,
+      "ambient_id": 2457364,
+      "word": "026613220",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 16
+    },
+    {
+      "original_code_index": 1134,
+      "ambient_id": 4905065,
+      "word": "056456324",
+      "distance": 2,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1135,
+      "ambient_id": 5030433,
+      "word": "060520662",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1136,
+      "ambient_id": 5990498,
+      "word": "101630003",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1137,
+      "ambient_id": 1304877,
+      "word": "014043210",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1138,
+      "ambient_id": 8030478,
+      "word": "125154321",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1139,
+      "ambient_id": 14756079,
+      "word": "236265432",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1140,
+      "ambient_id": 5580395,
+      "word": "065301242",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1141,
+      "ambient_id": 512029,
+      "word": "004231540",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1142,
+      "ambient_id": 7237630,
+      "word": "115342651",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1143,
+      "ambient_id": 2437055,
+      "word": "026500055",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1144,
+      "ambient_id": 8339113,
+      "word": "130611166",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1145,
+      "ambient_id": 14947009,
+      "word": "241022200",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1146,
+      "ambient_id": 21672610,
+      "word": "352133311",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1147,
+      "ambient_id": 28398211,
+      "word": "463244422",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1148,
+      "ambient_id": 113418,
+      "word": "000651444",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1149,
+      "ambient_id": 120479,
+      "word": "001011152",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1150,
+      "ambient_id": 1061290,
+      "word": "012010066",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1151,
+      "ambient_id": 2272431,
+      "word": "025213110",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1152,
+      "ambient_id": 1302820,
+      "word": "014034211",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1153,
+      "ambient_id": 3794429,
+      "word": "044152322",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1154,
+      "ambient_id": 4099411,
+      "word": "046562431",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 14
+    },
+    {
+      "original_code_index": 1155,
+      "ambient_id": 325829,
+      "word": "002524640",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 13
+    },
+    {
+      "original_code_index": 1156,
+      "ambient_id": 1281753,
+      "word": "013615614",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 13
+    },
+    {
+      "original_code_index": 1157,
+      "ambient_id": 2124561,
+      "word": "024026025",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 13
+    },
+    {
+      "original_code_index": 1158,
+      "ambient_id": 8847761,
+      "word": "135130136",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 13
+    },
+    {
+      "original_code_index": 1159,
+      "ambient_id": 819214,
+      "word": "006651244",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 13
+    },
+    {
+      "original_code_index": 1160,
+      "ambient_id": 4219409,
+      "word": "050602325",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 13
+    },
+    {
+      "original_code_index": 1161,
+      "ambient_id": 10827361,
+      "word": "161013436",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 13
+    },
+    {
+      "original_code_index": 1162,
+      "ambient_id": 369747,
+      "word": "003066660",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1163,
+      "ambient_id": 6521173,
+      "word": "106300111",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1164,
+      "ambient_id": 11602086,
+      "word": "200421216",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1165,
+      "ambient_id": 18327680,
+      "word": "311532320",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1166,
+      "ambient_id": 23399002,
+      "word": "402613444",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1167,
+      "ambient_id": 5303991,
+      "word": "063040350",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1168,
+      "ambient_id": 6264791,
+      "word": "104151461",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 9
+    },
+    {
+      "original_code_index": 1169,
+      "ambient_id": 487784,
+      "word": "004101053",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1170,
+      "ambient_id": 1093318,
+      "word": "012202342",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1171,
+      "ambient_id": 7818919,
+      "word": "123313453",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1172,
+      "ambient_id": 3245270,
+      "word": "036404300",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1173,
+      "ambient_id": 9147328,
+      "word": "140515411",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1174,
+      "ambient_id": 4767268,
+      "word": "055343512",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1175,
+      "ambient_id": 11492869,
+      "word": "166454623",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1176,
+      "ambient_id": 117094,
+      "word": "000665245",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1177,
+      "ambient_id": 1190850,
+      "word": "013056603",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1178,
+      "ambient_id": 2182521,
+      "word": "024360015",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1179,
+      "ambient_id": 8891315,
+      "word": "135401126",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1180,
+      "ambient_id": 15616909,
+      "word": "246512230",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1181,
+      "ambient_id": 21518967,
+      "word": "350623341",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1182,
+      "ambient_id": 28126919,
+      "word": "461034452",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1183,
+      "ambient_id": 3323454,
+      "word": "040151241",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1184,
+      "ambient_id": 386944,
+      "word": "003201055",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1185,
+      "ambient_id": 1347744,
+      "word": "014312166",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1186,
+      "ambient_id": 6464719,
+      "word": "105643402",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1187,
+      "ambient_id": 13072671,
+      "word": "216054513",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1188,
+      "ambient_id": 18974729,
+      "word": "320165624",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1189,
+      "ambient_id": 25683180,
+      "word": "431206035",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1190,
+      "ambient_id": 2874569,
+      "word": "033301445",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1191,
+      "ambient_id": 6318139,
+      "word": "104463142",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1192,
+      "ambient_id": 594357,
+      "word": "005023551",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1193,
+      "ambient_id": 7319958,
+      "word": "116134662",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1194,
+      "ambient_id": 13221624,
+      "word": "220245003",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1195,
+      "ambient_id": 19947225,
+      "word": "331356114",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1196,
+      "ambient_id": 26670425,
+      "word": "442460225",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1197,
+      "ambient_id": 3610378,
+      "word": "042454612",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1198,
+      "ambient_id": 3735088,
+      "word": "043514320",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1199,
+      "ambient_id": 573272,
+      "word": "004605230",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1200,
+      "ambient_id": 6530557,
+      "word": "106336345",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1201,
+      "ambient_id": 768312,
+      "word": "006346656",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1202,
+      "ambient_id": 936957,
+      "word": "010651440",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1203,
+      "ambient_id": 7544909,
+      "word": "121062551",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1204,
+      "ambient_id": 1319097,
+      "word": "014132523",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1205,
+      "ambient_id": 8044698,
+      "word": "125243634",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1206,
+      "ambient_id": 11824034,
+      "word": "202334255",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1207,
+      "ambient_id": 18549635,
+      "word": "313445366",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1208,
+      "ambient_id": 23356970,
+      "word": "402350060",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1209,
+      "ambient_id": 4822737,
+      "word": "055664313",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1210,
+      "ambient_id": 4118613,
+      "word": "050002422",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1211,
+      "ambient_id": 433663,
+      "word": "003454216",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1212,
+      "ambient_id": 7159257,
+      "word": "114565320",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1213,
+      "ambient_id": 2263295,
+      "word": "025144346",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1214,
+      "ambient_id": 8988889,
+      "word": "136255450",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1215,
+      "ambient_id": 14890947,
+      "word": "240366561",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1216,
+      "ambient_id": 21597291,
+      "word": "351400602",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1217,
+      "ambient_id": 23515994,
+      "word": "403611515",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1218,
+      "ambient_id": 3516522,
+      "word": "041614152",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1219,
+      "ambient_id": 10124474,
+      "word": "152025263",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1220,
+      "ambient_id": 5531089,
+      "word": "065004424",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1221,
+      "ambient_id": 6491889,
+      "word": "106115535",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1222,
+      "ambient_id": 12393947,
+      "word": "210226646",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1223,
+      "ambient_id": 19116797,
+      "word": "321330050",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1224,
+      "ambient_id": 25842398,
+      "word": "432441161",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1225,
+      "ambient_id": 3463453,
+      "word": "041303350",
+      "distance": 2,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1226,
+      "ambient_id": 10189054,
+      "word": "152414461",
+      "distance": 2,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1227,
+      "ambient_id": 5307946,
+      "word": "063055030",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1228,
+      "ambient_id": 818730,
+      "word": "006646653",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1229,
+      "ambient_id": 5611176,
+      "word": "065460054",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1230,
+      "ambient_id": 6555169,
+      "word": "106501165",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1231,
+      "ambient_id": 12457178,
+      "word": "210612206",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1232,
+      "ambient_id": 2485852,
+      "word": "030062245",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1233,
+      "ambient_id": 690437,
+      "word": "005603636",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1234,
+      "ambient_id": 1566853,
+      "word": "016214041",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1235,
+      "ambient_id": 7468911,
+      "word": "120325152",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1236,
+      "ambient_id": 2967337,
+      "word": "034136062",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1237,
+      "ambient_id": 9690488,
+      "word": "145240103",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1238,
+      "ambient_id": 16416089,
+      "word": "256351214",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1239,
+      "ambient_id": 2627362,
+      "word": "031221643",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1240,
+      "ambient_id": 9352620,
+      "word": "142332054",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1241,
+      "ambient_id": 4807533,
+      "word": "055602063",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1242,
+      "ambient_id": 11415436,
+      "word": "166013104",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1243,
+      "ambient_id": 11552693,
+      "word": "200124215",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1244,
+      "ambient_id": 18278294,
+      "word": "311235326",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1245,
+      "ambient_id": 25003888,
+      "word": "422346430",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1246,
+      "ambient_id": 530461,
+      "word": "004336351",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1247,
+      "ambient_id": 7253661,
+      "word": "115440462",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1248,
+      "ambient_id": 2584138,
+      "word": "030651634",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1249,
+      "ambient_id": 9191747,
+      "word": "141062045",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1250,
+      "ambient_id": 15900541,
+      "word": "252103156",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1251,
+      "ambient_id": 22626135,
+      "word": "363214260",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1252,
+      "ambient_id": 23586886,
+      "word": "404325301",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1253,
+      "ambient_id": 874703,
+      "word": "010302104",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1254,
+      "ambient_id": 2082964,
+      "word": "023463532",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1255,
+      "ambient_id": 2942923,
+      "word": "034004644",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1256,
+      "ambient_id": 9668181,
+      "word": "145115055",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1257,
+      "ambient_id": 12237894,
+      "word": "206006664",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1258,
+      "ambient_id": 18137159,
+      "word": "310110005",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1259,
+      "ambient_id": 23254183,
+      "word": "401441311",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 8
+    },
+    {
+      "original_code_index": 1260,
+      "ambient_id": 1561748,
+      "word": "016163126",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1261,
+      "ambient_id": 6355020,
+      "word": "105005520",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1262,
+      "ambient_id": 13080621,
+      "word": "216116631",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1263,
+      "ambient_id": 18979935,
+      "word": "320220042",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1264,
+      "ambient_id": 3133833,
+      "word": "035431353",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1265,
+      "ambient_id": 1406502,
+      "word": "014645406",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1266,
+      "ambient_id": 8014447,
+      "word": "125056510",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 6
+    },
+    {
+      "original_code_index": 1267,
+      "ambient_id": 1672595,
+      "word": "020134241",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1268,
+      "ambient_id": 2684226,
+      "word": "031546506",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1269,
+      "ambient_id": 1173269,
+      "word": "012654416",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1270,
+      "ambient_id": 4716177,
+      "word": "055041534",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1271,
+      "ambient_id": 3864215,
+      "word": "044562635",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1272,
+      "ambient_id": 573873,
+      "word": "004610046",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1273,
+      "ambient_id": 7181818,
+      "word": "115021150",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 10
+    },
+    {
+      "original_code_index": 1274,
+      "ambient_id": 14968928,
+      "word": "241143122",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1275,
+      "ambient_id": 17538298,
+      "word": "302034031",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1276,
+      "ambient_id": 1208128,
+      "word": "013161145",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1277,
+      "ambient_id": 7916922,
+      "word": "124202256",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1278,
+      "ambient_id": 14642516,
+      "word": "235313360",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1279,
+      "ambient_id": 2459261,
+      "word": "026621600",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1280,
+      "ambient_id": 8243327,
+      "word": "130032011",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1281,
+      "ambient_id": 720243,
+      "word": "006056556",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1282,
+      "ambient_id": 4350805,
+      "word": "051660364",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1283,
+      "ambient_id": 5263777,
+      "word": "062512201",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1284,
+      "ambient_id": 6224577,
+      "word": "103623312",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1285,
+      "ambient_id": 12832529,
+      "word": "214034423",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1286,
+      "ambient_id": 19558130,
+      "word": "325145534",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1287,
+      "ambient_id": 26283731,
+      "word": "436256645",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 7
+    },
+    {
+      "original_code_index": 1288,
+      "ambient_id": 3153806,
+      "word": "035543525",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1289,
+      "ambient_id": 4106672,
+      "word": "046622543",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1290,
+      "ambient_id": 9891081,
+      "word": "150033654",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1291,
+      "ambient_id": 16616339,
+      "word": "261144065",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1292,
+      "ambient_id": 17577090,
+      "word": "302255106",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1293,
+      "ambient_id": 24302684,
+      "word": "413366210",
+      "distance": 3,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1294,
+      "ambient_id": 3833091,
+      "word": "044403123",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1295,
+      "ambient_id": 494415,
+      "word": "004126305",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1296,
+      "ambient_id": 3089505,
+      "word": "035155206",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1297,
+      "ambient_id": 9815099,
+      "word": "146266310",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1298,
+      "ambient_id": 2992316,
+      "word": "034301645",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1299,
+      "ambient_id": 9717574,
+      "word": "145412056",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1300,
+      "ambient_id": 16443168,
+      "word": "256523160",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1301,
+      "ambient_id": 22345177,
+      "word": "360634201",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1302,
+      "ambient_id": 2190471,
+      "word": "024422133",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1303,
+      "ambient_id": 3285520,
+      "word": "036632530",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1304,
+      "ambient_id": 3960867,
+      "word": "045444501",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1305,
+      "ambient_id": 10686468,
+      "word": "156555612",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1306,
+      "ambient_id": 16588183,
+      "word": "260666023",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1307,
+      "ambient_id": 17412126,
+      "word": "301000134",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1308,
+      "ambient_id": 24137727,
+      "word": "412111245",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 5
+    },
+    {
+      "original_code_index": 1309,
+      "ambient_id": 1640948,
+      "word": "016643051",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1310,
+      "ambient_id": 6462822,
+      "word": "105635022",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1311,
+      "ambient_id": 13070774,
+      "word": "216046133",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1312,
+      "ambient_id": 18970431,
+      "word": "320150244",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1313,
+      "ambient_id": 25696032,
+      "word": "431261355",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1314,
+      "ambient_id": 3803522,
+      "word": "044220662",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1315,
+      "ambient_id": 4763930,
+      "word": "055331003",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1316,
+      "ambient_id": 3651386,
+      "word": "043015304",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1317,
+      "ambient_id": 10376987,
+      "word": "154126415",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1318,
+      "ambient_id": 12309939,
+      "word": "206430015",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1319,
+      "ambient_id": 17354841,
+      "word": "300341130",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1320,
+      "ambient_id": 23962695,
+      "word": "410452041",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1321,
+      "ambient_id": 2957833,
+      "word": "034066264",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1322,
+      "ambient_id": 9664177,
+      "word": "145100305",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 4
+    },
+    {
+      "original_code_index": 1323,
+      "ambient_id": 958088,
+      "word": "011100155",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1324,
+      "ambient_id": 5438113,
+      "word": "064136362",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1325,
+      "ambient_id": 6396463,
+      "word": "105240403",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1326,
+      "ambient_id": 13122064,
+      "word": "216351514",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1327,
+      "ambient_id": 19024122,
+      "word": "320462625",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1328,
+      "ambient_id": 25732573,
+      "word": "431503036",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1329,
+      "ambient_id": 32458167,
+      "word": "542614140",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1330,
+      "ambient_id": 787325,
+      "word": "006456260",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1331,
+      "ambient_id": 6567506,
+      "word": "106552151",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1332,
+      "ambient_id": 12469564,
+      "word": "210663262",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1333,
+      "ambient_id": 19060660,
+      "word": "321004303",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1334,
+      "ambient_id": 25786261,
+      "word": "432115414",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1335,
+      "ambient_id": 29217494,
+      "word": "503226125",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1336,
+      "ambient_id": 35940694,
+      "word": "614330236",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 3
+    },
+    {
+      "original_code_index": 1337,
+      "ambient_id": 1435219,
+      "word": "015125212",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1338,
+      "ambient_id": 8160820,
+      "word": "126236323",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1339,
+      "ambient_id": 14060477,
+      "word": "230340434",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1340,
+      "ambient_id": 20786078,
+      "word": "341451545",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1341,
+      "ambient_id": 27511679,
+      "word": "452562656",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1342,
+      "ambient_id": 29194390,
+      "word": "503101561",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1343,
+      "ambient_id": 35063225,
+      "word": "604014101",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1344,
+      "ambient_id": 1339842,
+      "word": "014250150",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1345,
+      "ambient_id": 8065443,
+      "word": "125361261",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1346,
+      "ambient_id": 14774188,
+      "word": "236402302",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1347,
+      "ambient_id": 20676246,
+      "word": "340513413",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1348,
+      "ambient_id": 27401847,
+      "word": "451624524",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1349,
+      "ambient_id": 5068147,
+      "word": "061035640",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    },
+    {
+      "original_code_index": 1350,
+      "ambient_id": 6028604,
+      "word": "102146051",
+      "distance": 4,
+      "other_codewords_min_distance": 5,
+      "private_holes_in_exception_set": 2
+    }
+  ],
+  "restricted_optimal_patch_size": 322
+}

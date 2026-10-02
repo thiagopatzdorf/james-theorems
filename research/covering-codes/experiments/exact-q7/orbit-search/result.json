@@ -1,0 +1,17 @@
+{
+  "scope": "FIXED_BASE_RESTRICTED_POOL_ONLY",
+  "original_code_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "quotient_classes_minimum_coverage": 61,
+  "quotient_classes": 29,
+  "candidate_centers": 9947,
+  "holes": 9261,
+  "best_patch_words": 322,
+  "best_total": 1351,
+  "improvements": [],
+  "solver_status": 1,
+  "solver_message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+  "mip_dual_bound": 0.0,
+  "runtime_seconds": 112.62399376100075,
+  "optimality": "NOT_ESTABLISHED",
+  "paid_resources_used": false
+}

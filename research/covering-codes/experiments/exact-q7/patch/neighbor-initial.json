@@ -1,0 +1,12 @@
+{
+  "source_sha256": "6d1b0e1abb8079df06a28d5301607d3d5247e0f2005d72e13f695ce26f6e6b52",
+  "initial_pool": 17668,
+  "nonzero_pool": 17668,
+  "distinct_coverage_pool": 17668,
+  "holes": 9261,
+  "unique_constraints": 9261,
+  "lp_status": 1,
+  "lp_objective": null,
+  "preprocessing_seconds": 98.00275202100602,
+  "scope": "1029 fixed base + original patch and radius-one neighbors only"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "FIXED_BASE_ONLY; not unrestricted K7(9,4)",
+  "independent_kernel_strategy": "literal Hamming representative-span distances",
+  "quotient_columns_checked": 117649,
+  "ambient_centers_represented": 40353607,
+  "integer_common_denominator": 1000000,
+  "exact_maximum_constraint_numerator": 999974,
+  "minimum_constraint_slack_numerator": 26,
+  "fractional_patch_lower_bound": "76217001/500000",
+  "integer_patch_lower_bound": 153,
+  "fixed_base_total_lower_bound": 1182,
+  "certificate_sha256": "55880f3fc837cea063da3530e68a89f9b2f0bd798f48712014d9ab188460db1f",
+  "forgeries_rejected": {
+    "negative_weight": "weight sign",
+    "zero_denominator": "weight sign",
+    "orbit_order_swapped": "orbit order",
+    "infeasible_doubled_weights": "constraint violation",
+    "inflated_bound_claim": "bound claim"
+  }
+}

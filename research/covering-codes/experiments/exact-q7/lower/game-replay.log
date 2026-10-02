@@ -1,0 +1,19 @@
+Tiny abstract-versus-concrete partition checks PASS: 80
+{
+  "tiny_crosschecks": "PASS",
+  "tiny_cases_checked": 80,
+  "principal_replay": {
+    "status": "UNKNOWN_BUDGET_EXCEEDED",
+    "global_lower_bound_claimed": false,
+    "chain": [],
+    "current_minimum_class_size": 0,
+    "states_entered": 32417,
+    "box_profiles_enumerated": 129523,
+    "partition_subproblems": 1221,
+    "winning_cache": "CacheInfo(hits=76, misses=32725, maxsize=None, currsize=32718)",
+    "runtime_seconds": 60.0002739890042
+  },
+  "method": "Exact histogram game recursion, losing-class partitions, sorted class symmetry, HHSP Theorem9 minimum-class chain",
+  "scope": "A proven winning chain implies global lower264. Timeout does not establish any bound.",
+  "paid_infrastructure_spend_usd": 0
+}

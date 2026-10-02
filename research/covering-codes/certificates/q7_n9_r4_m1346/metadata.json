@@ -27,5 +27,8 @@
   "formal_status": "NOT_PROVED",
   "optimality": "NOT_ESTABLISHED",
   "generator_sha256": "329664dae3f2b99c53f410a8c11352dee4c09bb050ffdbee307e95f7d39b978a",
-  "improvement_iteration": 4995
+  "improvement_iteration": 4995,
+  "M_unique": 1346,
+  "duplicates": 0,
+  "invalid_lines": 0
 }
