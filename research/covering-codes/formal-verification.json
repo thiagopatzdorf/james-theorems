@@ -32,7 +32,7 @@
   "sphere_lower_bound": 221,
   "sphere_lower_rebuilt_and_axioms_checked": true,
   "build_jobs_after_concurrent_lower_proof": 3334,
-  "build_jobs": 3335,
+  "build_jobs": 3336,
   "orbit_algebra": "PASS",
   "orbit_theorems": [
     "linear_add",
@@ -45,5 +45,8 @@
     "coset_card",
     "cosets_transport",
     "transport_normalization"
-  ]
+  ],
+  "compact_partition_bridge": "PASS; explicit finite-data hypotheses remain",
+  "kernel_distance_pilot_checks": 2048,
+  "pilot_scope": "witness distances only; incomplete membership, full partition and original-Finset linkage"
 }

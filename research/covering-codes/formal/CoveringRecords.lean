@@ -4,3 +4,4 @@ import CoveringRecords.Selector
 import CoveringRecords.PrincipalCode
 import CoveringRecords.HammingSphere
 import CoveringRecords.Orbit
+import CoveringRecords.CompactReplay

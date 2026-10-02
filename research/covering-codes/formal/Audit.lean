@@ -15,3 +15,7 @@ import CoveringRecords
 #print axioms CoveringRecords.Orbit.coset_card
 #print axioms CoveringRecords.Orbit.cosets_transport
 #print axioms CoveringRecords.Orbit.transport_normalization
+#print axioms CoveringRecords.CompactReplay.covers_of_partition
+#print axioms CoveringRecords.CompactReplay.principal_upper_of_partition
+#print axioms CoveringRecords.CompactReplay.original_first_word_member
+#print axioms CoveringRecords.CompactReplay.original_first_word_covers_pilot

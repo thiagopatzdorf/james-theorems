@@ -1,0 +1,2 @@
+'CoveringRecords.CompactPilot.distances' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoveringRecords.CompactPilot.sampled_distances' depends on axioms: [propext, Classical.choice, Quot.sound]

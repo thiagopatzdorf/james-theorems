@@ -1,0 +1,53 @@
+{
+  "status": "PARTIAL_KERNEL_REPLAY",
+  "principal_coverage": "NOT_PROVED",
+  "bridge_build": "PASS",
+  "sampled_distance_checks": 64,
+  "pilot_build": "PASS",
+  "native_decide_used": false,
+  "new_axioms": 0,
+  "standard_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "artifacts": {
+    "formal/CoveringRecords/CompactReplay.lean": "0aa3c43e942e78d32c9aead31832f1c13c6bce5da96504ec7dda891679573ec8",
+    "experiments/exact-q7/formal/Pilot.lean": "c924449f90629a53ecdde7fd49c064490f7b2e6ca0b060e6a5ac893ab4bc07b5",
+    "experiments/exact-q7/formal/pilot-inputs.json": "f026319afcaaad3f37292f188636710618a1c057da76e8546d4078e8d4851392",
+    "experiments/exact-q7/formal/compact-replay-build.log": "b6098b0ffe7a295611295a77b4e96388991034b9aec3c576886d9d61f9a90567",
+    "experiments/exact-q7/formal/pilot-build.log": "8e7d5eda9cea3ff4260c8bb25bd2797870179aa67255f34f291c298669ce750f",
+    "experiments/exact-q7/formal/Benchmark2048.lean": "964541b398905b0f91ed36d518409c494268f99c15ce5f6ca24712bb8a863aaa",
+    "experiments/exact-q7/formal/BenchmarkChunked.lean": "4fe1a8d1b6c9dd00b25d402ddde88c6acaf56336bf67c5528019d194c1107984",
+    "experiments/exact-q7/formal/benchmark2048-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/exact-q7/formal/benchmark2048-timing.json": "381aced784bb96bf15bea30a60db8ee61fdda473683925b2f0631e165261f84d",
+    "experiments/exact-q7/formal/benchmark-chunked-build.log": "5a322390fc38253e18083172bccaafe426d809f7c5b9e026d4bda8d75b7114d3",
+    "experiments/exact-q7/formal/benchmark-chunked-timing.json": "bd3bfd99878280c5bac9643d0ab46d7b48724da16ad4bf2a1b6546714e5661d7",
+    "experiments/exact-q7/formal/pilot-timing.json": "c402b0d1884980733ede55a3372624a0e3f30d6ce03033f881098d45e83d5c96",
+    "experiments/exact-q7/formal/generate_benchmark.py": "f99ae6e4265027ad876c7ddb61c1f5652caddabf953f2d3cc45d4724b9e38ec6",
+    "experiments/exact-q7/formal/benchmark-inputs.json": "76aaf06e2eb41b59dda621475287e64c8b8731ea4134bb8d98345ac824ec6417"
+  },
+  "chunked_benchmark": {
+    "checks": 2048,
+    "chunks": 32,
+    "chunk_size": 64,
+    "build": "PASS",
+    "seconds": 52.826053895994846,
+    "source_bytes": 99279,
+    "scope": "sampled witness distances only; no code membership or complete finite certificate replay"
+  },
+  "monolithic_2048": {
+    "build": "INTERRUPTED",
+    "seconds": 52.47876440000255,
+    "exit_code": 143,
+    "reason": "memory growth; replaced by bounded chunked benchmark"
+  },
+  "full_replay_estimate": {
+    "nonexceptional_representatives": 117622,
+    "exception_words": 9261,
+    "distance_checks": 126883,
+    "estimated_same_representation_source_bytes": 6150000,
+    "rough_distance_only_minutes": 43,
+    "caveat": "linear extrapolation from boundedbenchmark; excludes membership/coset inclusion/partition data proofs and not an actual full run"
+  }
+}
