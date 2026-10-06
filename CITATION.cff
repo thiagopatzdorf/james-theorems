@@ -8,6 +8,7 @@ authors:
 repository-code: https://github.com/thiagopatzdorf/james-theorems
 url: https://genesisinnovation.io/matematica
 version: 0.1.0
+license: CC-BY-4.0
 keywords:
   - lean4
   - formal-verification
