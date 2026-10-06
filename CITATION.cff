@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "James theorems: the three pillars of James (knowledge, safety, soul) proved in Lean 4"
+message: If you use this work, please cite it using the metadata from this file.
+type: software
+authors:
+  - family-names: Patzdorf
+    given-names: Thiago
+repository-code: https://github.com/thiagopatzdorf/james-theorems
+url: https://genesisinnovation.io/matematica
+version: 0.1.0
+keywords:
+  - lean4
+  - formal-verification
+  - kolmogorov-complexity
+  - event-sourcing
