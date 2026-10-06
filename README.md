@@ -16,6 +16,7 @@
 [![sorry: 0](https://img.shields.io/badge/sorry-0-B8975A)](JamesTheorems)
 [![axioms](https://img.shields.io/badge/axioms-propext%20%C2%B7%20Quot.sound-141414)](Axiomas.lean)
 [![Mathlib: none](https://img.shields.io/badge/Mathlib-none-lightgrey)](lakefile.toml)
+[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey)](LICENSE)
 
 [Manifesto](MANIFESTO.en.md) ·
 [Proofs](JamesTheorems) ·
@@ -154,4 +155,4 @@ move it to `.github/workflows/lean.yml` (the token that created the repository h
 
 **Cite.** Metadata in [`CITATION.cff`](CITATION.cff); GitHub offers the "Cite this repository" button.
 
-**License.** No license has been chosen yet, so all rights are reserved by default until the owner picks one.
+**License.** [CC BY 4.0](LICENSE): share and adapt freely, with attribution.

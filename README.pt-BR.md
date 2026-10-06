@@ -153,5 +153,4 @@ ativar, mova para `.github/workflows/lean.yml` (o token usado na criação do re
 
 **Citar.** Metadados em [`CITATION.cff`](CITATION.cff); o GitHub oferece o botão "Cite this repository".
 
-**Licença.** Nenhuma licença foi escolhida ainda; até o dono escolher, todos os direitos ficam reservados por
-padrão.
+**Licença.** [CC BY 4.0](LICENSE): compartilhe e adapte à vontade, com atribuição.

@@ -156,5 +156,4 @@ la permission `workflow`).
 
 **Citer.** Métadonnées dans [`CITATION.cff`](CITATION.cff) ; GitHub propose le bouton « Cite this repository ».
 
-**Licence.** Aucune licence n'a encore été choisie ; tant que le propriétaire n'en a pas choisi une, tous les
-droits sont réservés par défaut.
+**Licence.** [CC BY 4.0](LICENSE) : partagez et adaptez librement, avec attribution.
