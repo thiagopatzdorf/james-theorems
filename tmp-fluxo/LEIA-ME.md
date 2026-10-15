@@ -2,6 +2,7 @@
 
 Pasta de passagem. Baixe o arquivo e depois apague esta pasta.
 
+- `sgv-arquitetura-as-is-macro.drawio`: **visão macro da arquitetura e dos sistemas** (Denodo, Dremio, Power BI, Fluid, UiPath, UNC, agente de IA, Teams, WhatsApp...).
 - `sgv-renovacao-seguros-as-is-v6.drawio`: **a versão mais atual** (AS IS v6: com as métricas informadas: 3 min por apólice, 20% de crítica, lote instantâneo).
 - `sgv-renovacao-seguros-as-is-v5.drawio`: versão anterior (AS IS v5: Operador Seguros negocia por WhatsApp ou ligação; a emissão pode devolver o processo para a negociação).
 - `sgv-renovacao-seguros-as-is-v4.drawio`: versão anterior (AS IS v4: o agente de IA é chamado por uma pessoa no Teams).
