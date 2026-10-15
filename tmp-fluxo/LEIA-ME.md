@@ -2,6 +2,7 @@
 
 Pasta de passagem. Baixe o arquivo e depois apague esta pasta.
 
+- `sgv-arquitetura-to-be.drawio`: **arquitetura TO BE**: orquestração, vault de senhas, S3, IA, robôs de cotação e todas as integrações (com os serviços AWS marcados como proposta).
 - `sgv-renovacao-seguros-to-be.drawio`: **o TO BE (engenharia)**: baixa por API, S3, Fluids abertos pelo sistema, IA, cotação na AWS e gateways. Marcado [F1] (fase 1) e [Depois].
 - `sgv-renovacao-seguros-as-is-v7.drawio`: AS IS v7 (igual ao v6, com o prazo de dia 01 do mês seguinte confirmado).
 - `sgv-arquitetura-as-is-macro.drawio`: **visão macro da arquitetura e dos sistemas** (Denodo, Dremio, Power BI, Fluid, UiPath, UNC, agente de IA, Teams, WhatsApp...).

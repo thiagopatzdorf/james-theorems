@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2800 1562" width="2800" height="1562" font-family="Manrope, Arial, Helvetica, sans-serif">
+<defs><marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#334155"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="24" y="38" font-size="22" font-weight="700" fill="#0F172A">SGV · Renovação de seguros — arquitetura TO BE (orquestração, vault e integrações)</text>
+<text x="24" y="62" font-size="13" fill="#475569">Proposta de arquitetura levantada em 15/10/2026. O que o time informou: AWS, S3, App Gateway da Pioneira, Dremio, Power BI, IA integrada, Playwright ou Selenium, gateways de WhatsApp e e-mail, vault de senhas. Os serviços AWS citados (agenda, fila, orquestrador, workers, vault, observabilidade) são a minha proposta e precisam ser confirmados. A negociação com o cliente fica como hoje. O que está em &quot;A confirmar&quot;</text>
+<text x="24" y="79" font-size="13" fill="#475569">ainda não foi validado.</text>
+<rect x="0" y="96" width="2800" height="122" fill="#F8FAFC" stroke="#CBD5E1"/>
+<rect x="0" y="96" width="150" height="122" fill="#E2E8F0" stroke="#CBD5E1"/>
+<text text-anchor="middle" font-size="13" font-weight="700" fill="#0F172A"><tspan x="75" y="161">Dados e gestão</tspan></text>
+<rect x="0" y="218" width="2800" height="110" fill="#F1F5F9" stroke="#CBD5E1"/>
+<rect x="0" y="218" width="150" height="110" fill="#E2E8F0" stroke="#CBD5E1"/>
+<text text-anchor="middle" font-size="13" font-weight="700" fill="#0F172A"><tspan x="75" y="277">Pessoas</tspan></text>
+<rect x="0" y="328" width="2800" height="122" fill="#F8FAFC" stroke="#CBD5E1"/>
+<rect x="0" y="328" width="150" height="122" fill="#E2E8F0" stroke="#CBD5E1"/>
+<text text-anchor="middle" font-size="13" font-weight="700" fill="#0F172A"><tspan x="75" y="377">Integrações</tspan><tspan x="75" y="393">externas (APIs e</tspan><tspan x="75" y="409">gateways)</tspan></text>
+<rect x="0" y="450" width="2800" height="137" fill="#F1F5F9" stroke="#CBD5E1"/>
+<rect x="0" y="450" width="150" height="137" fill="#E2E8F0" stroke="#CBD5E1"/>
+<text text-anchor="middle" font-size="13" font-weight="700" fill="#0F172A"><tspan x="75" y="522.5">Orquestração (AWS)</tspan></text>
+<rect x="0" y="587" width="2800" height="122" fill="#F8FAFC" stroke="#CBD5E1"/>
+<rect x="0" y="587" width="150" height="122" fill="#E2E8F0" stroke="#CBD5E1"/>
+<text text-anchor="middle" font-size="13" font-weight="700" fill="#0F172A"><tspan x="75" y="644">Automação de tela</tspan><tspan x="75" y="660">(AWS)</tspan></text>
+<rect x="0" y="709" width="2800" height="137" fill="#F1F5F9" stroke="#CBD5E1"/>
+<rect x="0" y="709" width="150" height="137" fill="#E2E8F0" stroke="#CBD5E1"/>
+<text text-anchor="middle" font-size="13" font-weight="700" fill="#0F172A"><tspan x="75" y="781.5">Segurança e estado</tspan></text>
+<rect x="0" y="846" width="2800" height="137" fill="#F8FAFC" stroke="#CBD5E1"/>
+<rect x="0" y="846" width="150" height="137" fill="#E2E8F0" stroke="#CBD5E1"/>
+<text text-anchor="middle" font-size="13" font-weight="700" fill="#0F172A"><tspan x="75" y="918.5">Armazenamento e IA</tspan></text>
+<rect x="0" y="983" width="2800" height="137" fill="#F1F5F9" stroke="#CBD5E1"/>
+<rect x="0" y="983" width="150" height="137" fill="#E2E8F0" stroke="#CBD5E1"/>
+<text text-anchor="middle" font-size="13" font-weight="700" fill="#0F172A"><tspan x="75" y="1055.5">Processo (Fluid)</tspan></text>
+<rect x="0" y="1120" width="2800" height="110" fill="#F8FAFC" stroke="#CBD5E1"/>
+<rect x="0" y="1120" width="150" height="110" fill="#E2E8F0" stroke="#CBD5E1"/>
+<text text-anchor="middle" font-size="13" font-weight="700" fill="#0F172A"><tspan x="75" y="1163">Operação e</tspan><tspan x="75" y="1179">exceções (pessoas</tspan><tspan x="75" y="1195">e crítica)</tspan></text>
+<polyline points="1475,353.5 1475,192.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1387.5,157 982.5,157" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="692.5,518.5 800,518.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="990,518.5 1097.5,518.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1185,468 1185,432" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1272.5,518.5 1677.5,518.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1185,569 1185,605" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1272.5,648 2547.5,648" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="2635,424.5 2635,518.5 1852.5,518.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1765,475.5 1765,389 2257.5,389" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1765,561.5 1765,914.5 1562.5,914.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1765,561.5 1765,1051.5 402.5,1051.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1765,475.5 1765,157 1562.5,157" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1765,561.5 1765,777.5 1562.5,777.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="2345,727 2345,518.5 1852.5,518.5" fill="none" stroke="#64748B" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#seta)"/>
+<polyline points="2345,727 2345,648 1272.5,648" fill="none" stroke="#64748B" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#seta)"/>
+<polyline points="1765,561.5 1765,914.5 1967.5,914.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1967.5,914.5 1562.5,914.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="2055,864 2055,157 1562.5,157" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="2055,965 2055,1051.5 402.5,1051.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="895,561.5 895,1175 1097.5,1175" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="1272.5,1175 1387.5,1175" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="895,561.5 895,1175 692.5,1175" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="605,1139.5 605,1051.5 402.5,1051.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="315,1001 315,273 2257.5,273" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<polyline points="2345,308.5 2345,353.5" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#seta)"/>
+<rect x="807.5" y="114" width="175" height="86" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="895" y="138.5">Power BI: dashes de</tspan><tspan x="895" y="153.5">gestão e métricas</tspan><tspan x="895" y="168.5">(acompanhamento, sem</tspan><tspan x="895" y="183.5">abrir Fluid na mão)</tspan></text>
+<rect x="1387.5" y="121.5" width="175" height="71" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="1475" y="146">Dremio: base completa</tspan><tspan x="1475" y="161">de apólices, estado do</tspan><tspan x="1475" y="176">processo e métricas</tspan></text>
+<rect x="1387.5" y="1139.5" width="175" height="71" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="1.6" stroke-dasharray="6 3"/><text text-anchor="middle" font-size="12" fill="#3B2200"><tspan x="1475" y="1164">Time de operação e TI:</tspan><tspan x="1475" y="1179">recebe alertas e trata</tspan><tspan x="1475" y="1194">falhas</tspan></text>
+<rect x="2257.5" y="237.5" width="175" height="71" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="1.6" stroke-dasharray="6 3"/><text text-anchor="middle" font-size="12" fill="#3B2200"><tspan x="2345" y="262">Operador Seguros:</tspan><tspan x="2345" y="277">negociação (mantida</tspan><tspan x="2345" y="292">como hoje)</tspan></text>
+<rect x="1387.5" y="353.5" width="175" height="71" rx="10" fill="#E2E8F0" stroke="#475569" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0F172A"><tspan x="1475" y="378">Denodo: lake do CAS,</tspan><tspan x="1475" y="393">que também alimenta a</tspan><tspan x="1475" y="408">Pioneira</tspan></text>
+<rect x="1097.5" y="346" width="175" height="86" rx="10" fill="#E2E8F0" stroke="#475569" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0F172A"><tspan x="1185" y="370.5">App Gateway da</tspan><tspan x="1185" y="385.5">Pioneira: APIs de</tspan><tspan x="1185" y="400.5">baixa, vencidos,</tspan><tspan x="1185" y="415.5">endossos e renovações</tspan></text>
+<rect x="2257.5" y="353.5" width="175" height="71" rx="10" fill="#E2E8F0" stroke="#475569" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0F172A"><tspan x="2345" y="378">Gateway de WhatsApp:</tspan><tspan x="2345" y="393">aviso de renovação e</tspan><tspan x="2345" y="408">negociação</tspan></text>
+<rect x="2547.5" y="353.5" width="175" height="71" rx="10" fill="#E2E8F0" stroke="#475569" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0F172A"><tspan x="2635" y="378">Gateway de e-mail:</tspan><tspan x="2635" y="393">monitora a recusa da</tspan><tspan x="2635" y="408">vistoria</tspan></text>
+<rect x="517.5" y="483" width="175" height="71" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="605" y="507.5">Agendador (proposta:</tspan><tspan x="605" y="522.5">EventBridge): rotina</tspan><tspan x="605" y="537.5">diária de consultas</tspan></text>
+<path d="M800 483.5a95 8 0 0 1 190 0v70a95 8 0 0 1 -190 0z" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.6"/><path d="M800 483.5a95 8 0 0 0 190 0" fill="none" stroke="#0F766E" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#042F2E"><tspan x="895" y="505">Filas (proposta: SQS):</tspan><tspan x="895" y="520">baixa, questionário,</tspan><tspan x="895" y="535">cotação e avisos, com</tspan><tspan x="895" y="550">fila de exceção</tspan></text>
+<rect x="1097.5" y="468" width="175" height="101" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="1185" y="492.5">Orquestrador</tspan><tspan x="1185" y="507.5">(proposta: Step</tspan><tspan x="1185" y="522.5">Functions): fluxo por</tspan><tspan x="1185" y="537.5">apólice, novas</tspan><tspan x="1185" y="552.5">tentativas e prazos</tspan></text>
+<rect x="1677.5" y="475.5" width="175" height="86" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="1765" y="500">Workers de integração</tspan><tspan x="1765" y="515">(proposta: containers</tspan><tspan x="1765" y="530">ou Lambda): baixa,</tspan><tspan x="1765" y="545">Fluid, S3, IA</tspan></text>
+<rect x="1097.5" y="605" width="175" height="86" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="1185" y="629.5">Robôs de cotação</tspan><tspan x="1185" y="644.5">(Playwright ou</tspan><tspan x="1185" y="659.5">Selenium em containers</tspan><tspan x="1185" y="674.5">na AWS)</tspan></text>
+<rect x="2547.5" y="612.5" width="175" height="71" rx="10" fill="#E2E8F0" stroke="#475569" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0F172A"><tspan x="2635" y="637">Sistema de cotação</tspan><tspan x="2635" y="652">(acesso por tela, 90+</tspan><tspan x="2635" y="667">seletores)</tspan></text>
+<rect x="2257.5" y="727" width="175" height="101" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="2345" y="751.5">Vault de senhas</tspan><tspan x="2345" y="766.5">(proposta: Secrets</tspan><tspan x="2345" y="781.5">Manager): credenciais</tspan><tspan x="2345" y="796.5">de gateway, Fluid,</tspan><tspan x="2345" y="811.5">cotação e canais</tspan></text>
+<rect x="1387.5" y="727" width="175" height="101" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="1475" y="751.5">Estado por apólice</tspan><tspan x="1475" y="766.5">(proposta: banco</tspan><tspan x="1475" y="781.5">gerenciado):</tspan><tspan x="1475" y="796.5">idempotência e</tspan><tspan x="1475" y="811.5">auditoria</tspan></text>
+<path d="M1387.5 879H1562.5V940Q1518.75 954 1475 940T1387.5 940Z" fill="#DCFCE7" stroke="#15803D" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#052E16"><tspan x="1475" y="899.5">S3: PDFs das apólices,</tspan><tspan x="1475" y="914.5">endossos e</tspan><tspan x="1475" y="929.5">questionários</tspan></text>
+<rect x="1967.5" y="864" width="175" height="101" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="2055" y="888.5">IA integrada: lê a</tspan><tspan x="2055" y="903.5">apólice e os dados do</tspan><tspan x="2055" y="918.5">ano passado e monta o</tspan><tspan x="2055" y="933.5">questionário de 15</tspan><tspan x="2055" y="948.5">perguntas</tspan></text>
+<rect x="227.5" y="1001" width="175" height="101" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="315" y="1025.5">Fluid: abertura</tspan><tspan x="315" y="1040.5">automática 1 ano</tspan><tspan x="315" y="1055.5">antes, anexos,</tspan><tspan x="315" y="1070.5">instâncias e protocolo</tspan><tspan x="315" y="1085.5">(API)</tspan></text>
+<rect x="1097.5" y="1139.5" width="175" height="71" rx="10" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#0C2A40"><tspan x="1185" y="1164">Observabilidade</tspan><tspan x="1185" y="1179">(proposta: logs,</tspan><tspan x="1185" y="1194">métricas e alarmes)</tspan></text>
+<rect x="517.5" y="1139.5" width="175" height="71" rx="10" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1.6"/><text text-anchor="middle" font-size="12" fill="#450A0A"><tspan x="605" y="1164">Crítica: fila de</tspan><tspan x="605" y="1179">exceção (falha de</tspan><tspan x="605" y="1194">baixa ou de cotação)</tspan></text>
+<rect x="1479" y="261" width="43" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1483" y="273" font-size="12" font-weight="700" fill="#0F172A">carga</text>
+<rect x="986.5" y="139" width="64" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="990.5" y="151" font-size="12" font-weight="700" fill="#0F172A">consulta</text>
+<rect x="696.5" y="500.5" width="99" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="700.5" y="512.5" font-size="12" font-weight="700" fill="#0F172A">evento diário</text>
+<rect x="994" y="500.5" width="85" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="998" y="512.5" font-size="12" font-weight="700" fill="#0F172A">por apólice</text>
+<rect x="1189" y="438" width="92" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1193" y="450" font-size="12" font-weight="700" fill="#0F172A">API de baixa</text>
+<rect x="1276.5" y="500.5" width="57" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1280.5" y="512.5" font-size="12" font-weight="700" fill="#0F172A">tarefas</text>
+<rect x="1189" y="575" width="113" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1193" y="587" font-size="12" font-weight="700" fill="#0F172A">fila de cotação</text>
+<rect x="1276.5" y="630" width="36" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1280.5" y="642" font-size="12" font-weight="700" fill="#0F172A">tela</text>
+<rect x="2522" y="500.5" width="113" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="2526" y="512.5" font-size="12" font-weight="700" fill="#0F172A">recusa (evento)</text>
+<rect x="1769" y="371" width="43" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1773" y="383" font-size="12" font-weight="700" fill="#0F172A">aviso</text>
+<rect x="1694" y="896.5" width="71" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1698" y="908.5" font-size="12" font-weight="700" fill="#0F172A">grava PDF</text>
+<rect x="1631" y="1033.5" width="134" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1635" y="1045.5" font-size="12" font-weight="700" fill="#0F172A">abre e anexa (API)</text>
+<rect x="1666" y="139" width="99" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1670" y="151" font-size="12" font-weight="700" fill="#0F172A">base e estado</text>
+<rect x="1715" y="759.5" width="50" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1719" y="771.5" font-size="12" font-weight="700" fill="#0F172A">estado</text>
+<rect x="2260" y="500.5" width="85" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="2264" y="512.5" font-size="12" font-weight="700" fill="#0F172A">credenciais</text>
+<rect x="2260" y="630" width="85" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="2264" y="642" font-size="12" font-weight="700" fill="#0F172A">credenciais</text>
+<rect x="1769" y="896.5" width="127" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1773" y="908.5" font-size="12" font-weight="700" fill="#0F172A">pede questionário</text>
+<rect x="1566.5" y="896.5" width="78" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1570.5" y="908.5" font-size="12" font-weight="700" fill="#0F172A">lê apólice</text>
+<rect x="1907" y="139" width="148" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1911" y="151" font-size="12" font-weight="700" fill="#0F172A">dados do ano passado</text>
+<rect x="1921" y="1033.5" width="134" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1925" y="1045.5" font-size="12" font-weight="700" fill="#0F172A">grava questionário</text>
+<rect x="899" y="1157" width="106" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="903" y="1169" font-size="12" font-weight="700" fill="#0F172A">logs e alarmes</text>
+<rect x="1276.5" y="1157" width="50" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="1280.5" y="1169" font-size="12" font-weight="700" fill="#0F172A">alerta</text>
+<rect x="838" y="1157" width="57" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="842" y="1169" font-size="12" font-weight="700" fill="#0F172A">exceção</text>
+<rect x="457" y="1033.5" width="148" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="461" y="1045.5" font-size="12" font-weight="700" fill="#0F172A">segue para o negócio</text>
+<rect x="319" y="255" width="141" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="323" y="267" font-size="12" font-weight="700" fill="#0F172A">PDFs e questionário</text>
+<rect x="2349" y="319" width="57" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="2353" y="331" font-size="12" font-weight="700" fill="#0F172A">negocia</text>
+<rect x="24" y="1254" width="22" height="14" rx="3" fill="#E0F2FE" stroke="#0369A1"/>
+<text x="54" y="1266" font-size="12" fill="#334155">Automático (robô, sistema)</text>
+<rect x="239.6" y="1254" width="22" height="14" rx="3" fill="#FEF3C7" stroke="#B45309" stroke-dasharray="4 2"/>
+<text x="269.6" y="1266" font-size="12" fill="#334155">Manual (pessoa)</text>
+<rect x="382.6" y="1254" width="22" height="14" rx="3" fill="#EDE9FE" stroke="#6D28D9"/>
+<text x="412.6" y="1266" font-size="12" fill="#334155">Decisão</text>
+<rect x="472.8" y="1254" width="22" height="14" rx="3" fill="#DCFCE7" stroke="#15803D"/>
+<text x="502.8" y="1266" font-size="12" fill="#334155">Documento</text>
+<rect x="576.2" y="1254" width="22" height="14" rx="3" fill="#CCFBF1" stroke="#0F766E"/>
+<text x="606.2" y="1266" font-size="12" fill="#334155">Fila</text>
+<rect x="646.6" y="1254" width="22" height="14" rx="3" fill="#E2E8F0" stroke="#475569"/>
+<text x="676.6" y="1266" font-size="12" fill="#334155">Sistema externo</text>
+<rect x="789.6" y="1254" width="22" height="14" rx="3" fill="#FEE2E2" stroke="#B91C1C"/>
+<text x="819.6" y="1266" font-size="12" fill="#334155">Exceção, crítica</text>
+<rect x="939.2" y="1254" width="22" height="14" rx="3" fill="#0F172A" stroke="#0F172A"/>
+<text x="969.2" y="1266" font-size="12" fill="#334155">Início e fim</text>
+<text x="24" y="1312" font-size="14" font-weight="700" fill="#0F172A">Medido e informado pelo time</text>
+<text x="24" y="1336" font-size="13" fill="#334155" xml:space="preserve">• Hoje: baixa leva ≈3 minutos por apólice em tela, 20% das apólices e endossos vão para a crítica, e a carga do lote é instantânea (minutos). O prazo de</text>
+<text x="24" y="1354" font-size="13" fill="#334155" xml:space="preserve">    dia 01 é do mês seguinte.</text>
+<text x="24" y="1398" font-size="14" font-weight="700" fill="#0F172A">A confirmar</text>
+<text x="24" y="1422" font-size="13" fill="#334155" xml:space="preserve">• O stack AWS (agenda, fila, orquestrador, workers, vault, banco de estado e observabilidade) é proposta minha: o que o time já usa na AWS?</text>
+<text x="24" y="1440" font-size="13" fill="#334155" xml:space="preserve">• Vault de senhas: já existe um (qual) ou será o gerenciador de segredos da AWS? Quem rotaciona as senhas dos portais e do sistema de cotação?</text>
+<text x="24" y="1458" font-size="13" fill="#334155" xml:space="preserve">• Como o Fluid expõe a API (abrir, anexar, protocolar) e com que autenticação? O Orquestrador chama por HTTPS?</text>
+<text x="24" y="1476" font-size="13" fill="#334155" xml:space="preserve">• Como o Denodo entrega ao Dremio (conexão direta ou carga) e como o Dremio é consultado pelos workers?</text>
+<text x="24" y="1494" font-size="13" fill="#334155" xml:space="preserve">• O App Gateway da Pioneira: autenticação, limite de chamadas e se há ambiente de teste.</text>
+<text x="24" y="1512" font-size="13" fill="#334155" xml:space="preserve">• Quem recebe o alerta quando a baixa falha depois das novas tentativas, e onde fica a trilha de auditoria?</text>
+</svg>

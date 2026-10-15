@@ -1,0 +1,70 @@
+titulo: SGV · Renovação de seguros — arquitetura TO BE (orquestração, vault e integrações)
+subtitulo: Proposta de arquitetura levantada em 15/10/2026. O que o time informou: AWS, S3, App Gateway da Pioneira, Dremio, Power BI, IA integrada, Playwright ou Selenium, gateways de WhatsApp e e-mail, vault de senhas. Os serviços AWS citados (agenda, fila, orquestrador, workers, vault, observabilidade) são a minha proposta e precisam ser confirmados. A negociação com o cliente fica como hoje. O que está em "A confirmar" ainda não foi validado.
+modo: arquitetura
+
+raia dados: Dados e gestão
+raia pes: Pessoas
+raia ext: Integrações externas (APIs e gateways)
+raia orq: Orquestração (AWS)
+raia tela: Automação de tela (AWS)
+raia seg: Segurança e estado
+raia arm: Armazenamento e IA
+raia proc: Processo (Fluid)
+raia obs: Operação e exceções (pessoas e crítica)
+
+tarefa pbi @dados#2: Power BI: dashes de gestão e métricas (acompanhamento, sem abrir Fluid na mão)
+tarefa dre @dados#4: Dremio: base completa de apólices, estado do processo e métricas
+manual ti @obs#4: Time de operação e TI: recebe alertas e trata falhas
+manual ops @pes#7: Operador Seguros: negociação (mantida como hoje)
+ext den @ext#4: Denodo: lake do CAS, que também alimenta a Pioneira
+ext gw @ext#3: App Gateway da Pioneira: APIs de baixa, vencidos, endossos e renovações
+ext wa @ext#7: Gateway de WhatsApp: aviso de renovação e negociação
+ext em @ext#8: Gateway de e-mail: monitora a recusa da vistoria
+tarefa agd @orq#1: Agendador (proposta: EventBridge): rotina diária de consultas
+fila fila @orq#2: Filas (proposta: SQS): baixa, questionário, cotação e avisos, com fila de exceção
+tarefa orc @orq#3: Orquestrador (proposta: Step Functions): fluxo por apólice, novas tentativas e prazos
+tarefa wrk @orq#5: Workers de integração (proposta: containers ou Lambda): baixa, Fluid, S3, IA
+tarefa rob @tela#3: Robôs de cotação (Playwright ou Selenium em containers na AWS)
+ext cot @tela#8: Sistema de cotação (acesso por tela, 90+ seletores)
+tarefa vault @seg#7: Vault de senhas (proposta: Secrets Manager): credenciais de gateway, Fluid, cotação e canais
+tarefa db @seg#4: Estado por apólice (proposta: banco gerenciado): idempotência e auditoria
+doc s3 @arm#4: S3: PDFs das apólices, endossos e questionários
+tarefa ia @arm#6: IA integrada: lê a apólice e os dados do ano passado e monta o questionário de 15 perguntas
+tarefa fluid @proc#0: Fluid: abertura automática 1 ano antes, anexos, instâncias e protocolo (API)
+tarefa obs @obs#3: Observabilidade (proposta: logs, métricas e alarmes)
+excecao crit @obs#1: Crítica: fila de exceção (falha de baixa ou de cotação)
+
+den -> dre: carga
+dre -> pbi: consulta
+agd -> fila: evento diário
+fila -> orc: por apólice
+orc -> gw: API de baixa
+orc -> wrk: tarefas
+orc -> rob: fila de cotação
+rob -> cot: tela
+em -> wrk: recusa (evento)
+wrk -> wa: aviso
+wrk -> s3: grava PDF
+wrk -> fluid: abre e anexa (API)
+wrk -> dre: base e estado
+wrk -> db: estado
+vault ..> wrk: credenciais
+vault ..> rob: credenciais
+wrk -> ia: pede questionário
+ia -> s3: lê apólice
+ia -> dre: dados do ano passado
+ia -> fluid: grava questionário
+fila -> obs: logs e alarmes
+obs -> ti: alerta
+fila -> crit: exceção
+crit -> fluid: segue para o negócio
+fluid -> ops: PDFs e questionário
+ops -> wa: negocia
+
+duvida: O stack AWS (agenda, fila, orquestrador, workers, vault, banco de estado e observabilidade) é proposta minha: o que o time já usa na AWS?
+duvida: Vault de senhas: já existe um (qual) ou será o gerenciador de segredos da AWS? Quem rotaciona as senhas dos portais e do sistema de cotação?
+duvida: Como o Fluid expõe a API (abrir, anexar, protocolar) e com que autenticação? O Orquestrador chama por HTTPS?
+duvida: Como o Denodo entrega ao Dremio (conexão direta ou carga) e como o Dremio é consultado pelos workers?
+duvida: O App Gateway da Pioneira: autenticação, limite de chamadas e se há ambiente de teste.
+duvida: Quem recebe o alerta quando a baixa falha depois das novas tentativas, e onde fica a trilha de auditoria?
+nota: Hoje: baixa leva ≈3 minutos por apólice em tela, 20% das apólices e endossos vão para a crítica, e a carga do lote é instantânea (minutos). O prazo de dia 01 é do mês seguinte.
