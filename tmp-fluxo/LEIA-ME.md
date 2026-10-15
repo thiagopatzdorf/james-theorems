@@ -2,7 +2,8 @@
 
 Pasta de passagem. Baixe o arquivo e depois apague esta pasta.
 
-- `sgv-renovacao-seguros-as-is-v3.drawio`: **a versão mais atual** (AS IS v3: fila de Questionário = dados do ano passado, agente de IA só lê os PDFs).
+- `sgv-renovacao-seguros-as-is-v4.drawio`: **a versão mais atual** (AS IS v4: o agente de IA é chamado por uma pessoa no Teams).
+- `sgv-renovacao-seguros-as-is-v3.drawio`: versão anterior (AS IS v3: fila de Questionário = dados do ano passado, agente de IA só lê os PDFs).
 - `sgv-renovacao-seguros-as-is-v2.drawio`: versão anterior (AS IS v2: eventos em paralelo, crítica para o negócio, ciclo do ano).
 - `sgv-renovacao-seguros-as-is-completo.drawio`: o AS IS completo (abre no draw.io, Arquivo > Abrir).
 - `renovacao-seguros-as-is.drawio`: a versão anterior, só a etapa de baixa de apólices.
