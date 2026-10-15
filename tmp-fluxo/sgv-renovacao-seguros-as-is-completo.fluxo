@@ -1,0 +1,90 @@
+titulo: SGV · Renovação de seguros (residencial e auto) — AS IS completo
+subtitulo: Do dado de origem à apólice nova emitida. Levantado em 15/10/2026 com quem opera. Passos tracejados em âmbar são manuais (as instâncias de renovação, WhatsApp e assinaturas nunca foram automatizadas). Pontos em "A confirmar" ainda não foram validados.
+
+raia den: Denodo (lake do CAS, alimenta a Pioneira)
+raia dre: Dremio
+raia pbi: Power BI
+raia adri: Adri (assessora de seguros)
+raia op: Operador
+raia fluid: Fluid · instâncias RPA
+raia ui: Robô UiPath
+raia unc: Pasta de rede (UNC)
+raia ia: Agente de IA
+raia neg: Operação de negócio
+raia crit: Crítica
+
+inicio den1 @den: Seguros efetivados no ano anterior ou renovados
+tarefa dre1 @dre: Consome os dados do Denodo e entrega ao Power BI
+tarefa pbi1 @pbi: Dash com os ~1.000 processos a vencer, cerca de 40 dias antes (auto e residencial, 5 seguradoras)
+manual a1 @adri: Dia 20 abre o lote: importa os ~1.000 processos no Fluid
+tarefa f1 @fluid: Processos abertos em RPA | Baixa de Apólices (prazo: tudo baixado e nas instâncias certas até dia 01)
+manual o1 @op: Aciona o robô alimentador (passo manual)
+tarefa u1 @ui: Alimenta as 3 filas com final da vigência, nome do segurado e seguradora
+decisao dp @ui: Seguradora é Porto Seguro e o produto é Auto?
+decisao dprod @ui: Produto é Auto ou Residencial?
+fila q1 @ui: Fila BaixaApoliceRenovacaoSeguroAuto
+fila q2 @ui: Fila BaixaApoliceRenovacaoSeguroResidencial
+tarefa u2 @ui: Para cada item da fila: abre a tela da seguradora e baixa a apólice
+decisao d1 @ui: Conseguiu baixar a apólice?
+decisao d2 @ui: Tem endosso ou sinistro?
+doc unc1 @unc: PDF salvo como "Nome do segurado + Nº da apólice" (endosso não é baixado)
+tarefa u3 @ui: Depois de baixar tudo: anexa o PDF da apólice no Fluid (via API)
+decisao d3 @ui: Achou os dados do ano passado (campo da apólice, URL do Fluid do ano anterior)?
+tarefa u4 @ui: Extrai o PDF de dados do processo do ano anterior e anexa no Fluid
+tarefa u5 @ui: Anexa um PDF em branco no Fluid
+fila q3 @ui: Fila QuestionarioRenovacaoSeguros
+tarefa ia1 @ia: Lê a apólice e o PDF de dados e monta o questionário de 15 perguntas
+tarefa u6 @ui: Protocola o Fluid para RPA | Cotação de Seguros
+tarefa f2 @fluid: RPA | Cotação de Seguros: robô preenche a cotação em tela (90+ seletores; regras fixas, Fluid e apólice)
+decisao d4 @fluid: Cotação concluída com sucesso?
+manual f3 @fluid: RPA | Aviso de Renovação: WhatsApp avisa que faltam 10 dias e pergunta se quer renovar (sem robô)
+manual n1 @neg: Operação manual de negócio
+manual f4 @fluid: RPA | Envio Assinaturas (sem robô)
+manual f5 @fluid: RPA | Monitoramento Assinaturas (sem robô)
+tarefa f6 @fluid: RPA | Emissão de Apólices: aguarda a emissão, salva o nº da apólice nova no Fluid e encerra o processo
+fim fim1 @dre: O nº da apólice nova alimenta o Dremio e o dash do ano que vem
+excecao c1 @crit: Processo enviado para a crítica (a instância de Cotação está parada por crítica hoje)
+
+den1 -> dre1
+dre1 -> pbi1
+pbi1 -> a1
+a1 -> f1
+f1 -> o1
+o1 -> u1
+u1 -> dp
+dp -> dprod: não
+dp -> c1: sim
+dprod -> q1: Auto
+dprod -> q2: Residencial
+q1 -> u2
+q2 -> u2
+u2 -> d1
+d1 -> d2: sim
+d1 -> c1: não
+d2 -> unc1: não
+d2 -> c1: sim
+unc1 -> u3
+u3 -> d3
+d3 -> u4: sim
+d3 -> u5: não
+u4 -> q3
+u5 -> q3
+q3 -> ia1
+ia1 -> u6
+u6 -> f2
+f2 -> d4
+d4 -> f3: sim
+d4 -> c1: não
+f3 -> n1: sucesso
+n1 -> f4: sucesso
+f4 -> f5
+f5 -> f6
+f6 -> fim1
+
+duvida: Prazo: abre dia 20 e tudo tem de estar pronto dia 01. O dia 01 é do mês seguinte?
+duvida: Porto Seguro + Auto vai direto para a crítica: por quê (não há robô para esse portal)?
+duvida: A fila de Questionário é alimentada junto com as de baixa (como no passo do alimentador) ou só depois dos anexos? Onde o questionário fica gravado (anexo, campos)?
+duvida: Assumi que cotação com falha vai para a crítica. Quantos processos estão parados por crítica hoje e de que tipo?
+duvida: O que conta como "sucesso" em cada instância, e quem envia o WhatsApp de aviso hoje?
+duvida: Observação: a apólice nova é emitida mas não é baixada. Possível desperdício, já que ela alimentaria o próximo ano.
+duvida: A medir: tempo por apólice, taxa de crítica por seguradora e produto, horas por lote de 1.000, processos fora do prazo de dia 01.
