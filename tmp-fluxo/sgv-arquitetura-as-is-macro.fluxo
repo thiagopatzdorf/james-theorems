@@ -1,0 +1,58 @@
+titulo: SGV · Renovação de seguros — arquitetura e sistemas (AS IS macro)
+subtitulo: Visão macro de quais sistemas e pessoas participam e o que trafega entre eles hoje. Cada raia é uma camada. Levantado em 15/10/2026 com quem opera; o que está em "A confirmar" ainda não foi validado. O detalhe passo a passo está no AS IS v6.
+modo: arquitetura
+
+raia dados: Dados
+raia pes: Pessoas
+raia proc: Processo (Fluid)
+raia auto: Automação (UiPath)
+raia ext: Sistemas externos
+raia arq: Arquivos e IA
+raia can1: Canais · conversa
+raia can2: Canais · voz e e-mail
+
+tarefa den @dados#0: Denodo: lake do CAS, que também alimenta a Pioneira (seguros efetivados no ano anterior ou renovados)
+tarefa dre @dados#1: Dremio: consulta e consolida os dados
+tarefa pbi @dados#2: Power BI: dash com os ~1.000 processos a vencer, cerca de 40 dias antes
+manual opr @pes#1: Operador RPA: start manual do robô alimentador
+manual adri @pes#2: Adri (assessora de seguros): abre o lote dia 20
+manual ops @pes#6: Operador Seguros: negocia e usa o agente
+tarefa fluid @proc#3: Fluid: instâncias RPA | Baixa de Apólices, Cotação, Aviso de Renovação, Assinaturas e Emissão de Apólices
+tarefa rob @auto#4: Robôs UiPath: alimentador, baixa da apólice, dados do ano passado e cotação
+fila orq @auto#5: UiPath Orchestrator: filas Auto, Residencial e Questionário
+ext seg @ext#3: Portais das 5 seguradoras (acesso por tela)
+ext cot @ext#5: Sistema de cotação (acesso por tela, 90+ seletores)
+ext vis @ext#1: Vistoria (a recusa chega por e-mail)
+doc unc @arq#3: Pasta de rede (UNC): PDF das apólices
+tarefa ia @arq#7: Agente de IA: lê os PDFs e monta o questionário de 15 perguntas
+ext teams @can1#5: Teams: o operador chama o agente
+ext wa @can1#7: WhatsApp: aviso de renovação, negociação e contrato com o cliente
+ext mail @can2#2: E-mail: recusa da vistoria
+ext tel @can2#7: Ligação com o cliente: negociação sem contrato
+
+den -> dre: dados
+dre -> pbi: consulta
+pbi -> adri: dash do lote
+adri -> fluid: importa ~1.000 processos
+opr -> rob: start manual
+fluid -> rob: processos e anexos (API)
+rob -> orq: 3 filas
+rob -> seg: baixa apólice (3 min)
+rob -> cot: preenche cotação
+rob -> unc: salva o PDF
+fluid -> ops: PDFs da apólice e de dados
+ops -> teams: chama o agente
+teams -> ia: PDF e questionário
+ia ..> ops: questionário (15 perguntas)
+ops -> wa: negocia e contrato
+ops -> tel: negocia sem contrato
+vis -> mail: recusa
+mail -> fluid: recusa volta à negociação
+fluid -> pbi: nº da apólice nova
+
+duvida: Qual é o sistema de cotação (a tela com 90+ seletores) e o que ele devolve ao Fluid?
+duvida: Como o Fluid e o UiPath se falam: só API para anexos e protocolo, ou também tela? Onde roda o UiPath (Orchestrator, quantos robôs)?
+duvida: O agente de IA: qual modelo e onde roda? O Teams é um bot ou uma pessoa que chama?
+duvida: O Denodo entrega ao Dremio por conexão direta ou por uma carga? O que é CAS e como ele alimenta a Pioneira?
+duvida: Onde ficam as credenciais dos 5 portais e do sistema de cotação (cofre)?
+nota: Tempo por apólice em tela: 3 minutos. Taxa de crítica: 20% das apólices e endossos. O lote é instantâneo (minutos). Não há métrica por seguradora.

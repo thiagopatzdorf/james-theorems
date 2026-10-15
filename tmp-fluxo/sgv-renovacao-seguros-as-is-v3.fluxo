@@ -1,0 +1,104 @@
+titulo: SGV · Renovação de seguros (residencial e auto) — AS IS v3
+subtitulo: Versão 3, com as correções de 15/10/2026. Tudo roda por evento e em paralelo. A baixa da apólice e a consulta dos dados do ano passado (fila de Questionário) não dependem uma da outra. O agente de IA está fora da sequência e só lê os PDFs (seta tracejada = leitura de dado). A crítica segue para o negócio, e o ano fecha um ciclo no Dremio. Tracejado em âmbar = manual. Pontos em "A confirmar" ainda não foram validados.
+
+raia den: Denodo (lake do CAS, alimenta a Pioneira)
+raia dre: Dremio
+raia pbi: Power BI
+raia adri: Adri (assessora de seguros)
+raia op: Operador
+raia fluid: Fluid · instâncias RPA
+raia ui: Robô UiPath · alimentador
+raia orq: UiPath · filas
+raia ub: Robô UiPath · baixa da apólice
+raia uq: Robô UiPath · dados do ano passado
+raia unc: Pasta de rede (UNC)
+raia ia: Agente de IA (independente, por evento)
+raia neg: Operação de negócio
+raia crit: Crítica
+
+inicio den1 @den: Seguros efetivados no ano anterior ou renovados
+tarefa dre1 @dre: Consome os dados do Denodo e entrega ao Power BI
+tarefa pbi1 @pbi: Dash com os ~1.000 processos a vencer, cerca de 40 dias antes (auto e residencial, 5 seguradoras)
+manual a1 @adri: Dia 20 abre o lote: importa os ~1.000 processos no Fluid
+tarefa f1 @fluid: Processos abertos em RPA | Baixa de Apólices (prazo: tudo baixado e nas instâncias certas até dia 01)
+manual o1 @op: Aciona o robô alimentador (passo manual)
+tarefa u1 @ui: Alimenta as 3 filas ao mesmo tempo com final da vigência, nome do segurado e seguradora
+decisao dp @ui: Seguradora é Porto Seguro e o produto é Auto?
+decisao dprod @ui: Produto é Auto ou Residencial?
+fila q1 @orq: Fila BaixaApoliceRenovacaoSeguroAuto
+fila q2 @orq: Fila BaixaApoliceRenovacaoSeguroResidencial
+fila q3 @orq: Fila QuestionarioRenovacaoSeguros (dados do ano passado)
+tarefa u2 @ub: Para cada item da fila: abre a tela da seguradora e baixa a apólice
+decisao d1 @ub: Conseguiu baixar a apólice?
+decisao d2 @ub: Tem endosso ou sinistro?
+doc unc1 @unc: PDF salvo como "Nome do segurado + Nº da apólice" (endosso não é baixado)
+tarefa u3 @ub: Depois de baixar tudo: anexa o PDF da apólice no Fluid (via API)
+tarefa uq1 @uq: Para cada item da fila: lê o campo da apólice com os dados do ano passado (URL do Fluid do ano anterior)
+decisao d3 @uq: Achou o processo do ano anterior?
+tarefa u4 @uq: Extrai o PDF de dados do processo do ano anterior e anexa no Fluid
+tarefa u5 @uq: Anexa um PDF em branco no Fluid
+tarefa u6 @ub: Protocola o Fluid para RPA | Cotação de Seguros
+tarefa ia1 @ia: Lê o PDF da apólice e o PDF de dados do ano passado e monta o questionário de 15 perguntas
+fim ia2 @ia: Questionário de 15 perguntas pronto
+tarefa f2 @fluid: RPA | Cotação de Seguros: robô preenche a cotação em tela (90+ seletores; regras fixas, Fluid e apólice)
+decisao d4 @fluid: Cotação concluída com sucesso?
+manual f3 @fluid: RPA | Aviso de Renovação: WhatsApp avisa que faltam 10 dias e pergunta se quer renovar (sem robô)
+manual n1 @neg: Operação manual de negócio
+manual f4 @fluid: RPA | Envio Assinaturas (sem robô)
+manual f5 @fluid: RPA | Monitoramento Assinaturas (sem robô)
+tarefa f6 @fluid: RPA | Emissão de Apólices: aguarda a emissão, salva o nº da apólice nova no Fluid e encerra o processo
+tarefa dre2 @dre: O nº da apólice nova entra no Dremio
+excecao c1 @crit: Processo enviado para a crítica (a instância de Cotação está parada por crítica hoje)
+
+den1 -> dre1
+dre1 -> pbi1
+pbi1 -> a1
+a1 -> f1
+f1 -> o1
+o1 -> u1
+u1 -> dp
+u1 -> q3
+dp -> dprod: não
+dp -> c1: sim
+dprod -> q1: Auto
+dprod -> q2: Residencial
+q1 -> u2
+q2 -> u2
+u2 -> d1
+d1 -> d2: sim
+d1 -> c1: não
+d2 -> unc1: não
+d2 -> c1: sim
+unc1 -> u3
+q3 -> uq1
+uq1 -> d3
+d3 -> u4: sim
+d3 -> u5: não
+u3 -> u6
+u4 -> u6
+u5 -> u6
+u3 ..> ia1: lê PDF da apólice
+u4 ..> ia1: lê PDF de dados
+u5 ..> ia1: lê PDF em branco
+ia1 -> ia2
+u6 -> f2
+f2 -> d4
+d4 -> f3: sim
+d4 -> c1: não
+f3 -> n1: sucesso
+c1 -> n1: segue para o negócio
+n1 -> f4: sucesso
+f4 -> f5
+f5 -> f6
+f6 -> dre2
+dre2 -> pbi1: dash do ano que vem
+
+duvida: Quem protocola para a Cotação e como espera as duas partes (baixa e dados do ano passado)? Assumi que o protocolo só acontece depois das duas.
+duvida: O que dispara o agente de IA (os dois PDFs no Fluid?), onde o questionário fica gravado e a Cotação usa esse questionário?
+duvida: Depois que o negócio trata a crítica, o processo volta para qual instância? (o fluxo é mais circular do que o desenho mostra)
+duvida: Prazo: abre dia 20 e tudo tem de estar pronto dia 01. O dia 01 é do mês seguinte?
+duvida: Porto Seguro + Auto vai direto para a crítica: por quê (não há robô para esse portal)?
+duvida: Assumi que cotação com falha vai para a crítica. Quantos processos estão parados por crítica hoje e de que tipo?
+duvida: O que conta como "sucesso" em cada instância, e quem envia o WhatsApp de aviso hoje?
+duvida: Observação: a apólice nova é emitida mas não é baixada. Possível desperdício, já que ela alimentaria o próximo ano.
+duvida: A medir: tempo por apólice, taxa de crítica por seguradora e produto, horas por lote de 1.000, processos fora do prazo de dia 01.

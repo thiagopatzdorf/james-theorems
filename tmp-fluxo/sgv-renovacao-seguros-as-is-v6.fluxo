@@ -1,0 +1,121 @@
+titulo: SGV · Renovação de seguros (residencial e auto) — AS IS v6
+subtitulo: Versão 6, com as correções e as métricas informadas em 15/10/2026. Tudo roda por evento e em paralelo. O Operador Seguros chama o agente de IA no Teams, conduz a negociação (WhatsApp ou ligação) e, se a emissão demorar ou a vistoria recusar, o processo volta para a negociação: é aí que o fluxo fica circular. Tracejado em âmbar = manual; seta tracejada cinza = dado que a pessoa pega no Fluid. Pontos em "A confirmar" ainda não foram validados.
+
+raia den: Denodo (lake do CAS, alimenta a Pioneira)
+raia dre: Dremio
+raia pbi: Power BI
+raia adri: Adri (assessora de seguros)
+raia op: Operador RPA (start manual)
+raia fluid: Fluid · Baixa, Cotação e Aviso
+raia ui: Robô UiPath · alimentador
+raia orq: UiPath · filas
+raia ub: Robô UiPath · baixa da apólice
+raia uq: Robô UiPath · dados do ano passado
+raia unc: Pasta de rede (UNC)
+raia ia: Agente de IA (independente, chamado no Teams)
+raia neg: Operador Seguros (Teams e negociação)
+raia flas: Fluid · Assinaturas
+raia flem: Fluid · Emissão de Apólices
+raia crit: Crítica
+
+inicio den1 @den: Seguros efetivados no ano anterior ou renovados
+tarefa dre1 @dre: Consome os dados do Denodo e entrega ao Power BI
+tarefa pbi1 @pbi: Dash com os ~1.000 processos a vencer, cerca de 40 dias antes (auto e residencial, 5 seguradoras)
+manual a1 @adri: Dia 20 abre o lote: importa os ~1.000 processos no Fluid (instantâneo, em minutos)
+tarefa f1 @fluid: Processos abertos em RPA | Baixa de Apólices (prazo: tudo baixado e nas instâncias certas até dia 01)
+manual o1 @op: Aciona o robô alimentador (passo manual)
+tarefa u1 @ui: Alimenta as 3 filas ao mesmo tempo com final da vigência, nome do segurado, seguradora e nº da apólice do ano anterior
+decisao dp @ui: Seguradora é Porto Seguro e o produto é Auto?
+decisao dprod @ui: Produto é Auto ou Residencial?
+fila q1 @orq: Fila BaixaApoliceRenovacaoSeguroAuto
+fila q2 @orq: Fila BaixaApoliceRenovacaoSeguroResidencial
+fila q3 @orq: Fila QuestionarioRenovacaoSeguros (dados do ano passado)
+tarefa u2 @ub: Para cada item da fila: abre a tela da seguradora e baixa a apólice (≈3 min por apólice em tela)
+decisao d1 @ub: Conseguiu baixar a apólice?
+decisao d2 @ub: Tem endosso ou sinistro?
+doc unc1 @unc: PDF salvo como "Nome do segurado + Nº da apólice" (endosso não é baixado)
+tarefa u3 @ub: Depois de baixar tudo: anexa o PDF da apólice no Fluid (via API)
+tarefa uq1 @uq: Para cada item da fila: lê o campo da apólice com os dados do ano passado (URL do Fluid do ano anterior)
+decisao d3 @uq: Achou o processo do ano anterior?
+tarefa u4 @uq: Extrai o PDF de dados do processo do ano anterior e anexa no Fluid
+tarefa u5 @uq: Anexa um PDF em branco no Fluid
+tarefa u6 @ub: Protocola o Fluid para RPA | Cotação de Seguros
+manual p1 @neg: Chama o agente de IA no Teams e envia o PDF e o questionário
+tarefa ia1 @ia: Lê o PDF da apólice e o PDF de dados do ano passado e monta o questionário de 15 perguntas
+tarefa f2 @fluid: RPA | Cotação de Seguros: robô preenche a cotação em tela (90+ seletores; regras fixas, Fluid e apólice)
+decisao d4 @fluid: Cotação concluída com sucesso?
+manual f3 @fluid: RPA | Aviso de Renovação: WhatsApp avisa que faltam 10 dias e pergunta se quer renovar (sem robô)
+manual n1 @neg: Negocia com o cliente: manda WhatsApp para confirmar os dados ou faz as perguntas do questionário por ligação
+decisao dn @neg: Canal da negociação?
+manual f4 @flas: RPA | Envio Assinaturas: envia o contrato (sem robô)
+manual f5 @flas: RPA | Monitoramento Assinaturas (sem robô)
+tarefa f6 @flem: RPA | Emissão de Apólices: aguarda a emissão da apólice
+decisao d5 @flem: Passou de 5 dias ou chegou e-mail de recusa da vistoria?
+tarefa f7 @flem: Apólice emitida: salva o nº da apólice nova no Fluid e encerra o processo
+tarefa dre2 @dre: O nº da apólice nova entra no Dremio
+excecao c1 @crit: Processo enviado para a crítica (≈20% das apólices e endossos; a instância de Cotação está parada por crítica hoje)
+
+den1 -> dre1
+dre1 -> pbi1
+pbi1 -> a1
+a1 -> f1
+f1 -> o1
+o1 -> u1
+u1 -> dp
+u1 -> q3
+dp -> dprod: não
+dp -> c1: sim
+dprod -> q1: Auto
+dprod -> q2: Residencial
+q1 -> u2
+q2 -> u2
+u2 -> d1
+d1 -> d2: sim
+d1 -> c1: não
+d2 -> unc1: não
+d2 -> c1: sim
+unc1 -> u3
+q3 -> uq1
+uq1 -> d3
+d3 -> u4: sim
+d3 -> u5: não
+u3 -> u6
+u4 -> u6
+u5 -> u6
+u3 ..> p1: PDF da apólice
+u4 ..> p1: PDF de dados
+u5 ..> p1: PDF em branco
+p1 -> ia1: pelo Teams
+ia1 -> n1: questionário
+u6 -> f2
+f2 -> d4
+d4 -> f3: sim
+d4 -> c1: não
+f3 -> n1: sucesso
+c1 -> n1: segue para o negócio
+n1 -> dn
+dn -> f4: WhatsApp (envia contrato)
+dn -> f6: Ligação (sem contrato)
+f4 -> f5
+f5 -> f6
+f6 -> d5
+d5 -> f7: não
+d5 -> n1: sim, volta para a negociação
+f7 -> dre2
+dre2 -> pbi1: dash do ano que vem
+
+duvida: Quem é "Operador Seguros" (a pessoa do Teams): é a mesma da Operação de negócio? E quando ela chama o agente (depois dos PDFs no Fluid)? Que "questionário" ela envia: um modelo com as 15 perguntas?
+duvida: Se a negociação for por ligação, vai direto para a Emissão (sem Envio e Monitoramento de Assinaturas)? Assumi que sim, já que não envia contrato.
+duvida: Quando a emissão devolve o processo para a negociação, ele volta para o mesmo operador e reinicia o prazo de 5 dias? Quem faz a vistoria?
+duvida: Depois que o negócio trata a crítica, o processo volta para qual instância?
+duvida: Prazo: abre dia 20 e tudo tem de estar pronto dia 01. O dia 01 é do mês seguinte?
+duvida: Porto Seguro + Auto vai direto para a crítica: por quê (não há robô para esse portal)?
+duvida: Quantos processos estão parados hoje na crítica da Cotação e de que tipo? Assumi que cotação com falha vai para a crítica.
+duvida: Observação: a apólice nova é emitida mas não é baixada. Possível desperdício, já que ela alimentaria o próximo ano.
+duvida: O nº da apólice do ano anterior vem do dash (Dremio)? É com ele que o robô acha o processo do ano anterior?
+duvida: A medir: taxa de crítica por seguradora e produto (hoje não existe), processos fora do prazo de dia 01, quantas voltas à negociação por processo.
+nota: Tempo por apólice em tela: 3 minutos.
+nota: Taxa de crítica: 20% das apólices e endossos.
+nota: O lote é instantâneo, em minutos.
+nota: Não há métrica por seguradora.
+nota: Conta a partir desses números (estimativa, não medida): 1.000 apólices x 3 min = 50 h de tela por lote se for um robô só, e 20% = cerca de 200 processos por lote vão para a crítica.
