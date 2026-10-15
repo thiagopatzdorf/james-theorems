@@ -2,6 +2,8 @@
 
 Pasta de passagem. Baixe o arquivo e depois apague esta pasta.
 
+- `sgv-renovacao-seguros-to-be.drawio`: **o TO BE (engenharia)**: baixa por API, S3, Fluids abertos pelo sistema, IA, cotação na AWS e gateways. Marcado [F1] (fase 1) e [Depois].
+- `sgv-renovacao-seguros-as-is-v7.drawio`: AS IS v7 (igual ao v6, com o prazo de dia 01 do mês seguinte confirmado).
 - `sgv-arquitetura-as-is-macro.drawio`: **visão macro da arquitetura e dos sistemas** (Denodo, Dremio, Power BI, Fluid, UiPath, UNC, agente de IA, Teams, WhatsApp...).
 - `sgv-renovacao-seguros-as-is-v6.drawio`: **a versão mais atual** (AS IS v6: com as métricas informadas: 3 min por apólice, 20% de crítica, lote instantâneo).
 - `sgv-renovacao-seguros-as-is-v5.drawio`: versão anterior (AS IS v5: Operador Seguros negocia por WhatsApp ou ligação; a emissão pode devolver o processo para a negociação).
