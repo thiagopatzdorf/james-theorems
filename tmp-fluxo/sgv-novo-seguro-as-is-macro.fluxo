@@ -1,0 +1,59 @@
+titulo: SGV · Novo seguro + ciclo de renovação — AS IS macro
+subtitulo: Visão macro do que acontece hoje, do pedido da agência (ou lead do Salesforce) até a apólice emitida, e como o Denodo guarda o ano da renovação para o fluxo de renovação começar cerca de 40 dias antes de vencer. A cotação do seguro novo é manual; a negociação, a assinatura e a emissão seguem o mesmo caminho da renovação. Pontos em "A confirmar" ainda não foram validados.
+
+raia ori: Origem do pedido
+raia op: Operador Seguros
+raia cli: Cliente
+raia fl: Fluid (assinaturas, vistoria e emissão)
+raia den: Denodo / Dremio / Power BI
+raia ren: Fluxo de renovação
+
+inicio i1 @ori: Agência pede um contrato (seguro novo) ou chega um lead no Salesforce
+manual o1 @op: Recebe o pedido e abre o processo no Fluid
+manual o2 @op: Faz a cotação à mão (sem robô), nas seguradoras
+manual o3 @op: Apresenta a cotação ao cliente
+decisao d1 @cli: Cliente aceitou?
+fim e1 @cli: Negócio perdido (processo encerrado)
+decisao d2 @op: Canal da negociação?
+manual o4 @op: Envia o contrato para assinatura (RPA | Envio Assinaturas)
+manual c1 @cli: Assina o contrato
+manual o5 @op: Monitora a assinatura (RPA | Monitoramento Assinaturas)
+manual o6 @op: Negocia por ligação (não há contrato para assinar)
+manual v1 @fl: Vistoria do bem
+decisao d3 @fl: Vistoria recusada ou emissão passou de 5 dias?
+tarefa em1 @fl: Emissão da apólice (RPA | Emissão de Apólices)
+tarefa den1 @den: Apólice efetivada entra no Denodo com a data de renovação (mesmo dado que alimenta o dash)
+doc esp @den: Espera cerca de 1 ano, até faltar ~40 dias para o fim da vigência
+tarefa r1 @ren: Abre o lote de renovação (dash do Power BI, Fluid, filas do UiPath, cotação por robô, negociação, emissão)
+tarefa r2 @ren: Renovação emitida: nova data de renovação volta ao Denodo
+
+i1 -> o1
+o1 -> o2
+o2 -> o3
+o3 -> d1
+d1 -> e1: não
+d1 -> d2: sim
+d2 -> o4: WhatsApp
+d2 -> o6: Ligação
+o4 -> c1
+c1 -> o5
+o5 -> v1
+o6 -> v1
+v1 -> d3
+d3 -> o3: sim, volta para a negociação
+d3 -> em1: não
+em1 -> den1
+den1 -> esp
+esp -> r1
+r1 -> r2
+r2 ~> den1: próximo ciclo
+
+duvida: Quem faz a vistoria (a seguradora, uma empresa parceira ou o próprio cliente)? É ela que recusa?
+duvida: A cotação do seguro novo é feita em quais portais? Quantas seguradoras por pedido? Quanto tempo leva?
+duvida: Lead do Salesforce e pedido da agência entram no mesmo processo do Fluid, ou são processos diferentes?
+duvida: O seguro novo dispara o RPA | Aviso de Renovação só na renovação, ou também algum aviso ao fechar?
+duvida: O "esperar 1 ano" é só o dash do Power BI ou existe um agendamento? Quem garante que nenhuma apólice some do dash?
+duvida: Quando a emissão devolve o processo para a negociação, volta para o mesmo operador?
+nota: Se a negociação for por ligação, não há contrato para assinar; por WhatsApp sempre há.
+nota: O detalhe da renovação está em sgv-renovacao-seguros-as-is-v7.
+nota: Se a emissão passar de 5 dias ou a vistoria for recusada, o processo volta para a negociação.
