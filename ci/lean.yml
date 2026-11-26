@@ -8,3 +8,11 @@ jobs:
       - uses: leanprover/lean-action@v1
       - name: Axiomas
         run: lake env lean Axiomas.lean
+      - name: Sem sorry
+        run: "! grep -rn 'sorry' JamesTheorems Regras"
+      # Os vetores versionados (os mesmos de fabrica-de-sites/packages/regras-provadas) têm de ser os que o modelo gera.
+      - name: Vetores das regras
+        run: |
+          lake exe vetores /tmp/preco.json /tmp/etiqueta.json
+          cmp /tmp/preco.json vetores/preco.json
+          cmp /tmp/etiqueta.json vetores/etiqueta.json

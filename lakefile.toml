@@ -1,6 +1,14 @@
 name = "james-theorems"
 version = "0.1.0"
-defaultTargets = ["JamesTheorems"]
+defaultTargets = ["JamesTheorems", "Regras", "vetores"]
 
 [[lean_lib]]
 name = "JamesTheorems"
+
+# Regras de negócio da casa onde um defeito custa dinheiro, provadas e exportadas como vetores de teste.
+[[lean_lib]]
+name = "Regras"
+
+[[lean_exe]]
+name = "vetores"
+root = "Vetores"
